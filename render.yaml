@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: adhyatmik-transcriber
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TRANSCRIPTION_MODEL
+        value: gpt-transcribe
+      - key: CHUNK_SECONDS
+        value: "300"
+      - key: DATA_DIR
+        value: /app/data
