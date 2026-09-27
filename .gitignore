@@ -6,5 +6,11 @@ __pycache__/
 .DS_Store
 
 # Generated lecture media and transcripts
+# Keep source media, temporary audio, and other generated data out of Git.
+# Raw transcript TXT + JSON files ARE versioned.
 data/*
 !data/.gitkeep
+!data/*/
+data/*/*
+!data/*/raw_transcript.txt
+!data/*/raw_transcript.json

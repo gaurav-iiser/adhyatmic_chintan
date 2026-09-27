@@ -1,0 +1,2 @@
+[console_scripts]
+adhyatmik = adhyatmik.cli:app
