@@ -7,6 +7,8 @@ class Settings(BaseSettings):
 
     openai_api_key: str
     transcription_model: str = "gpt-transcribe"
+    cleaning_model: str = "gpt-5-mini"
+    cleaner_context_chars: int = 900
     chunk_seconds: int = 300
     data_dir: Path = Path("./data")
     glossary_path: Path = Path("./glossary/vedanta_terms.txt")

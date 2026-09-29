@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adhyatmik-tools"
-version = "0.1.0"
-description = "Lecture ingestion and Hindi/Sanskrit-aware transcription tools for the Adhyatmik project"
+version = "0.4.0"
+description = "Lecture ingestion, Hindi/Sanskrit-aware transcription, conservative cleaning, and human review tools for the Adhyatmik project"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

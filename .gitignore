@@ -5,12 +5,18 @@ __pycache__/
 .env
 .DS_Store
 
-# Generated lecture media and transcripts
-# Keep source media, temporary audio, and other generated data out of Git.
-# Raw transcript TXT + JSON files ARE versioned.
+# Keep source media, temporary audio, and any other generated data out of Git.
+# Transcript artifacts and human-review audit files are durable project data.
 data/*
 !data/.gitkeep
 !data/*/
 data/*/*
 !data/*/raw_transcript.txt
 !data/*/raw_transcript.json
+!data/*/proposed_clean_transcript.txt
+!data/*/proposed_clean_transcript.json
+!data/*/proposed_cleaning_report.json
+!data/*/human_review_state.json
+!data/*/clean_transcript.txt
+!data/*/clean_transcript.json
+!data/*/human_review_report.json

@@ -1,8 +1,8 @@
-# Adhyatmik Tools — Lecture Ingestor + Hindi Transcriber
+# Adhyatmik Tools — Ingestor + Hindi Transcriber + Conservative Cleaner + Human Review
 
 MVP toolchain for turning a lecture video/audio source into a timestamped raw Hindi transcript that preserves Sanskrit/Vedānta terminology.
 
-## What v0.1 does
+## What the pipeline currently does
 
 1. Accepts a local media file or a YouTube URL.
 2. Extracts mono 16 kHz audio with FFmpeg.
@@ -12,7 +12,7 @@ MVP toolchain for turning a lecture video/audio source into a timestamped raw Hi
    - `raw_transcript.txt` — human-readable transcript with time ranges.
    - `raw_transcript.json` — machine-readable segments for the later cleaning/RAG pipeline.
 
-This is the **raw transcription** stage. Do not manually replace it with a cleaned transcript; the next pipeline stage will preserve both versions.
+The raw transcription stage is immutable. The cleaner creates an AI proposal and audit report; human review then produces the canonical clean transcript without overwriting the raw transcript.
 
 ## Requirements
 
@@ -49,6 +49,49 @@ Outputs appear under:
 data/<lecture-id>/raw_transcript.txt
 data/<lecture-id>/raw_transcript.json
 ```
+
+
+## Clean an existing transcript
+
+Clean one lecture:
+
+```bash
+adhyatmik clean --lecture-id bhagavad-gita-ch1-part19
+```
+
+Clean every uncleaned lecture:
+
+```bash
+adhyatmik clean-all
+```
+
+The cleaner first writes an AI proposal:
+
+```text
+data/<lecture-id>/
+  raw_transcript.txt
+  raw_transcript.json
+  proposed_clean_transcript.txt
+  proposed_clean_transcript.json
+  proposed_cleaning_report.json
+```
+
+Then run human review:
+
+```bash
+adhyatmik review --lecture-id bhagavad-gita-ch1-part19
+```
+
+After all changed/flagged segments are accepted, rejected, or edited, the reviewer writes:
+
+```text
+  clean_transcript.txt
+  clean_transcript.json
+  human_review_report.json
+  human_review_state.json
+```
+
+`clean_transcript.*` is the human-reviewed canonical transcript. See [`docs/CLEANER_WORKFLOW.md`](docs/CLEANER_WORKFLOW.md) and [`docs/HUMAN_REVIEW_WORKFLOW.md`](docs/HUMAN_REVIEW_WORKFLOW.md).
 
 ## Run the web app
 
@@ -99,6 +142,8 @@ src/adhyatmik/
   transcribe.py   OpenAI transcription
   pipeline.py     orchestration + transcript outputs
   models.py       output schemas
+  cleaner.py      conservative transcript cleaning + AI proposal
+  reviewer.py     interactive human accept/reject/edit + final transcript
 
 glossary/
   vedanta_terms.txt
@@ -111,4 +156,12 @@ tests/
 
 After validating transcription quality on Lecture 1:
 
-`raw_transcript -> conservative cleaner -> enriched transcript -> RAG chunks`
+`raw_transcript -> conservative cleaner proposal -> human review -> clean_transcript -> enriched transcript -> RAG chunks`
+
+## Windows recovery / fresh-clone setup
+
+For the exact Windows + Git Bash procedure—from `git clone` through FFmpeg, Python environment setup, `.env`, testing, transcription, and backing raw transcript files up to GitHub—see:
+
+[`docs/RECOVERY_SETUP_WINDOWS.md`](docs/RECOVERY_SETUP_WINDOWS.md)
+
+Raw transcript TXT and JSON files under `data/<lecture-id>/` are intentionally versioned. Source video/audio and API secrets are not.
