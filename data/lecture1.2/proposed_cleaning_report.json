@@ -1,0 +1,636 @@
+{
+  "lecture_id": "lecture1.2",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 13,
+  "total_changes": 74,
+  "review_notes": [
+    "Segment 0: Sanskrit shloka fragments were adjusted (spacing and an ending change: 'आचार्यं उपसंगम्य'). Please verify these against the intended original śloka text (Bhagavadgītā opening lines) to ensure doctrinal/orthographic accuracy.",
+    "Segment 0: Spoken colloquial fragments such as 'देख लेना बाद' and the sentence 'संजय धृतराष्ट्र के पास रहते थे, ऐसा नहीं है।' were left as in the raw transcript despite possible ASR confusion; review if these reflect the speaker's intended words.",
+    "Segment 0: Multiple forms of 'पाण्डव'/'पांडव' were present; preserved original usages except where changed for the Sanskrit compound. Verify consistency if required.",
+    "Segment 1: The phrase 'युत्सु, युत्सु होकर के' (original transcript preserved) may be an ASR misrecognition or colloquial/sanskritized phrasing (possibly intended 'युद्ध हेतु' or 'युद्ध के लिए'). Left unchanged; please review for intended wording.",
+    "Segment 1: Correction from 'चार्थ में' to 'चरितार्थ में' is medium-confidence — please verify against the original audio to confirm speaker said 'चरितार्थ में'.",
+    "Segment 2: ट्रांसक्रिप्ट में 'सफरर' शब्द अस्पष्ट है (\"अब उसमें सफरर तो दोनों ओर स्त्री है...\") — सम्भवतः ASR त्रुटि/अनुत्तरदायी शब्द है; मूल वक्तव्य का अर्थ बदल सकता है। मानक सुधार सुनिश्चित करने हेतु मानव-समीक्षा की आवश्यकता है।",
+    "Segment 2: पंक्ति 'कहि बल बिरहु बेगि तुम आयहु। आयौ।' संभवतः अवधी/रामचरितमानस से उद्धरण है; मौलिक शब्दांकन अस्पष्ट लग रहा है। श्लोक/पंक्ति की शुद्धता सुनिश्चित करने हेतु संदर्भ या मूल ऑडियो की जाँच आवश्यक है।",
+    "Segment 2: शब्द 'तासु' पुरातन/अर्थवाचक प्राचीन रूप लग रहा है; हालांकि मैंने इसे नहीं बदला, पर यदि उद्धरण से संबंधित है तो एक भाषायी-समीक्षा उपयोगी होगी।",
+    "Segment 3: वाक्य 'उसका मंथन कर सकता है' संदर्भानुसार असंदिग्ध नहीं है—'मंथन' शब्द संभवतः ASR त्रुटि हो सकता है (उदा. 'नाश', 'विनाश' आदि)। निश्चित करने हेतु मूल ऑडियो की समीक्षा आवश्यक।",
+    "Segment 3: वाक्य 'मुँह में तृण दबा के, ... अपने गर्दन पर कुठार रख करके, और अपनी पत्नी को आगे करके' का शब्दनुक्रम और अर्थ असहज/संभवतः खंडित है; मूल उच्चारण से पुष्टि चाहिए।",
+    "Segment 3: अंश 'ऐसा कोई महावीर को बोले' में 'को' या 'से' का उपयोग संदर्भानुसार बदला जा सकता है; वर्तमान रूप बनाये रखा गया पर पुष्टि हेतु समीक्षा सुझावित।",
+    "Segment 4: Possible ASR error: 'स्रुवा' in 'तलवार की स्रुवा से...' is unclear/unusual in context. Speaker likely intended a different word (e.g., 'नोक', 'श्रुति', or similar). Preserved original; please review and correct if necessary.",
+    "Segment 5: Phrase 'पहले जाके मटियामेट कराते हैं' is unclear / possibly misrecognized (ASR). Left as raw speech; please review for intended wording.",
+    "Segment 5: Fragment 'एक मुझे याद आ रहा है, सूची, है? गंधर्व व्यूह होगा, है? लिखा होगा' is uncertain in meaning and may contain ASR errors (e.g., 'सूची'?). Preserved as spoken; please review.",
+    "Segment 6: Phrase 'सम्यक प्रकाश से उनके निकट गया' is unclear — 'प्रकाश' may be an ASR error or mis-transcription of a Sanskrit/Hindi word (e.g., 'प्रकार'/'प्रागक'/'प्रागत्य'). I have preserved it as in the raw text; please review and correct if the speaker intended a different word.",
+    "Segment 7: Speaker pronunciation/transcription unclear for terms: \"भीमधाम\" and \"भीमधम दुर्योधनं तदा\" — preserved as in raw transcript but please verify intended Sanskrit/Hindi wording.",
+    "Segment 7: Verify the exact Sanskrit word used for 'धीमता' in the quoted line (Bhagavadgītā 1.22) against the original source if fidelity is required.",
+    "Segment 8: The token 'धीमता शिष्येण' appears twice and may be an ASR rendering of a Sanskrit/Hindi phrase (e.g., 'धिमत: शिष्येण' or similar). I preserved the original wording because the intended Sanskrit form is unclear; please review.",
+    "Segment 8: 'ध्रुव चेतन्य' (सात-आठ लोग सेवा में ध्रुव चेतन्य थे) may be a proper name or misrecognition (e.g., 'द्रुव-चैतन्य', 'द्रव चेतन' etc.). Preserved as in transcript; please verify.",
+    "Segment 8: The correction 'लाड़-डाँट' from 'लाग-डाँट' was applied with medium confidence—please confirm the speaker meant 'लाड़-डाँट' (affectionate scolding).",
+    "Segment 8: The restructuring 'शस्त्रविद्या और अस्त्रविद्या' was applied to remove an apparent ASR duplication; please confirm this matches the speaker's intended phrasing.",
+    "Segment 9: शब्द 'पटरे' (\"कोई पटरे पर\") ऑडियो-ट्रांसक्रिप्ट में आया है; संभव है यह किसी स्थानीय बोलचाल का शब्द हो या ASR द्वारा गलत पहचाना गया हो। सत्यापन हेतु स्रोत ऑडियो की जाँच आवश्यक है।",
+    "Segment 9: कहानी के कुछ ऐतिहासिक/पात्र-संबंधी बिंदु (किसने किसे पकड़ कर लाया — दुर्योधन/अर्जुन व इत्यादि) ट्रांसक्रिप्ट में जैसा था वैसा ही रखा गया। यदि यह संदर्भात्मक/दृष्टान्तात्मक त्रुटि है तो कृपया मूल वक्तव्य (ऑडियो) देखकर पुष्टि करें।",
+    "Segment 9: वाक्य 'अपमान भंग...' ऑडियो में अस्पष्ट प्रतीत हुआ; मैंने इसे 'जब अपमान हो गया, मान भंग हुआ' कर दिया है क्योंकि ऐसा पाठ सम्भवतः आशय था, पर सुनिश्चित करने के लिए मूल स्रोत सुनना बेहतर होगा।",
+    "Segment 10: The term 'अयोनिज' was left as in the original; could be 'अयोनिजा' but uncertain—please review Sanskrit/formal term.",
+    "Segment 10: Phrases like 'आप मरोगे कैसे?' and usages of 'मरोगे' vs 'मरेंगे' were preserved as spoken; please verify if tense/form correction is needed for doctrinal accuracy.",
+    "Segment 10: The clause 'लेकिन इसको आचार्य धर्म कहते हैं, सबसे निम्नता नहीं।' is ambiguous in the recording and was left unchanged; recommend human review for intended wording/meaning.",
+    "Segment 10: The placeholder-like word 'अमुक' was preserved from the transcript; confirm if speaker intended a specific ritual name.",
+    "Segment 11: The phrase 'वो याद दिलाता है, दुर्योधन आज उनको।' may be an ASR artifact or a spoken disfluency — unsure if the speaker intended a different verb form (e.g., 'याद दिला रहा है'). Preserved wording with punctuation; please review.",
+    "Segment 11: Sanskrit line 'पाण्डुपुत्राणाम् एतां महतीं चमूम् द्रुपदपुत्रेण तव शिष्येण धीमता' was adjusted for 'चमूम्' but 'धीमता' remains as in the raw. If the intended classical form differs, please review the exact original verse wording.",
+    "Segment 11: Removed 'सी' after 'मैंने तो बहुत देखा है' as probable ASR noise. If speaker actually said 'सी' with meaning, please restore.",
+    "Segment 12: There are several Sanskrit names/phrases in the enumerations that remain uncertain (e.g., 'महांश्च सवु, स्वासश्च महेष्वासाः') — ASR distortions here are ambiguous; please review original audio for exact Sanskrit wording.",
+    "Segment 12: The mantra lines (ॐ पूर्णमदः ... पूर्णमेवावशिष्यते) were left as in the speaker's phrasing. If accurate transliteration of the canonical śloka is required, review with the audio or a Sanskrit source.",
+    "Segment 12: The repeated/colloquial phrasings around 'चेकितानः' and nearby lines were normalized conservatively; please verify that 'चेकितानः' is the intended name in context."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "किमकुर्वत संजय।",
+      "corrected": "किम अकुर्वत संजय।",
+      "category": "sanskrit",
+      "reason": "Inserted space between 'किम' and 'अकुर्वत' to reflect the correct Sanskrit phrase segmentation.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "आचार्यमुपसंगम्य।",
+      "corrected": "आचार्यं उपसंगम्य।",
+      "category": "sanskrit",
+      "reason": "Separated compound and adjusted ending to the standard Sanskrit form 'आचार्यं', which fits the quoted śloka context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "किमकुर्वत",
+      "corrected": "किम अकुर्वत",
+      "category": "sanskrit",
+      "reason": "Inserted space in the repeated occurrence of the Sanskrit phrase for consistency and correct word boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "तार-लूज",
+      "corrected": "तार लूज",
+      "category": "other",
+      "reason": "Normalized the hyphenated colloquial English loan 'लूज' to separate words for readability.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "शरशय्या",
+      "corrected": "शय्या",
+      "category": "spelling",
+      "reason": "ASR likely misrecognized 'शय्या' as 'शरशय्या'; corrected to the common phrase 'शय्या पर पड़े हुए'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "चार्थ में",
+      "corrected": "चरितार्थ में",
+      "category": "asr_term",
+      "reason": "Presumed ASR error: 'चार्थ में' is unlikely in context; 'चरितार्थ में' (meaning 'in the literal/manifest sense') fits the sentence about अर्थ/सार्थकता.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "सूरपणखा के प्रसंग में पहली जो चुनौती दी,",
+      "corrected": "सुरपणखा के प्रसंग में पहली जो चुनौती दी,",
+      "category": "proper_name",
+      "reason": "नाम के स्पेलिंग को सामान्य रूप में समान किया गया (सूरपणखा → सुरपणखा) ताकि पाठ में एकरूपता बनी रहे।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "सुरपणखा का नाक, कान काट करके,",
+      "corrected": "सुरपणखा का नाक-कान काटकर—",
+      "category": "punctuation",
+      "reason": "वाक्य प्रवाह के लिए विराम-चिन्ह/हाइफ़न जोड़ा गया और 'काट करके' को सामान्य 'काटकर' में बदला गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "तो हालाँकि उन्होंने समुद्र पार कर लिया, तो भी अंगद को भेजा उन्होंने दूत बनाकर के।",
+      "corrected": "तो हालाँकि उन्होंने समुद्र पार कर लिया, तो भी अंगद को दूत बनाकर भेजा।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य की क्रम-विन्यास और बोली के अनुकूल व्याकरणिक सुधार ('बेजा उन्होंने' → 'बेजा') किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "तासु दूत में जो हनुमान जी ने कहा कि मैं उनका दूत हूँ, तो पढ़ने से ऐसा नहीं लगता कि प्रभु राम ने एक बार भी ऐसा संकेत किया हो। कि आप रावण को जाके कोई संदेश देना।",
+      "corrected": "तासु दूत में जो हनुमान जी ने कहा कि 'मैं उनका दूत हूँ', तो पढ़ने से ऐसा नहीं लगता कि प्रभु राम ने एक बार भी ऐसा संकेत किया हो कि आप रावण को जाकर कोई संदेश दें।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य-खंडों को जोड़ा गया और 'जाके' को मानक रूप 'जाकर' से प्रतिस्थापित कर के वाक्य को स्पष्ट किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "जानकी जी को देख करके, उनकी सुधि ले करके,",
+      "corrected": "जानकी जी को देखकर, उनकी सुधि लेकर,",
+      "category": "punctuation",
+      "reason": "संयुक्त क्रियाविशेषणों को अधिक सामान्य वाक्यरचना में बदला गया (देख करके → देखकर, ले करके → लेकर)।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "लेकिन, यस, रावण को उन्होंने युद्ध न करने की सलाह जरूर दी।",
+      "corrected": "लेकिन, हाँ, रावण को उन्होंने युद्ध न करने की सलाह जरूर दी।",
+      "category": "asr_term",
+      "reason": "'यस' संभवतः अंग्रेज़ी 'yes' का ASR रूप है; सामान्य हिंदी रूप 'हाँ' से संगति बेहतर बैठती है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "और उसका उत्तर बड़ा प्रसिद्ध है कि सुई के नोक बराबर भूमि देने वाला नहीं हूँ मैं।",
+      "corrected": "और उसका उत्तर बड़ा प्रसिद्ध है कि सुई के नोक के बराबर भूमि देने वाला नहीं हूँ मैं।",
+      "category": "spelling",
+      "reason": "वाक्य में 'नोक के बराबर' के लिए 'के' का अभाव स्पष्ट रूप से एक त्रुटि है; जोड़ना पठनीयता और व्याकरण हेतु सुधार है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "कि दुर्योधन ने पांडव के पक्ष को सही माना, इसके बावजूद उनका हिस्सा उनको नहीं दिया, ये ठग है, ये बेईमान है।",
+      "corrected": "कि दुर्योधन ने पांडवों के पक्ष को सही माना, इसके बावजूद उनका हिस्सा उनको नहीं दिया, ये ठग है, ये बेईमान है।",
+      "category": "spelling",
+      "reason": "यहां 'पांडव' के बहुवचन स्वरूप 'पांडवों' का प्रयोग अधिक उपयुक्त है और वक्तव्य के संदर्भ से मेल खाता है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "कोई पाँच गाँव में उसका कुछ घट जाता",
+      "corrected": "कोई पाँच गाँव में से उसका कुछ घट जाता",
+      "category": "asr_term",
+      "reason": "Missing postposition 'से' — restores intended idiom ('पाँच गाँव में से').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "ले करके",
+      "corrected": "लेकर",
+      "category": "spelling",
+      "reason": "Compound verb written as separate words by ASR; corrected to standard form 'लेकर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "धर्म क्षेत्रे",
+      "corrected": "धर्मक्षेत्रे",
+      "category": "sanskrit",
+      "reason": "Sanskrit term 'धर्मक्षेत्रे' was split incorrectly; corrected to canonical form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "धर्म क्षेत्र",
+      "corrected": "धर्मक्षेत्र",
+      "category": "sanskrit",
+      "reason": "Sanskrit term 'धर्मक्षेत्र' split; corrected to canonical compound form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "दृष्ट्वा तु पाण्डवानीकम, पाण्डव अनीकम, पाण्डवानाम् अनीकम इति पाण्डवानीकम, सष्ठी तत्पुरुषः।",
+      "corrected": "दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा।",
+      "category": "sanskrit",
+      "reason": "ASR garbled multiple Sanskrit words; corrected to the standard Bhagavad Gita phrase (दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा) that fits the context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "दृष्ट्वा तु पाण्डवानीकम, व्यूढं दुर्योधनस्तदा。",
+      "corrected": "दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा।",
+      "category": "sanskrit",
+      "reason": "Minor ASR orthography fix (visarga/ending) to match standard Sanskrit form and maintain repetition present in the original.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "दुर्यादन ने सेना को देखा।",
+      "corrected": "दुर्योधन ने सेना को देखा।",
+      "category": "proper_name",
+      "reason": "Clear ASR misrecognition of the proper name 'दुर्योधन'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "व्यूढमनीकम्।",
+      "corrected": "व्यूढं।",
+      "category": "sanskrit",
+      "reason": "ASR concatenated/altered Sanskrit ending; corrected to 'व्यूढं' consistent with quoted Sanskrit and subsequent explanation.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "व्यूढम का अर्थ है व्यूहबद्ध।",
+      "corrected": "व्यूढं का अर्थ है व्यूहबद्ध।",
+      "category": "sanskrit",
+      "reason": "Consistent correction of the Sanskrit term's orthography to 'व्यूढं'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "सज्जित होके, सज के खड़ी हुईं,",
+      "corrected": "सज्जित होकर, सज के खड़ी हुईं,",
+      "category": "spelling",
+      "reason": "Standardized colloquial 'होके' to 'होकर' for clearer sentence boundary and standard Hindi spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "पाण्डवानीकम् दृष्ट्वा।",
+      "corrected": "पाण्डवानीकं दृष्ट्वा।",
+      "category": "sanskrit",
+      "reason": "Adjusted Sanskrit ending for consistency with corrected quoted phrase.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "माना गया, व्यूह रचना।",
+      "corrected": "माना गया: व्यूह रचना।",
+      "category": "punctuation",
+      "reason": "Comma replaced by colon to clarify sentence boundary and emphasis between clause and appositive.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "योध्दा",
+      "corrected": "योद्धा",
+      "category": "spelling",
+      "reason": "Obvious ASR/spelling error for Hindi word 'योद्धा'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "व्यूढं अनीकं द्रुष्ट्वा।",
+      "corrected": "व्यूढं अनीकं दृष्ट्वा।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit verb form 'द्रुष्ट्वा' to standard transliteration 'दृष्ट्वा'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "दुर्योधनः अनीकं पाण्डवानीकं व्यूढं द्रुष्ट्वा।",
+      "corrected": "दुर्योधनः अनीकं पाण्डवानीकं व्यूढं दृष्ट्वा।",
+      "category": "sanskrit",
+      "reason": "Corrected repeated Sanskrit form 'द्रुष्ट्वा' to 'दृष्ट्वा' for consistency.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "थोड़ो",
+      "corrected": "थोड़ा",
+      "category": "spelling",
+      "reason": "ASR rendered spoken 'थोड़ा' as 'थोड़ो'; corrected to standard spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "नैचरली",
+      "corrected": "नेचुरली",
+      "category": "asr_term",
+      "reason": "ASR rendering of English loanword 'naturally' approximated as 'नैचरली'; normalized to common Hindi transliteration 'नेचुरली'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "राजा वचनम अब्रवीत।",
+      "corrected": "राजा वचनम् अब्रवीत्।",
+      "category": "sanskrit",
+      "reason": "Added visarga/ending consonant in Sanskrit phrase to match conventional transliteration/spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "आपने थोड़ो कहा, ये आपके जो दोस्त हैं रुपेन्द्र, उन्होंने कहा ये।",
+      "corrected": "आपने कहा, ये आपके जो दोस्त हैं रुपेन्द्र, उन्होंने कहा ये।",
+      "category": "other",
+      "reason": "Removed redundant word placement to reflect intended spoken phrase; 'थोड़ा' already corrected earlier and phrase streamlined to match flow without altering meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "पश्यैतां पाण्डुपुत्राणाम्, आचार्य महतीं चमूम्। व्यूढां द्रुपदपुत्रेण, तव शिष्येण धीमता। पश्यैतां पाण्डुपुत्राणाम्, आचार्य... आचार्य महतीं चमूम्। व्यूढां द्रुपदपुत्रेण। तव शिष्येण धीमता।",
+      "corrected": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता।\nपश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता।",
+      "category": "sanskrit",
+      "reason": "Quoted the Bhagavadgītā line consistently and normalized sandhi/spacing to a standard Sanskrit form while preserving the speaker's repetition.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "उनकी लाग-डाँट वास्तव में किसी से खास थी नहीं।",
+      "corrected": "उनकी लाड़-डाँट वास्तव में किसी से खास थी नहीं।",
+      "category": "spelling",
+      "reason": "ASR produced 'लाग-डाँट' which is not a common phrasing; 'लाड़-डाँट' (affectionate scolding) fits context and is a likely correction.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "तो द्रोणाचार्य जी महाराज तो शस्त्र विद्या के अस्त्र विद्या के निष्णात धनुर्धर हुए।",
+      "corrected": "तो द्रोणाचार्य जी महाराज तो शस्त्रविद्या और अस्त्रविद्या के निष्णात धनुर्धर हुए।",
+      "category": "asr_term",
+      "reason": "Phrase 'शस्त्र विद्या के अस्त्र विद्या के' is repetitive/misrecognized; corrected to 'शस्त्रविद्या और अस्त्रविद्या' for grammatical clarity, preserving intended meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "This is पहला वाक्य यही प्रकट होता है कि एक दरिद्र ब्राह्मण था।",
+      "corrected": "यह पहला वाक्य यही प्रकट होता है कि एक दरिद्र ब्राह्मण था।",
+      "category": "asr_term",
+      "reason": "ASR inserted English 'This is' mid-Hindi sentence; replaced with Hindi 'यह' to match surrounding Hindi.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "आँटे का दूध।",
+      "corrected": "आटे का दूध।",
+      "category": "spelling",
+      "reason": "Normalized spelling: 'आटे' is the standard form; corrected diacritic for clarity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "तो दस साढ़े दस, ग्यारह बजे के लगभग हम लोग गए वहाँ रात को।",
+      "corrected": "तो दस साढ़े दस, ग्यारह बजे के लगभग हम लोग वहाँ गए रात को।",
+      "category": "sentence_boundary",
+      "reason": "हल्का शब्द-क्रम व वाक्य-सीमांकन सुधार ताकि वाक्य प्रवाह स्पष्ट रहे।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "संत लोग कोई सोया हुआ है, कोई पटरे पर, कोई कहीं-कहीं, तो सब उठे।",
+      "corrected": "संत लोग — कोई सोया हुआ था, कोई पटरे पर, कोई कहीं-कहीं; सब उठ गए।",
+      "category": "sentence_boundary",
+      "reason": "कर्मकाल/कालवाचक रूप और वाक्य-सीमांकन सुधारे गए ताकि वर्णन पिछले प्रसंग के अनुरूप भूतकाल में रहे और पढने में स्पष्ट हो।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "अब रात को मैं गया, चाय बनेगी। हमने कहा, चाय बनेगी, चलो ठीक है।",
+      "corrected": "रात को मैं गया, कहा कि चाय बनेगी। हमने कहा, 'चाय बनेगी, चलो ठीक है।'",
+      "category": "punctuation",
+      "reason": "उद्धरण और वाक्य-विभाजन जोड़कर संवाद स्पष्ट किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "गंगाजी सामने दिख रही हैं।",
+      "corrected": "गंगाजी सामने दिख रही थीं।",
+      "category": "tense",
+      "reason": "कथावाचक प्रसंग भूतकाल में है; काल सुसंगत किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "जब चाय आई हमारे सामने, मुझे लगा ये हलुआ जैसी इसका सुगंध आ रही है, हलुआ जैसी, और चाय पी रहे हैं।",
+      "corrected": "जब चाय हमारे सामने आई, मुझे लगा कि इसकी सुगंध हलुआ जैसी है; हलुआ जैसी, और चाय पी रहे थे।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य-क्रम और काल सुधारे गए ताकि अनुवर्ती वाक्य सही रूप में पढ़ें।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "बोले, असल में दूध तो था नहीं। तो हमने आटे से चाय बना दी।",
+      "corrected": "बोले, 'असल में दूध तो था नहीं।' तो उन्होंने आटे से चाय बना दी।",
+      "category": "other",
+      "reason": "कथ्यात्मक रूप में उक्तिघोष स्पष्ट करने के लिए उद्धरण जोड़ा गया और क्रिया-कर्ता को संदर्भानुसार 'उन्होंने' रखा (संस्‍थागत सेवा कर रहे लोगों की क्रिया)।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "पहली बार मैंने आटे को उन्होंने भूना, अच्छी तरह से थोड़ा घी में, और फिर चाय में डाल दी।",
+      "corrected": "पहली बार मैंने देखा कि आटे को उन्होंने अच्छी तरह से, थोड़ा घी में भूना, और फिर चाय में डाल दिया।",
+      "category": "sentence_boundary",
+      "reason": "आदेशात्मक वाक्य-रचना को सामान्य वाक्यक्रम में बदला गया ताकि अर्थ स्पष्ट रहे।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "और चाय हो गई सफेद, बिल्कुल चाय का कलर।",
+      "corrected": "और चाय सफेद हो गई, बिल्कुल चाय के रंग की।",
+      "category": "punctuation",
+      "reason": "हिंदी में 'कलर' के साथ वाक्य सुधारकर सामान्य अभिव्यक्ति बनाई गई।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "हमने कहा, चलो एक चीज तो आप लोगों ने हमको आज समझाई थी कि अश्वत्थामा कौन सा दूध पीता होगा।",
+      "corrected": "हमने कहा, 'चलो, एक चीज तो आप लोगों ने हमें आज समझाई है — कि अश्वत्थामा कौन सा दूध पीता होगा।'",
+      "category": "punctuation",
+      "reason": "उद्धरण और सर्वनाम 'हमें' बनाकर वाक्य-संसोधन ताकि संदर्भ स्पष्ट रहे।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "वो आटा भूना जाता होगा उसके लिए घी में, और फिर उसका दो-चार गिलास बनाते होंगे, तो पीता होगा।",
+      "corrected": "वो आटा घी में भूना जाता होगा, और फिर उनका दो-चार गिलास बनाते होंगे, तो पीता होगा。",
+      "category": "grammar",
+      "reason": "शब्दक्रम व सर्वनाम समन्वय सुधारा गया ताकि वाक्य पठनीय और तर्कसंगत रहे।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "एक दिन वो कहेंगे, यार रिश्तेदारी में, और उस दिन असली दूध मिल गया उसको।",
+      "corrected": "एक दिन रिश्तेदारी में असली दूध मिल गया उसे।",
+      "category": "punctuation",
+      "reason": "अनावश्यक टुकड़े हटाकर वाक्य को संक्षिप्त व स्पष्ट किया गया; सर्वनाम 'उसे' का प्रयोग समुचित रखा गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "तब द्रोणाचार्य जी महाराज, उन्होंने कहा, ठीक है, मैं गाय ले आता हूँ। महाराज द्रुपद के पास गए वो, वो तो राजा थे, पांचाल देश के राजा थे।",
+      "corrected": "तब द्रोणाचार्य जी ने कहा, 'ठीक है, मैं गाय ले आता हूँ।' वे महाराज द्रुपद के पास गए; द्रुपद पांचाल देश के राजा थे।",
+      "category": "punctuation",
+      "reason": "वाक्य-बंध और नाम‑प्रसंग स्पष्ट करने हेतु विभाजन व संयोजन किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "तो संदेश भिजवाया कि उनके एक मित्र आए हैं, और ये महाराज धोती-फटी हुई पहने हुए, सिपाही भी हँसा इनके ऊपर कि बताओ, ये पगला आदमी बोलता है कि महाराज के मैं मित्र हूँ।",
+      "corrected": "तो संदेश भेजा कि उनके एक मित्र आए हैं, और यह महाराज धोती फटी-फटी पहने हुए थे; सिपाहियों ने भी इन पर हँसा कि यह पागल आदमी कहता है कि 'मैं महाराज का मित्र हूँ।'",
+      "category": "spelling",
+      "reason": "गलत मानने योग्य शब्द 'भिजवाया' को 'भेजा' किया गया, 'पगला'→'पागल' समरूप वर्तनी सुधारी गई और वाक्य विभाजन से अर्थ स्पष्ट किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "तो महाराज द्रुपद को भी बड़ा अपमान-सा लगा, उन्होंने बहुत डाँटा इनको, बोले, साथ में पढ़ लेने का क्या मतलब है, तुमको दोस्त समझने लग गए? हैं? मित्रता और शत्रुता बराबरी में होती है, और ये सब काफी कुछ बोल के अपमानित कर दिया।",
+      "corrected": "तो महाराज द्रुपद को भी बड़ा अपमान सा लगा। उन्होंने इन्हें खूब डाँटा: 'साथ में पढ़ लेने का क्या मतलब है? तुमको दोस्त समझने लग गए? मित्रता और शत्रुता बराबरी में होती है।' और इस तरह काफी कुछ कहकर अपमानित कर दिया।",
+      "category": "sentence_boundary",
+      "reason": "बहुत लंबे वाक्य को विभाजित कर संदर्भ व उद्धरण स्पष्ट किए गए और सर्वनाम 'इनको'→'इन्हें' रूपान्तरित किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "बस, महाराज, जब अपमान भंग... अपमान जब हो गया, मान भंग हुआ, तब बोले, अब हम बराबरी करके आएँगे।",
+      "corrected": "बस, जब अपमान हो गया, मान भंग हुआ, तब बोले, 'अब हम बराबरी करके आएँगे।'",
+      "category": "other",
+      "reason": "अस्पष्ट 'अपमान भंग...' अंश को हटाकर वाक्यार्थ सुस्पष्ट किया गया; मूल भावना बरकरार रखी गई।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "तो वहाँ उन्होंने उसको जब सामने समर्पित किया, तो उन्होंने उनको आधा राज्य दे दिया, द्रोणाचार्य ने। राज्य तो पूरा जीत लिया था, आधा राज्य वापस किया, जाओ, आधा राज्य ले जाओ, अब हम बराबर के हो गए।",
+      "corrected": "तो वहाँ जब उन्होंने उसको सामने समर्पित किया, तो द्रोणाचार्य ने उनको आधा राज्य दे दिया। राज्य तो पूरा जीत लिया था, पर द्रोणाचार्य ने आधा राज्य वापस किया — 'जाओ, आधा राज्य ले जाओ, अब हम बराबर के हो गए।'",
+      "category": "sentence_boundary",
+      "reason": "कथानक के क्रम को बनाए रखते हुए वाक्यांशों को स्पष्ट और क्रमवार रूप से सजाया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "बड़ा बैठ के बातें करते हैं",
+      "corrected": "बड़े बैठ कर बातें करते हैं",
+      "category": "punctuation",
+      "reason": "हिंदी व्याकरणानुसार स्थानीय वाक्य-सुधार।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "और भीतर जो है द्रुपद के आग लगी हुई है कि इसने मेरा पूरा राज्य हड़प लिया, फिर मेरे आधे राज्य पर शासन करता है, हमारा अपमान करवाया।",
+      "corrected": "और भीतर द्रुपद के अंदर आग लगी हुई है कि इसने मेरा पूरा राज्य हड़प लिया, फिर मेरे आधे राज्य पर शासन करता है, हमारा अपमान करवाया।",
+      "category": "grammar",
+      "reason": "व्यंजना स्पष्ट करने हेतु 'भीतर' और 'अंदर' का संयोजन किया गया ताकि अर्थ अधिक पठनीय हो; मूल भावना बरकरार रखी गई।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "निःशस्त्र होकर के द्रोणाचार्य के चरणों में गए",
+      "corrected": "निःशस्त्र होकर द्रोणाचार्य के चरणों में गए",
+      "category": "asr_term",
+      "reason": "Unnecessary particle 'के' inserted by ASR; removed to form correct Hindi phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तीनों के पास गए हैं ये।",
+      "corrected": "तीनों के पास गए थे ये।",
+      "category": "asr_term",
+      "reason": "Tense/auxiliary misrecognition; corrected to past tense to match narrative.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "मैं किसको बताऊँ?",
+      "corrected": "मैं किसको बताऊँगा?",
+      "category": "asr_term",
+      "reason": "Likely ASR omission of verb ending; 'बताऊँगा' fits intended meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "ये वाक्य उन्होंने बोला कि अभी इसकी कोई जरूरत नहीं है कि तुमको मैं अपने मृत्यु का उपाय बता दूँ, द्रोणाचार्य ने बताया।",
+      "corrected": "द्रोणाचार्य ने कहा कि अभी इसकी कोई जरूरत नहीं है कि मैं तुमको अपने मृत्यु का उपाय बता दूँ।",
+      "category": "sentence_boundary",
+      "reason": "Sentence was garbled/redundant; reordered to a clearer, high-confidence rendering while preserving intended content.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "कृपाचार्य तो शिरंजीवी हैं, सात चिरंजीवियों में से एक चिरंजीवी हैं कृपाचार्य।",
+      "corrected": "कृपाचार्य तो शिरंजीवी हैं, सात चिरंजीवियों में से एक हैं।",
+      "category": "other",
+      "reason": "Redundant repetition likely due to ASR; streamlined while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "यज्ञ से नी, इसीलिए द्रौपदी का एक नाम है याज्ञसेनी, यज्ञ से पैदा हुई।",
+      "corrected": "यज्ञ से ही, इसीलिए द्रौपदी का एक नाम है याज्ञसेनी, यज्ञ से पैदा हुई।",
+      "category": "asr_term",
+      "reason": "ASR misrecognized 'ही' as 'नी'; corrected to make grammatical sense.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "सो द्रुपद ने फिर ऋषियों ने उनको बताया कि आप अमुक कोई यज्ञ करो।",
+      "corrected": "सो द्रुपद से ऋषियों ने उनको बताया कि आप अमुक कोई यज्ञ करो।",
+      "category": "sentence_boundary",
+      "reason": "Duplication/word-order error likely from ASR; adjusted to a coherent clause while preserving stated actors and intent.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "दोनों ही युद्ध के फिर कारण बने हैं।",
+      "corrected": "दोनों ही युद्ध के कारण बने हैं।",
+      "category": "asr_term",
+      "reason": "Extraneous 'फिर' appears to be ASR artifact; removed to restore intended meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "ऐसा कितने लोग कर सकते हैं?",
+      "corrected": "ऐसे कितने लोग कर सकते हैं?",
+      "category": "spelling",
+      "reason": "Grammar/word-choice correction from 'ऐसा' to 'ऐसे' to match plural 'लोग'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "वो याद दिलाता है दुर्योधन आज उनको।",
+      "corrected": "वो याद दिलाता है, दुर्योधन आज उनको।",
+      "category": "punctuation",
+      "reason": "Added comma to reflect spoken pause and improve readability; original words preserved.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "मैं उनको दिखाना चाहता हूँ धृष्टद्युम्न को।",
+      "corrected": "मैं उनको दिखाना चाहता हूँ, धृष्टद्युम्न को।",
+      "category": "punctuation",
+      "reason": "Added comma to reflect natural pause and clarify clause boundary without changing meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "मैंने तो बहुत देखा है, सी।",
+      "corrected": "मैंने तो बहुत देखा है।",
+      "category": "asr_term",
+      "reason": "'सी' appears to be an ASR artifact/filler and was removed to restore a coherent sentence.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "पाण्डुपुत्राणाम् एतां महतीं चमूं, द्रुपदपुत्रेण तव शिष्येण धीमता।",
+      "corrected": "पाण्डुपुत्राणाम् एतां महतीं चमूम् द्रुपदपुत्रेण तव शिष्येण धीमता।",
+      "category": "sanskrit",
+      "reason": "Adjusted sandhi/ending 'चमूं' to standard Devanagari 'चमूम्' and removed comma to match typical Sanskrit verse punctuation.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "अत्र शूरा महेष्वासा, भीमार्जुनसमा युधि, युयुधानो विराटश्च... द्रुपदश्च महारथः। धृष्टकेतुश्च कितानः। काशिराजश्च वीर्यवान्। पुरुजित् कुन्तिभोजश्च। शैब्यश्च नरपुङ्गवः। युधामन्युश्च विक्रान्तः। उत्तमौजाश्च वीर्यवान्। सौभद्रो द्रौपदेयाश्च। सर्व एव महारथाः।",
+      "corrected": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि युयुधानो विराटश्च द्रुपदश्च महारथः धृष्टकेतुश्च चेकितानः काशिराजश्च वीर्यवान् पुरुजित् कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः युधामन्युश्च विक्रान्तः उत्तमौजाश्च वीर्यवान् सौभद्रो द्रौपदेयाश्च सर्व एव महारथाः।",
+      "category": "sanskrit",
+      "reason": "Restored a standard, continuous Sanskrit enumeration of warrior names and corrected 'कितानः' to 'चेकितानः' (dhṛṣṭaketuś ca cekitānaḥ) and removed unnecessary commas/ellipses to match verse form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "अत्र पाण्डव पक्षे",
+      "corrected": "अत्र पाण्डवपक्षे",
+      "category": "spelling",
+      "reason": "Compound word written separately by ASR; corrected to standard sandhi form",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "विराटश्च, कल्चर्चा करेंगे इन पर।",
+      "corrected": "विराटश्च — कल चर्चा करेंगे इन पर।",
+      "category": "asr_term",
+      "reason": "‘कल्चर्चा’ is an ASR-merger; separated into 'कल चर्चा'. Added dash for natural pause.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "ऐसा न कर देना, इकितानः। चेकितान नाम था उनका。",
+      "corrected": "ऐसा न कर देना, चेकितानः। चेकितान नाम था उनका।",
+      "category": "asr_term",
+      "reason": "‘इकितानः’ appears to be an ASR error; corrected to the known name 'चेकितानः'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "विराटश्च, कल्चर्चा करेंगे इन पर।",
+      "corrected": "विराटश्च — कल चर्चा करेंगे इन पर।",
+      "category": "punctuation",
+      "reason": "Inserted a dash to reflect a spoken pause and improve sentence boundary.",
+      "confidence": "high"
+    }
+  ]
+}

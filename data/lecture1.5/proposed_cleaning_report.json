@@ -1,0 +1,653 @@
+{
+  "lecture_id": "lecture1.5",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 15,
+  "total_changes": 76,
+  "review_notes": [
+    "Segment 0: The phrases 'न नभश्च पृथिवीं चैव तुमुलो व्यनुनादयन्।' and 'कैर्मया सह योद्धव्यम्।' appear in the raw but some words may be uncertain ASR renderings of Sanskrit; I preserved them as-is except for spacing corrections elsewhere. Please review these lines for exact Sanskrit wording.",
+    "Segment 0: Several lines are duplicated in the raw transcript; I preserved the repetitions and corrected word boundaries and obvious ASR substitutions only.",
+    "Segment 1: Several short stretches appear garbled or uncertain due to ASR errors and should be reviewed manually for fidelity: 'चिकित्सा की कोष की सारी व्यवस्था' (unclear meaning in context) and 'उलटी-पुलटी कपी लंका जारी' (seems like ASR corruption).",
+    "Segment 1: The form 'महति स्यंदने स्थितौ' is preserved as in the raw; verify against the intended shloka/reading (possible alternate sandhi/syllabic forms).",
+    "Segment 2: कई संस्कृत/उपनिषद् उद्धरणों में ASR-संबंधी अनिश्चितताएँ प्रतीत होती हैं — उदाहरण: 'नो मेधया न बहुना श्रुतेन', 'व्यूढामनीकम्', 'महति स्यंदने स्थितः', और प्रारम्भिक वाक्यांशों में 'पाण्डवानीकम् / पाण्डवानाम् अनीकम् दृष्ट्वा' की पुनरावृत्ति। ये वाक्य/शब्द लेखनिक रूप से सत्यापन के लिए मानव समीक्षा मांगते हैं।",
+    "Segment 2: श्लोक-संबंधी या संस्कृत-अवधियों में संशोधन करने पर सिद्धान्तिक अर्थ बदल सकता है; जहाँ भी अर्थ परिवर्तन का जोखिम हो, मूल ट्रान्सक्रिप्ट बचाये रखा गया है.",
+    "Segment 3: Verify the Sanskrit phrasing in the opening sentence: 'उवाच। धृतराष्ट्रान् दृष्ट्वा इदं वाक्यं ऋषिकेशम् आह।' — the exact grammatical case and verb form may need confirmation against the intended quoted Sanskrit.",
+    "Segment 3: Confirm the identity and correct full name/spelling of the general referred to as 'विज' (Vij) — speaker's reference could be to a specific officer whose full name/initials should be verified.",
+    "Segment 3: Confirmed correction 'सेनयोर्' → 'सेनयोः' is a grammatical normalization; please review if a different sandhi form was intended in the quoted Sanskrit.",
+    "Segment 4: कुछ संस्कृत पाठों (विशेषकर 'यौत्स्यमानानवेक्षेऽहं' बनाम 'योत्स्यमानानवेक्षेऽहं') के रूप में विविधता मिलती है; मैंने पारंपरिक मुद्रित पाठ के अनुरूप 'यौत्स्यमानानवेक्षेऽहं यो येऽत्र समागताः' सुझाया। यदि आप किसी विशिष्ट सम्प्रदाय/एडिशन के पाठ का पालन कर रहे हैं तो कृपया जाँच कर पुष्टि करें।",
+    "Segment 4: पहले श्लोक में 'रणसमुद्यमे' का स्वरूप रखा गया है; यदि यहाँ कोई अन्य पारंपरिक रूप स्वीकार्य है तो कृपया रिव्यू कर अनुमोदित पाठ बताइए।",
+    "Segment 5: Please review the Sanskrit phrasing around 'सेनयोः उभयोः मध्ये' (originally 'सेनयोरumbuhanधे' variants) to confirm the preferred edition/wording for the quoted Gītā verse—correction made conservatively but medium confidence.",
+    "Segment 5: Multiple occurrences of the Sanskrit compound 'प्रियचिकीर्षवः' were normalized by removing spaces; verify against source edition if a spaced rendering was intentionally used in the recording.",
+    "Segment 6: Sanskrit phrase 'भीष्मद्रोणप्रमुखतः, सर्वेषां च महीक्षिताम्' retained as in raw; canonical wording uncertain. Please review Sanskrit phrase for accuracy (e.g., महीक्षिताम् vs. महीपताम् or अन्य).",
+    "Segment 6: The token 'अभियाय' in the list of संबोधन was kept as in raw ('अभियाय'); original speaker wording here is unclear — please verify intended appellation.",
+    "Segment 6: Phrase 'वो न खुन न रगड़ो, वो डिस्टर्ब होता है' appears garbled/colloquial; preserved verbatim. Please review and correct speaker's intended Hindi if needed.",
+    "Segment 6: Segment ends abruptly with 'त' — likely incomplete. Please review original audio for completion/end of sentence.",
+    "Segment 7: श्लोक-उद्धरणों में कुछ जगहों पर वक्ता ने बोलते हुए अस्थिर/आकस्मिक रूप से शब्द बदले या बीच में रुके; मैंने स्पष्ट संदर्भ वाले हिस्सों को पारंपरिक श्लोक-रूप में सुधारा (उदा. 'सेनयोः उभयोः मध्ये रथोत्तमम् स्थापयित्वा उवाच')। जहाँ अर्थ बदलने का जोखिम होता, वहां परिवर्तन सीमित रखा गया।",
+    "Segment 7: फिर भी शुरुआती प्रश्न-वाक्य ('तो किसने कहा कि ...') में मूल रिकॉर्डिंग का कुछ भाग अस्पष्ट था; मैंने अगले वाक्य में मौलिक श्लोक के अनुरूप सुधार किए, पर यदि मूल वक्तव्य में कोई विशेष शब्द/उक्ति मौजूद थी तो मानव-समीक्षा की सलाह दूँगा।",
+    "Segment 8: वाक्यांश 'सर्वे शाम च मही क्षितां भीष्म द्रोण प्रमुखतः' संभवतः संस्कृत श्लोक-सदृश है लेकिन अस्पष्ट है (शब्दों का क्रम/उच्चारण गड़बड़ लग रहा है)। सुनिश्चित करने के लिए मानव-समीक्षा आवश्यक।",
+    "Segment 8: वाक्य 'तब तो प्रवृत्ते शस्त्र संपाते नहीं' का स्वरूप अस्पष्ट/संभवतः अपूर्ण है; मूल वक्तव्य में टेबल/लॉजिकल संरचना की जाँच कर ली जानी चाहिए।",
+    "Segment 8: वाक्य 'सारा गोधन लेकर के वापस आए' (पूर्व संदर्भ में) संकेत कर सकता है कि 'गोधन' सही शब्द है या ASR ने कुछ और गलत सुना; मूल ऑडियो/वाक्य-प्रसंग से सत्यापन चाहिए.",
+    "Segment 9: The trailing fragment 'तत्र पश्यत् स्थि' appears to be an incomplete or misrecognized Sanskrit quotation/phrase. Preserved as-is; please review and verify intended wording.",
+    "Segment 9: Several colloquial/ambiguous phrases (e.g., 'रील', 'सरसंधान करना', 'इस सर्दी इतनी है कि साल में से हाथ को निकाले') were left unchanged due to uncertainty about the speaker's exact intended words.",
+    "Segment 10: Several Sanskrit shloka fragments were adjusted for sandhi/word boundaries. Corrections marked medium confidence where exact intended lexical forms (joined vs separated) were inferred from common Bhagavad-gītā phrasing. Please review those lines (especially 'तत्रापश्यत्स्थितान्पार्थः' and 'विषीदन्निदं अब्रवीत्') against the original audio or source text if exact fidelity to a quoted śloka is required.",
+    "Segment 11: वाक्य में 'ककहगघ' शब्द स्पष्ट रूप से ASR त्रुटि लगती है; मूल वक्तव्य क्या था यह मान्यक द्वारा जाँचने की आवश्यकता है।",
+    "Segment 11: वाक्यांश 'तो सब आए हुए नारायण' में 'नारायण' संभवतः एक भावपूर्ण उछलन है—यदि यह किसी विशिष्ट शब्द (जैसे 'नारायण' या अन्य) का उद्धरण है, तो कृपया स्रोत ऑडियो देखें।",
+    "Segment 12: Several nearby Sanskrit/Hindi fragments (e.g., 'परया कृपया आविष्टः सह कौन्तेयः', 'परया कृपया', and 'विषत्रु प्रत्य लगाया') remain as in the raw transcript because their intended exact Sanskrit/Hindi wording is ambiguous from the audio. Please review these phrases for possible correction to canonical Gītā text (e.g., verse 1.28: 'कृपयाविष्टो विषीदन्निदं वाक्यमुवाच सञ्जयः').",
+    "Segment 12: Phrase 'अपने ही मनोभाव के आज अधीन हो गया' contains 'आज' which may be an ASR error (possibly 'आज्ञा' or 'अपने'). Contextual review is suggested.",
+    "Segment 13: Several short Sanskrit phrases appear unclear or possibly misrecognized and need human verification: 'वो विषत्रु प्रत्य लगाया' — wording unclear; could be a misrecognition of a Sanskrit term related to 'विषाद'.",
+    "Segment 13: 'विषीदन् निदमब्रवीत' — string 'निदमब्रवीत' is likely misrecognized; please check the intended Sanskrit/quotation.",
+    "Segment 13: 'योत्सुम् समुपस्थितम्' — verify whether intended is 'योत्सुं समुपस्थितम्' or another form.",
+    "Segment 13: The final fragment 'न च शक्नोम' is truncated; the speaker appears to be reciting Bhagavadgita verses (1.29–1.30). Please review the original audio to restore the full phrase if needed.",
+    "Segment 14: The phrase 'न च शक्नोम्यवस्थातुं' was left as in the raw transcript. Classical Bhagavadgītā variants include forms like 'न च शक्नोम्यवस्थितुं' or 'न च शक्नोम्यवस्थितुम्'. This element could be standardized, but correction might alter classical shloka orthography — please review.",
+    "Segment 14: Several short Sanskrit shlokā/phrases were normalized for common sandhi/orthography (गाण्डीव, त्वक्चैव, पूर्णात्पुर्णमुदच्यते, श्रीगुरुभ्यो). If a specific edition/spelling is required, please verify against that authoritative text."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "सगोषोधार्तराष्ट्राणां हृदयानि व्यदारयत्।",
+      "corrected": "सघोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्।",
+      "category": "sanskrit",
+      "reason": "ASR merged words and misrecognized 'सघोषो'; corrected to expected Sanskrit phrase as confirmed by context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः।",
+      "corrected": "अथ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः।",
+      "category": "sentence_boundary",
+      "reason": "Missing space between 'व्यवस्थितान्' and 'दृष्ट्वा' due to ASR; added space to restore correct word boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः।",
+      "corrected": "अथ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः।",
+      "category": "sentence_boundary",
+      "reason": "Second occurrence of the same missing space corrected to preserve repetition while fixing word boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "ऋषीकेशं तदा वाक्यम् इदमाह महीपते।",
+      "corrected": "हृषीकेशं तदा वाक्यम्। इदमाह महीपते।",
+      "category": "asr_term",
+      "reason": "ASR misrecognized initial consonant ('ऋ' instead of 'हृष'); corrected to 'हृषीकेशं' and separated clauses for punctuation consistency.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत।",
+      "corrected": "सेनयोः उभयोः मध्ये रथं स्थापय मेऽच्युत।",
+      "category": "sanskrit",
+      "reason": "Corrected the common Sanskrit phrase 'सेनयोः उभयोः मध्ये' from ASR output.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "सेनयोरूबरुभयोर्मध्ये रथं स्थापय मेऽच्युत।",
+      "corrected": "सेनयोः उभयोः मध्ये रथं स्थापय मेऽच्युत।",
+      "category": "sanskrit",
+      "reason": "Second/duplicated occurrence normalized to the same correct Sanskrit phrase while preserving repetition.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "यावदेतान् निरीक्षेऽहं। योद्धुकामानवस्थितान्।",
+      "corrected": "यावदेतान् निरीक्षेऽहं योद्धुकामान् अवस्थितान्।",
+      "category": "sanskrit",
+      "reason": "Fixed spacing and combined clause to reflect the expected Sanskrit structure 'यावदेतान् निरीक्षेऽहं योद्धुकामान् अवस्थितान्।'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "यावदेतान् निरीक्षेऽहं। योद्धुकामानवस्थितान्।",
+      "corrected": "यावदेतान् निरीक्षेऽहं योद्धुकामान् अवस्थितान्।",
+      "category": "sanskrit",
+      "reason": "Second/duplicated occurrence similarly corrected to preserve repetition with proper word boundaries.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "सघोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्।",
+      "corrected": "सगोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्।",
+      "category": "sanskrit",
+      "reason": "High-confidence ASR misrecognition of the Sanskrit term; corrected to 'सगोषो' consistent with preceding context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "पांच जन्य उनके हाथ में है।",
+      "corrected": "पाञ्जन्य उनके हाथ में है।",
+      "category": "sanskrit",
+      "reason": "Corrected the name of Krishna's conch from a literal Hindi segmentation ('पांच जन्य') to the Sanskrit term 'पाञ्जन्य' as intended.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "प्रवृत्ते शस्त्रसंपाते",
+      "corrected": "प्रवृत्ते शस्त्र संपाते",
+      "category": "spelling",
+      "reason": "Inserted missing space between 'शस्त्र' और 'संपाते' for correct word separation.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "शस्त्र संपाते—ये शब्द लिखा है, भगवान वेदव्यास की कृपा है—प्रवृत्ते",
+      "corrected": "शस्त्र संपाते — ये शब्द लिखा है, भगवान वेदव्यास की कृपा है — प्रवृत्ते",
+      "category": "punctuation",
+      "reason": "Added spaces around em-dashes to improve sentence boundaries and readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "सेनयोर् उभयोर् मध्ये",
+      "corrected": "सेनयोः उभयोः मध्ये",
+      "category": "sanskrit",
+      "reason": "Sanskrit sandhi/ending normalization: 'सेनयोर्' is better represented as 'सेनयोः' in this context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "Amerikन सैटेलाइट",
+      "corrected": "अमेरिकन सैटेलाइट",
+      "category": "asr_term",
+      "reason": "Mixed-script recognition: 'Amerikन' normalized to Devanagari 'अमेरिकन'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "Vij",
+      "corrected": "विज",
+      "category": "proper_name",
+      "reason": "Transliterated the Latin-script name 'Vij' into Devanagari 'विज' to match surrounding Hindi text and preserve the spoken name.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "यावत् एतान् निरीक्षेऽहं योद्धुकामानवस्थितान्, कैर्मया सह योद्धव्यम् अस्मिन् रणसमुद्यमे।",
+      "corrected": "यावत एतान् निरीक्षेऽहं योद्धुकामान् अवस्थितान्। कैर्मया सह योद्धव्यमस्मिन् रणसमुद्यमे।",
+      "category": "sanskrit",
+      "reason": "Sanskrit श्लोक में शब्दों का विभाजन और विराम स्पष्ट किया गया (योद्धुकामान् अवस्थितान्; विभक्त वाक्य विभाजन) ताकि श्लोक का सामान्य प्रचलित पाठानुसार रूप मिले।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "पंक्ति से अवस्थित हैं",
+      "corrected": "पंक्ति में अवस्थित हैं",
+      "category": "asr_term",
+      "reason": "हिंदी में 'पंक्ति से' ASR त्रुटि प्रतीत होती है; संदर्भानुसार सही वाक्यांश 'पंक्ति में अवस्थित' है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः। धार्तराष्ट्रस्य दुर्बुद्धेः युद्धे प्रियचिकीर्षवः।",
+      "corrected": "यौत्स्यमानानवेक्षेऽहं यो येऽत्र समागताः। धार्तराष्ट्रस्य दुर्बुद्धेः युद्धे प्रियचिकीर्षवः।",
+      "category": "sanskrit",
+      "reason": "श्लोक के पारंपरिक पाठानुसार 'यौत्स्यमानानवेक्षेऽहं यो येऽत्र समागताः' रूप अधिक सुस्पष्ट है; ASR ने 'य एतेऽत्र' रूप दीया था जिसे शुद्ध किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः। धार्तराष्ट्रस्य दुर्बुद्धेः युद्धे प्रियचिकीर्षवः।",
+      "corrected": "यौत्स्यमानानवेक्षेऽहं यो येऽत्र समागताः। धार्तराष्ट्रस्य दुर्बुद्धेः युद्धे प्रियचिकीर्षवः।",
+      "category": "sanskrit",
+      "reason": "ऊपर की तरह, पाठ की पुनरावृत्ति में भी 'य एतेऽत्र' को पारंपरिक पाठानुसार सुधारा गया। (दोहराए गए श्लोक में समान सुधार बनाए रखा गया)।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "प्रिय चिकीर्षवः",
+      "corrected": "प्रियचिकीर्षवः",
+      "category": "sanskrit",
+      "reason": "संस्‍कृत समास/सम्पुट लेखन में 'प्रियचिकीर्षवः' एक साथ लिखा जाना सामान्य है; ASR ने बीच में जगह डाली थी।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "दुर्बुद्धेः प्रिय चिकीर्षवः।",
+      "corrected": "दुर्बुद्धेः प्रियचिकीर्षवः।",
+      "category": "sanskrit",
+      "reason": "Combined Sanskrit compound 'प्रियचिकीर्षवः' (removed erroneous space) to reflect the intended shloka term.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "दुर्बुद्धेः प्रिय चिकीर्षवः।",
+      "corrected": "दुर्बुद्धेः प्रियचिकीर्षवः।",
+      "category": "sanskrit",
+      "reason": "Repeated occurrence of the same Sanskrit phrase; removed space to form correct compound.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "ये एते, ये जो, ये एते समागताः प्रिय चिकीर्षवः,",
+      "corrected": "ये एते, ये जो, ये एते समागताः प्रियचिकीर्षवः,",
+      "category": "sanskrit",
+      "reason": "Corrected spacing in the Sanskrit compound 'प्रियचिकीर्षवः'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "I will know who are you.",
+      "corrected": "I will know who you are.",
+      "category": "asr_term",
+      "reason": "Corrected English word order to the standard quoted sentence (likely ASR grammar error).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "Tell the name of your friend, I will come to know who are you.",
+      "corrected": "Tell the name of your friend, I will come to know who you are.",
+      "category": "asr_term",
+      "reason": "Corrected English word order in the quoted sentence (ASR error).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "The man is known by his company he keeps.",
+      "corrected": "The man is known by the company he keeps.",
+      "category": "asr_term",
+      "reason": "Fixed English idiom/word order (likely ASR transcription issue).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "ग्यारह क्षौणी उधर हैं।",
+      "corrected": "ग्यारह अक्षौहिणी उधर हैं।",
+      "category": "sanskrit",
+      "reason": "Corrected the technical/military term to 'अक्षौहिणी' (standard term in the Bhagavadgita context).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "सेनयोरुभयोर्मधे।",
+      "corrected": "सेनयोः उभयोः मध्ये।",
+      "category": "sanskrit",
+      "reason": "Separated and corrected Sanskrit phrase to a more standard classical form ('सेनयोः उभयोः मध्ये') for clarity.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "उवाच पार्थ पश्यैतान्, समवेतान् कुरूनिति।",
+      "corrected": "उवाच पार्थ पश्यैतान् समवेतान् कुरूनिति।",
+      "category": "punctuation",
+      "reason": "Removed comma to reflect continuous Sanskrit phrase and improve sentence boundary.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "संजय बीच में बोलते हैं महाराज धृतराष्ट्र से, महाराज, एवमुक्तो हृषीकेशः।",
+      "corrected": "संजय बीच में बोलते हैं, महाराज धृतराष्ट्र से: \"एवमुक्तो हृषीकेशः।\"",
+      "category": "punctuation",
+      "reason": "Inserted sentence break and quotation punctuation to mark direct speech and clarify sentence structure.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "हे भारत, भारत शब्द किसके लिए?",
+      "corrected": "हे भारत — 'भारत' शब्द किसके लिए?",
+      "category": "punctuation",
+      "reason": "Added punctuation to set off vocative 'हे भारत' and quote the word 'भारत' for clarity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "पहले भी कई संबोधन आए हैं, पृथ्वीपते, महीपते, अभियाय, भारत, हे भारत, हे भारत, हे महाराज।",
+      "corrected": "पहले भी कई संबोधन आए हैं — पृथ्वीपते, महीपते, अभियाय, भारत, हे भारत, हे भारत, हे महाराज।",
+      "category": "punctuation",
+      "reason": "Adjusted punctuation to present the list of appellations more clearly.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "गुडाकेशेन, अर्जुन का एक नाम है गुडाकेश।",
+      "corrected": "गुडाकेशेन, अर्जुन का एक नाम है — गुडाकेश।",
+      "category": "punctuation",
+      "reason": "Inserted dash to set off explanatory apposition for clarity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "ये अर्जुन का नाम तब पड़ा जब ये शिष्य के रूप में तो आचार्य द्रोण के चरणों में धनुर्विद्या सीख रहे थे।",
+      "corrected": "ये अर्जुन का नाम तब पड़ा, जब ये शिष्य के रूप में आचार्य द्रोण के चरणों में धनुर्विद्या सीख रहे थे।",
+      "category": "asr_term",
+      "reason": "Removed extraneous 'तो' (likely ASR artifact) and added comma to improve sentence boundary.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "शब्द भेदी बाण",
+      "corrected": "शब्दभेदी बाण",
+      "category": "spelling",
+      "reason": "Joined compound word for standard Sanskrit/Hindi compound form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "थोड़ा भर पता चला कि अर्जुन जो हैं शब्द भेदी बाण का अभ्यास कर रहे हैं।",
+      "corrected": "थोड़ा-सा पता चला कि अर्जुन जो हैं, शब्दभेदी बाण का अभ्यास कर रहे हैं।",
+      "category": "asr_term",
+      "reason": "Replaced colloquial 'थोड़ा भर' with 'थोड़ा-सा' and added comma for clarity; tightened phrasing while preserving meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "संजय बीच में बोलते हैं महाराज धृतराष्ट्र से, महाराज, एवमुक्तो हृषीकेशः।",
+      "corrected": "संजय बीच में बोलते हैं, महाराज धृतराष्ट्र से: \"एवमुक्तो हृषीकेशः।\"",
+      "category": "sentence_boundary",
+      "reason": "Clarified placement of direct speech and add quote marks to indicate Sanjay's utterance (improves sentence boundary).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "तो उनको उपाधि मिली निद्रा-विजयी।",
+      "corrected": "तो उनको उपाधि मिली — निद्रा-विजयी।",
+      "category": "punctuation",
+      "reason": "Added dash to set off the explanatory title 'निद्रा-विजयी' as an appositive, improving clarity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "पिनीद नहीं आती थी",
+      "corrected": "नींद नहीं आती थी",
+      "category": "asr_term",
+      "reason": "आम बोलचाल में 'नींद' ही प्रयुक्त होता है; 'पिनीद' ASR त्रुटि लगती है और संदर्भ (नींद-विजयी चर्चा) से स्पष्ट है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "कम्प्लेन",
+      "corrected": "कंप्लेन",
+      "category": "spelling",
+      "reason": "देवनागरी में 'कंप्लेन' का सामान्य उच्चारण/लेखन; मूल शब्द अंग्रेजी 'complain' का हिंदी रूप।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "अपना सोती थी",
+      "corrected": "सो जाती थी",
+      "category": "asr_term",
+      "reason": "'अपना सोती थी' वाक्यरचना अर्थहीन लगती है; संदर्भानुसार आशय 'वहाँ थोड़ी देर बाद सो जाती थी' ही है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "सेनयोरभोयर्मध्ये स्थापय मे अच्युत रथम्?",
+      "corrected": "तो किसने कहा कि सेनयोः उभयोः मध्ये रथोत्तमम् स्थापय मे?",
+      "category": "asr_term",
+      "reason": "यह भाग स्पष्ट रूप से ASR द्वारा मिलकर जुदा हुआ है; संदर्भ में आगे पाठ में वही श्लोक स्पष्ट रूप से आता है (सेनयोः उभयोः मध्ये रथोत्तमम्), इसलिए इसे समन्वयित और पठनीय रूप में सुधारा गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "ऋषिकेशः।",
+      "corrected": "हृषीकेशः।",
+      "category": "sanskrit",
+      "reason": "शब्द संदर्भ (गुडाकेश, हृषीकेश) के आधार पर 'हृषीकेशः' सर्वमान्य सही रूप है; 'ऋषिकेश' ASR त्रुटि प्रतीत होती है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "सेनयोरुभयोर्मध्ये रथोत्तमं स्थापयित्वा वाच।",
+      "corrected": "सेनयोः उभयोः मध्ये रथोत्तमम् स्थापयित्वा उवाच।",
+      "category": "sanskrit",
+      "reason": "श्लोक-रूप में सही संधि-निर्माण और पारंपरिक रूप 'उभयोः', 'रथोत्तमम्', 'उवाच' स्पष्ट हैं; ASR ने कुछ अक्षर मिसरिप किया था।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "स्थापयित्वा वाच, स्थापित करके—अब ये स्थापयित्वा ऐसी क्रिया है जो अगली क्रिया की सूचना देती है—स्थापयित्वा वाच, स्थापित करके फिर बोले।",
+      "corrected": "स्थापयित्वा उवाच, स्थापित करके फिर बोले।",
+      "category": "sanskrit",
+      "reason": "वाक्य में दोहराव और 'वाच' के स्थान पर पारंपरिक 'उवाच' अपेक्षित है; अनावश्यक पुनरावृत्ति संक्षेपित की गई केवल जहां स्पष्ट था।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "प्रथा के पुत्र हो",
+      "corrected": "पृथा के पुत्र हो",
+      "category": "sanskrit",
+      "reason": "पार्थ (Partha) का अर्थ है 'पृथा के पुत्र' — यहाँ 'प्रथा' ASR/उच्चारण त्रुटि है; शाब्दिक श्रोत 'पृथा' उचित है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "कुरून्, ये सब के सब कौरव दल के लोग हैं।",
+      "corrected": "कुरून् — ये सब के सब कौरव दल के लोग हैं।",
+      "category": "punctuation",
+      "reason": "Inserted stronger delimiting punctuation to reflect the spoken pause/contrast (improves sentence boundary and clarity).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "भीष्मद्रोणप्रमुखतः।",
+      "corrected": "भीष्म-द्रोण प्रमुखतः।",
+      "category": "sanskrit",
+      "reason": "Separated compound for clarity (भीष्म और द्रोण को प्रमुख बताया जा रहा है); spacing/word-boundary correction in a Sanskrit/Hindi compound.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "स्नेह स्निग्ध किया",
+      "corrected": "स्नेह-स्निग्ध किया",
+      "category": "other",
+      "reason": "Joined as a compound with hyphen to reflect the spoken adjectival compound (clarifies phrase structure).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "अर्जुन तो कभी अपने को अर्जुन बोलता नहीं था, जब उसे पूछा जाता था, कौन हो तुम?",
+      "corrected": "अर्जुन तो कभी अपने को अर्जुन बोलता नहीं था; जब उसे पूछा जाता था, कौन हो तुम?",
+      "category": "punctuation",
+      "reason": "Changed comma to semicolon to mark the subordinate clause boundary and improve sentence structure.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "द्रोण शिष्य अर्जुन, ये उपाधि थी उसकी अपनी।",
+      "corrected": "'द्रोणशिष्य' अर्जुन, ये उपाधि थी उसकी अपनी।",
+      "category": "sanskrit",
+      "reason": "Combined as the conventional epithet 'द्रोणशिष्य' (title referring to his identity as Drona's student); reflects intended proper term.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "महाधनुर्धर थे",
+      "corrected": "महान धनुर्धर थे",
+      "category": "spelling",
+      "reason": "Probable ASR concatenation/mistranscription. Context indicates the intended phrase is 'महान धनुर्धर' (great archer).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "इंद्रांशुए",
+      "corrected": "इंद्रांश",
+      "category": "sanskrit",
+      "reason": "Apparent ASR corruption of Sanskrit term 'इंद्रांश' (of Indra). Corrected to a standard form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "सेनयोरुभयोर् मध्ये,",
+      "corrected": "सेनयोः उभयोः मध्ये,",
+      "category": "sanskrit",
+      "reason": "Separated and corrected Sanskrit sandhi to standard form 'सेनयोः उभयोः' from the ASR-merged 'सेनयोरुभयोर्'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तत्र पश्यत् स्थितान् पार्थः।",
+      "corrected": "तत्रापश्यत्स्थितान्पार्थः।",
+      "category": "sanskrit",
+      "reason": "Normalized the Sanskrit phrase to the common Bhagavad-gītā phrasing (joined/sandhi form).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "सेनयोरुभयोरपि।",
+      "corrected": "सेनयोः उभयोः अपि।",
+      "category": "sanskrit",
+      "reason": "Separated sandhi to standard Sanskrit 'सेनयोः उभयोः अपि' from ASR-merged form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "विषीदन्निदमब्रवीत्।",
+      "corrected": "विषीदन्निदं अब्रवीत्।",
+      "category": "sanskrit",
+      "reason": "Inserted word boundary to reflect intended Sanskrit phrase 'विषीदन्निदं अब्रवीत्'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "श्वशुरान् सुहृदश् चैव।",
+      "corrected": "श्वशुरान् सुहृदश्चैव।",
+      "category": "sanskrit",
+      "reason": "Corrected sandhi by joining 'सुहृदश्' and 'चैव' to 'सुहृदश्चैव' to match Sanskrit conjunct form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "तान् कौन्तेयः समीक्ष्य, तान् सह कौन्तेयः समीक्ष्य,",
+      "corrected": "तान् कौन्तेयः समीक्ष्य —",
+      "category": "asr_term",
+      "reason": "Repeated phrase appears to be an ASR duplication; reduced to a single occurrence to restore intended phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "स्वसुरान",
+      "corrected": "श्वशुरान्",
+      "category": "sanskrit",
+      "reason": "Corrected to the standard Sanskrit form श्वशुरान् (as in the Bhagavadgītā verse), which fits the context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "सखींस् तथा",
+      "corrected": "सखीन् तथा",
+      "category": "sanskrit",
+      "reason": "Adjusted to the conventional Sanskrit form 'सखीन्' consistent with the list of relations in the verse.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "हृदय में पूज्य भाव है, हृदय में कृतज्ञता का भाव भरा हुआ है, तो एकदम सारी दृष्टि बदलती है। तत्र पार्थः तत्र अपश्यत्। किनको देखा? पितॄन्। अपने पिता तुल्य, पिता, चाचा, ताऊ जैसे लोगों को देखा।",
+      "corrected": "हृदय में पूज्य भाव है, हृदय में कृतज्ञता का भाव भरा हुआ है, तो एकदम सारी दृष्टि बदलती है। तत्र पार्थः तत्र अपश्यत्। किनको देखा? पितॄन् — अपने पिता तुल्य, पिता, चाचा, ताऊ जैसे लोगों को देखा।",
+      "category": "punctuation",
+      "reason": "Inserted punctuation (em dash) to clarify the spoken list structure and improve sentence boundaries while preserving original wording.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "छुद्र वस्तु",
+      "corrected": "क्षुद्र वस्तु",
+      "category": "asr_term",
+      "reason": "ASR misrecognized the Sanskrit/Hindi word 'क्षुद्र' as 'छुद्र'; 'क्षुद्र' (small/trivial) fits context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "भंवंडर",
+      "corrected": "भँवंडर",
+      "category": "spelling",
+      "reason": "Normalized nasalization in common Hindi spelling for 'भँवंडर' (whirlwind/whirlpool).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "कृपायैव अस्रुल्टली होके।",
+      "corrected": "कृपयाविष्टः।",
+      "category": "sanskrit",
+      "reason": "Speaker is quoting Bhagavadgita; corrected to the recognizable Sanskrit phrase 'कृपयाविष्टः'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "विषीदन् निदमब्रवीत,",
+      "corrected": "विषीदन्निदमब्रवीत्,",
+      "category": "sanskrit",
+      "reason": "Corrected to the expected Sanskrit phrasing from the Gita (sandhi and spelling) 'विषीदन्निदमब्रवीत्'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "कृपया परया आविष्टः",
+      "corrected": "परया कृपया आविष्टः",
+      "category": "sanskrit",
+      "reason": "Phrase order corrected to the conventional Sanskrit phrasing (matches prior context).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "मने उसमें एक निरंतरता है",
+      "corrected": "माने उसमें एक निरंतरता है",
+      "category": "asr_term",
+      "reason": "Corrected colloquial/ASR misrecognition 'मने' -> 'माने' (meaning 'that is to say').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "वेपथुश्च शरीरे मे",
+      "corrected": "वेपथुश्च शरीरे मम",
+      "category": "sanskrit",
+      "reason": "Corrected to the expected Sanskrit/Hindi mix 'शरीरे मम' (my body) consistent with the Gita verse being cited.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 14,
+      "original": "शरीरे मे",
+      "corrected": "शरीरे में",
+      "category": "spelling",
+      "reason": "Corrected Hindi postposition spelling to standard 'में'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "गांडीवं स्रंसते हस्तात्।",
+      "corrected": "गाण्डीवं स्रंसते हस्तात्।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit transliteration of 'गाण्डीवं' to standard form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "यह गांडीव मेरा परम प्रिय धनुष...",
+      "corrected": "यह गाण्डीव मेरा परम प्रिय धनुष...",
+      "category": "sanskrit",
+      "reason": "Made the same Sanskrit orthographic correction for consistency ('गाण्डीव').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "त्वक् चैव परिदह्यते,",
+      "corrected": "त्वक्चैव परिदह्यते,",
+      "category": "sanskrit",
+      "reason": "Applied sandhi form 'त्वक्चैव' common in the shloka; corrected spacing/compound.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "भ्रमतीव च मे मनः, मेरा मन तो घूम रहा है इस समय।",
+      "corrected": "भ्रमतीव च मे मनः। मेरा मन तो घूम रहा है इस समय।",
+      "category": "punctuation",
+      "reason": "Separated clauses into two sentences for clearer sentence boundary while preserving speaker's meaning and repetition.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "ॐ... पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते।",
+      "corrected": "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पुर्णमुदच्यते।",
+      "category": "sanskrit",
+      "reason": "Restored expected sandhi to the pūrṇa-mantra ('पूर्णात्पुर्णमुदच्यते') consistent with standard recension.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "ॐ श्री गुरुभ्यो नमः।",
+      "corrected": "ॐ श्रीगुरुभ्यो नमः।",
+      "category": "sanskrit",
+      "reason": "Combined 'श्री' with 'गुरुभ्यो' as a common Sanskrit compound form.",
+      "confidence": "medium"
+    }
+  ]
+}

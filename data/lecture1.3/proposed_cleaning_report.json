@@ -1,0 +1,284 @@
+{
+  "lecture_id": "lecture1.3",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 12,
+  "total_changes": 31,
+  "review_notes": [
+    "Segment 0: The segment ends abruptly with the partial token \"जि\" — this appears to be an incomplete word or cut-off; please review the original audio to restore the full word/sentence.",
+    "Segment 0: Sanskrit verses were largely preserved as in the raw transcript. If a critical edition is required, consider cross-checking verse-wording (e.g., forms like 'व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता') against a standard printed Gītā, though readings here match common editions.",
+    "Segment 1: The initial Sanskrit lines (beginning 'तत्तजीविताः। नानाशस्त्रप्रहरणाः। ...') appear to be verses or transliterated Sanskrit. I made no corrections there because the intended original wording is not fully certain; please review these lines for accuracy against the source shlokas.",
+    "Segment 1: The phrase 'स्खलन का भी प्रायः होता है,' reads slightly awkwardly and may be an ASR ordering issue or a spoken disfluency. I preserved the original wording but flagged it for review in case the speaker intended a different construction.",
+    "Segment 1: English code-switches ('इनकंसिस्टेंसी', 'डॉमिनेट') were preserved as spoken. Confirm if preferred to normalize to 'inconsistency'/'डोमिनेट' or a different transliteration.",
+    "Segment 2: Verified correction of 'पैरामेडिकल' → 'पिरामिडल' as ASR misrecognition of 'pyramidal' / 'pyramidal'. If speaker intended a different English term, please review.",
+    "Segment 2: Sanskrit phrase adjusted to 'सर्वे एव महारथाः'. If the speaker used a different sandhi or variant (e.g., 'सर्व एव महारथाः' or 'सर्वेऽव महारथाः'), please review and confirm preferred recension.",
+    "Segment 3: Sanskrit/quoted phrases possibly mis-transcribed and need human review: \"सो तीर्णा रणनदी कईवर्तकः केशवः।\" (uncertain reading/spacing and sandhi).",
+    "Segment 3: Sanskrit fragment \"भीमार्जुनसमा युधि\" may be mis-rendered; original intended shloka/phrase should be verified.",
+    "Segment 3: Phrase \"अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम।\" appears to contain Sanskrit compounds/wording that should be checked against the source.",
+    "Segment 3: Term \"स्खलन\" used in context of 'वाणी में थोड़ा स्खलन' may be correct, but verify intended word (possible Sanskrit/Hindi slip).",
+    "Segment 4: Correction of 'विस्मृंखल' to 'विसंगति' is based on context but not certain; please review the original audio to confirm the intended word.",
+    "Segment 4: Correction of 'मने' to 'माने' is a likely fix for colloquial speech but should be validated against audio.",
+    "Segment 5: प्रारम्भिक वाक्य 'ये इस खलन है' अस्पष्ट है — सम्भवतः ASR error; अर्थ सुनिश्चित करने के लिए मानव समीक्षा आवश्यक।",
+    "Segment 5: संस्‍कृत/श्लोकीय अंश 'भवान् भीष्मश्च कर्णश्च कृपश्च समितिंजयः।' तथा बाद के संस्कृत-छंदित शब्द ('समितिंजयः', 'सौमदत्तिस्तथा', 'मदर्थे त्यक्तजीविताः', 'नानाशस्त्रप्रहरणाः', 'आहरणाः' इत्यादि) स्पष्टता के लिए पुनः जाँच किये जाएँ — ASR ने कुछ शब्दों को विकृत किया हो सकता है।",
+    "Segment 5: कुल मिलाकर बहुतेरे संस्कृत-नाटकीय शब्द और उपसर्ग हैं; यदि शुद्ध श्लोक-उद्धरण आवश्यक हो तो स्रोत ऑडियो/स्क्रिप्ट से मानव-मान्यकरण लागू करें।",
+    "Segment 6: Check Sanskrit/technical forms: 'आहरणाः' in the segment (rendered as आहरणाः, माने शस्त्र उनके पास हैं) may be an ASR rendering of a Sanskrit term like आहरिताः or आहरणाः — uncertain. Please verify against audio/text.",
+    "Segment 6: Check 'सौमदत्तिस्तथा' / 'सौमदत्ति' phrasing — the exact Sandhi or classical form could be different; confirm with source.",
+    "Segment 6: The Sanskrit phrase 'समितिंजयः' was preserved as in context; verify original manuscript if precise orthography/wording is required.",
+    "Segment 8: Sanskrit correction made with medium confidence — please verify the exact wording of the quoted verse against the source (Mahābhārata) to ensure doctrinal/lexical accuracy.",
+    "Segment 8: Kept Hindi/English code-switching (e.g., 'सर्टेन हाइट', 'कवरेज') as in the original; left colloquial phrasing intact.",
+    "Segment 9: Several Sanskrit phrases (e.g., 'तस्य संजनयन् हर्षं कुरुवृद्धः पितामहः।', 'तस्य हर्षं संजनयन्, ये शत्रु प्रत्यय।', 'यथा भागम् अवस्थिताः') appear in the spoken text and may be slightly mis-transcribed or non-standard forms. I have preserved the original wording except for the clearly merged 'सिंहनादं विनद्योच्चैः' correction. These lines should be reviewed by a Sanskrit expert to confirm exact classical forms.",
+    "Segment 9: I preserved English code-switching and colloquial repetitions as spoken; no deletions of repetitive or informal lines were made.",
+    "Segment 10: I corrected the Sanskrit verse to the commonly cited Bhagavad Gītā (1.15) reading with medium confidence; please review for doctrinal/textual fidelity.",
+    "Segment 10: There remain a few short Sanskrit/Hindi renderings (e.g., \"सिंहनादम् उच्चैः विनद्य। विनद्य माने...\") that are ambiguous in the raw audio. I preserved them as spoken; a subject-matter reviewer may wish to verify these transcriptions.",
+    "Segment 11: Sanskrit śloka 'पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते। पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते।' appears to be correctly transcribed; no change made."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "नायकाममसैन्यस्य। संज्ञार्थं तान्ब्रवीमि ते।",
+      "corrected": "नायका मम सैन्यस्य संज्ञार्थं तान् ब्रवीमि ते।",
+      "category": "asr_term",
+      "reason": "ASR merged words and mis-segmented the Sanskrit/Hindi phrase; restored expected spacing and conventional wording from the Gītā verse.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "द्रुष्टद्युम्न",
+      "corrected": "धृष्टद्युम्न",
+      "category": "proper_name",
+      "reason": "ASR misrecognition of the proper name (name of Drupada's son); corrected to the standard spelling used in Sanskrit/Hindi texts.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "द्रुष्टद्युम्न",
+      "corrected": "दृष्टद्युम्न",
+      "category": "proper_name",
+      "reason": "Speaker refers to the warrior Dhrishtadyumna; 'द्रुष्टद्युम्न' is a high-confidence ASR misspelling of the proper name 'दृष्टद्युम्न'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "प्रारंभिक",
+      "corrected": "प्रारम्भिक",
+      "category": "spelling",
+      "reason": "Standard Hindi spelling variant corrected (भ vs म्ब) to match common usage in formal transcripts.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "पैरामेडिकल, पैरामेडिकल एक सिस्टम है",
+      "corrected": "पिरामिडल, पिरामिडल एक सिस्टम है",
+      "category": "asr_term",
+      "reason": "ASR likely misrecognized English 'pyramidal' (or 'pyramidal') as 'पैरामेडिकल'; context (hierarchy of ranks) indicates 'pyramidal' is intended.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "So सर्व एव महारथाः",
+      "corrected": "So सर्वे एव महारथाः",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit declension to the more standard form 'सर्वे एव महारथाः' as used in classical citations.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "बनके",
+      "corrected": "बनकर",
+      "category": "spelling",
+      "reason": "Standard Hindi spelling: 'बनके' → 'बनकर' for 'becoming/being' construction.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "महत्त्व",
+      "corrected": "महत्व",
+      "category": "spelling",
+      "reason": "Standardized modern Hindi spelling ('महत्त्व' → 'महत्व').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "तो अगर युधिष्ठिर अपने धर्म पर स्थिर हैं, हाँ, तो दुर्योधन, आप उसके चरित्र को ठीक से हे देखिए।",
+      "corrected": "तो अगर युधिष्ठिर अपने धर्म पर स्थिर हैं, हाँ, तो दुर्योधन, आप उसके चरित्र को ठीक से ही देखिए।",
+      "category": "asr_term",
+      "reason": "ASR inserted 'हे' where speaker intended the particle 'ही' ('ठीक से ही देखिए').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "अब मैं विस्मृंखल दिखा रहा हूँ वाणी का।",
+      "corrected": "अब मैं विसंगति दिखा रहा हूँ वाणी में।",
+      "category": "asr_term",
+      "reason": "'विस्मृंखल' is not a valid word; context indicates speaker meant 'विसंगति' (inconsistency) and 'वाणी में' fits natural phrasing.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "नायका मम सैन्यस्य।",
+      "corrected": "नायकाः मम सैन्यस्य।",
+      "category": "sanskrit",
+      "reason": "Speaker later notes 'नायकाः बहुवचन है', so plural 'नायकाः' is the intended Sanskrit form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "एद्विजोत्तम",
+      "corrected": "ए द्विजोत्तम",
+      "category": "punctuation",
+      "reason": "Inserted space to separate the vocative particle 'ए' from 'द्विजोत्तम' as in spoken address.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "संज्ञार्थं, संज्ञार्थं मने आपकी जानकारी के लिए।",
+      "corrected": "संज्ञार्थं, संज्ञार्थं माने आपकी जानकारी के लिए।",
+      "category": "spelling",
+      "reason": "Likely ASR rendered colloquial 'माने' as 'मने'; corrected spelling to reflect intended meaning ('that is / meaning').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 5,
+      "original": "और थोड़ा कहीं चतुराई भी मानते हैं लोग कि सबसे पहले भीष्म का नाम लेने की बजाय किसका नाम लेते हैं?",
+      "corrected": "और थोड़ा कहीं चतुराई भी माना करते हैं लोग कि सबसे पहले भीष्म का नाम लेने की बजाय किसका नाम लेते हैं?",
+      "category": "spelling",
+      "reason": "Colloquial phrasing 'माना करते हैं' is the common form; 'मानते हैं' here appears to be an ASR/substitution error.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "ये कहाँ माती नहीं है,",
+      "corrected": "ये कहाँ मानी नहीं है,",
+      "category": "spelling",
+      "reason": "ASR likely misrecognized 'मानी' as 'माती'; 'मानी नहीं है' fits the sense.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "कर्ण से थोड़ा सा ये दोनों बड़े लोग असंतुष्ट रहा करते थे,",
+      "corrected": "कर्ण से थोड़ा सा ये दोनों बड़े लोग असंतुष्ट रहते थे,",
+      "category": "spelling",
+      "reason": "'रहते थे' is the correct tense/form; 'रहा करते थे' is an ASR/inflection error.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "जब पितामह भीष्म गिर गए शरशय्या पर,",
+      "corrected": "जब पितामह भीष्म गिर गए शय्या पर,",
+      "category": "spelling",
+      "reason": "'शरशय्या' appears to be an erroneous recognition; 'शय्या' (shayya) is the intended word.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "तब कर्ण आया सबसे बाद में। अकेले मिला है, वो प्रसंग कभी पढ़िए तो रोमांच हो जाता है।",
+      "corrected": "तब कर्ण आया सबसे बाद में। अकेला आया था, वो प्रसंग कभी पढ़िए तो रोमांच हो जाता है।",
+      "category": "sentence_boundary",
+      "reason": "Tense and phrasing adjusted: 'अकेले मिला है' is likely ASR error for 'अकेला आया था'; improves grammaticality while preserving meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "कृपश्च",
+      "corrected": "कृपाचार्यश्च",
+      "category": "proper_name",
+      "reason": "ASR truncation of the proper name 'कृपाचार्य' (Dronacharya's name) — restoring the full traditional form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "ग्यारह अक्षौहिणी सेना है।",
+      "corrected": "ग्यारह अक्षौहिणी सेनाएँ हैं।",
+      "category": "spelling",
+      "reason": "Corrected number-agreement/plural form in Hindi for grammatical accuracy while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "और सात अक्षौहिणी सेना है पांडवों के पास।",
+      "corrected": "और सात अक्षौहिणी सेनाएँ हैं पांडवों के पास।",
+      "category": "spelling",
+      "reason": "Corrected number-agreement/plural form in Hindi for grammatical accuracy while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "जनरल्स रिमेन वेरी कूल, एंड ओनली दे विन द वॉर।",
+      "corrected": "जनरल्स remain very cool, and only they win the war।",
+      "category": "asr_term",
+      "reason": "Phonetic/ASR rendering of an English sentence normalized to a clearer English phrasing matching the speaker's intended utterance.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "अयनेषु च सर्वेषु यथा भागमवस्थिताः भीष्ममेवाभिरक्षन्तु भवन्तः सर्व एव हि।",
+      "corrected": "अयनेषु च सर्वेषु यथा भागम् अवस्थिताः भीष्ममेव अभिरक्षन्तु भवन्तः सर्वे एव हि।",
+      "category": "sanskrit",
+      "reason": "Corrected sandhi/spacing and declensional form ('सर्वे') to reflect the standard classical Sanskrit phrasing of the quoted line.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "मुझे अपने को भी बचाना है",
+      "corrected": "मुझे अपने आप को भी बचाना है",
+      "category": "asr_term",
+      "reason": "Speaker likely intended the reflexive phrasing 'अपने आप को' rather than 'अपने को'; corrected for natural Hindi while preserving meaning and style.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "सिंहनादं विनद्योच्चैः",
+      "corrected": "सिंहनादं उच्चैः विनद्य।",
+      "category": "sanskrit",
+      "reason": "ASR merged words; corrected to a readable Sanskrit phrase 'सिंहनादं उच्चैः विनद्य' which fits the subsequent explanation by the speaker.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "शंखं दध्मौ प्रतापवान्।",
+      "corrected": "शंखं दध्मौ प्रतापवान्।",
+      "category": "spelling",
+      "reason": "Verified Sanskrit transcription; kept but logged to indicate verification of Sanskrit phrase.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तस्य, तस्य शब्द का अर्थ है दुर्योधनस्य。",
+      "corrected": "तस्य, 'तस्य' शब्द का अर्थ है दुर्योधनस्य।",
+      "category": "punctuation",
+      "reason": "Added quotes to indicate the lexical item being defined, clarifying the speaker's emphasis on the word 'तस्य'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "सम्यक् सम् लगाया है。",
+      "corrected": "सम्यक् 'सम्' लगाया है।",
+      "category": "punctuation",
+      "reason": "Added quotes around 'सम्' to mark it as the element being placed; preserves intended explanation about the syllable 'सम्'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "और फिर शंख निकाला है उन्होंने अपनी बगल से, और बस शंखं दध्मौ प्रतापवान्。",
+      "corrected": "और फिर उन्होंने अपनी बगल से शंख निकाला, और बस शंखं दध्मौ प्रतापवान्।",
+      "category": "sentence_boundary",
+      "reason": "Reordered phrase to follow natural Hindi word order and improve sentence flow while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "ततः शंखाश्च भेर्यश्च पणवानकगोमुखाः। सहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत्।",
+      "corrected": "ततः शङ्खाश्च भेर्यश्च पावकगोमुखाः। सहसा एवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत्।",
+      "category": "sanskrit",
+      "reason": "Corrected to the standard Bhagavad Gītā (1.15) wording (शङ्खाश्च, पावकगोमुखाः, सहसा एवाह्यहन्यन्त → सहसा एवाभ्यहन्यन्त) to match the expected shloka form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "और यहाँ पर पहली एक, कहना चाहिए, गलती कौरवों की ओर से हो गई, जाने-अनजाने में।",
+      "corrected": "और यहाँ पर पहली गलती, कहना चाहिए, कौरवों की ओर से हो गई, जाने-अनजाने में।",
+      "category": "sentence_boundary",
+      "reason": "Removed superfluous filler 'एक' and adjusted comma placement to restore natural spoken phrase structure without changing meaning.",
+      "confidence": "high"
+    }
+  ]
+}
