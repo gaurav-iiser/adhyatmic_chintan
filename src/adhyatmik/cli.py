@@ -9,6 +9,7 @@ from .pipeline import process_file, process_youtube
 from .reviewer import review_lecture
 from .enrichment import enrich_lecture
 from .rag_chunker import chunk_lecture
+from .indexing import build_index
 
 app = typer.Typer(help="Adhyatmik lecture ingestion, transcription, cleaning,"
                         " human review tools, and semantic enrichment tools.")
@@ -135,6 +136,49 @@ def chunk_transcript(
     console.print(
         f"[cyan]Chunks created:[/cyan] "
         f"{len(result.chunks)}"
+    )
+
+@app.command("index")
+def index_rag_chunks(
+    force: bool = typer.Option(
+        False,
+        "--force",
+        help=(
+            "Rebuild the global RAG index "
+            "and regenerate all embeddings"
+            ),
+        ),
+    ):
+    """Embed all RAG chunks and build the global retrieval index."""
+
+    result = build_index(
+        Settings(),
+        force=force,
+    )
+
+    console.print(
+        f"[green]RAG index:[/green] "
+        f"{result.index_json_path}"
+    )
+
+    console.print(
+        f"[cyan]Lectures indexed:[/cyan] "
+        f"{len(result.source_lecture_ids)}"
+    )
+
+    console.print(
+        f"[cyan]Chunks indexed:[/cyan] "
+        f"{result.source_chunk_count}"
+    )
+
+    console.print(
+        f"[cyan]Embedding model:[/cyan] "
+        f"{result.embedding_model}"
+    )
+
+    console.print(
+        f"[cyan]Embedding dimensions:[/cyan] "
+        f"{result.embedding_dimensions}"
     )
 
 

@@ -153,3 +153,39 @@ class RagChunkingResult(BaseModel):
     rag_chunks_path: str
 
     chunks: list[RagChunk] = Field(default_factory=list)
+
+class IndexedChunk(BaseModel):
+    chunk_id: str
+    lecture_id: str
+
+    # Lets us later detect if source text changed
+    # after the embedding was generated.
+    text_sha256: str
+
+    embedding: list[float] = Field(
+        default_factory=list
+    )
+
+    # Preserve the complete original RAG chunk,
+    # including provenance and metadata.
+    chunk: RagChunk
+
+
+class RagIndex(BaseModel):
+    index_version: Literal["v1"] = "v1"
+
+    embedding_model: str
+    embedding_dimensions: int
+
+    source_lecture_ids: list[str] = Field(
+        default_factory=list
+    )
+
+    source_chunk_count: int
+
+    created_at_utc: str
+    index_json_path: str
+
+    chunks: list[IndexedChunk] = Field(
+        default_factory=list
+    )

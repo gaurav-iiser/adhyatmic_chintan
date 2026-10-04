@@ -18,7 +18,10 @@ class Settings(BaseSettings):
     rag_chunk_min_chars: int = 600
     rag_chunk_target_chars: int = 1600
     rag_chunk_max_chars: int = 2600
-    
+
+    embedding_model: str = "text-embedding-3-large"
+    embedding_batch_size: int = 64
+
     chunk_seconds: int = 300
     data_dir: Path = Path("./data")
     glossary_path: Path = Path("./glossary/vedanta_terms.txt")
