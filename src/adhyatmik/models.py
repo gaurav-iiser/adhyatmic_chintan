@@ -189,3 +189,18 @@ class RagIndex(BaseModel):
     chunks: list[IndexedChunk] = Field(
         default_factory=list
     )
+
+class RetrievalHit(BaseModel):
+    rank: int
+    score: float
+    chunk: RagChunk
+
+
+class RetrievalResult(BaseModel):
+    query: str
+    embedding_model: str
+    top_k: int
+
+    hits: list[RetrievalHit] = Field(
+        default_factory=list
+    )

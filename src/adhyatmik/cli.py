@@ -10,6 +10,7 @@ from .reviewer import review_lecture
 from .enrichment import enrich_lecture
 from .rag_chunker import chunk_lecture
 from .indexing import build_index
+from .retrieval import retrieve
 
 app = typer.Typer(help="Adhyatmik lecture ingestion, transcription, cleaning,"
                         " human review tools, and semantic enrichment tools.")
@@ -180,6 +181,83 @@ def index_rag_chunks(
         f"[cyan]Embedding dimensions:[/cyan] "
         f"{result.embedding_dimensions}"
     )
+
+@app.command("retrieve")
+def retrieve_chunks(
+    query: str = typer.Argument(
+        ...,
+        help="Question or search query",
+    ),
+    top_k: int = typer.Option(
+        5,
+        "--top-k",
+        "-k",
+        help="Number of chunks to return",
+    ),
+):
+    """Retrieve the most relevant RAG chunks."""
+
+    result = retrieve(
+        query,
+        Settings(),
+        top_k=top_k,
+    )
+
+    console.print(
+        f"\n[bold]Query:[/bold] "
+        f"{result.query}"
+    )
+
+    console.print(
+        f"[dim]Embedding model: "
+        f"{result.embedding_model}[/dim]\n"
+    )
+
+    for hit in result.hits:
+        chunk = hit.chunk
+
+        console.rule(
+            f"#{hit.rank} "
+            f"{chunk.chunk_id}"
+        )
+
+        console.print(
+            f"[cyan]Score:[/cyan] "
+            f"{hit.score:.4f}"
+        )
+
+        console.print(
+            f"[cyan]Lecture:[/cyan] "
+            f"{chunk.lecture_id}"
+        )
+
+        console.print(
+            f"[cyan]Time:[/cyan] "
+            f"{chunk.start_seconds:.1f}"
+            f"–"
+            f"{chunk.end_seconds:.1f} sec"
+        )
+
+        source_segments = [
+            str(
+                fragment.source_segment_index
+            )
+            for fragment
+            in chunk.source_fragments
+        ]
+
+        console.print(
+            f"[cyan]Source segments:[/cyan] "
+            f"{', '.join(source_segments)}"
+        )
+
+        console.print()
+
+        console.print(
+            chunk.text
+        )
+
+        console.print()
 
 
 if __name__ == "__main__":
