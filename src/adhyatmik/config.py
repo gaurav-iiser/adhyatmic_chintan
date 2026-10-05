@@ -22,6 +22,9 @@ class Settings(BaseSettings):
     embedding_model: str = "text-embedding-3-large"
     embedding_batch_size: int = 64
 
+    answer_model: str = "gpt-5-mini"
+    answer_top_k: int = 5
+
     chunk_seconds: int = 300
     data_dir: Path = Path("./data")
     glossary_path: Path = Path("./glossary/vedanta_terms.txt")

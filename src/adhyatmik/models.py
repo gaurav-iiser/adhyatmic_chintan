@@ -204,3 +204,38 @@ class RetrievalResult(BaseModel):
     hits: list[RetrievalHit] = Field(
         default_factory=list
     )
+
+class GroundedAnswerPoint(BaseModel):
+    text: str
+
+    # These must refer only to retrieved RAG chunks.
+    source_chunk_ids: list[str] = Field(
+        default_factory=list
+    )
+
+
+class GroundedAnswerDraft(BaseModel):
+    sufficient_context: bool
+
+    answer_points: list[GroundedAnswerPoint] = Field(
+        default_factory=list
+    )
+
+    insufficiency_message: str | None = None
+
+
+class AnswerResult(BaseModel):
+    query: str
+    answer_model: str
+
+    sufficient_context: bool
+
+    rendered_answer: str
+
+    retrieved_chunk_ids: list[str] = Field(
+        default_factory=list
+    )
+
+    cited_chunk_ids: list[str] = Field(
+        default_factory=list
+    )

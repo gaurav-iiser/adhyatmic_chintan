@@ -11,6 +11,7 @@ from .enrichment import enrich_lecture
 from .rag_chunker import chunk_lecture
 from .indexing import build_index
 from .retrieval import retrieve
+from .answering import answer_question
 
 app = typer.Typer(help="Adhyatmik lecture ingestion, transcription, cleaning,"
                         " human review tools, and semantic enrichment tools.")
@@ -258,6 +259,64 @@ def retrieve_chunks(
         )
 
         console.print()
+
+@app.command("ask")
+def ask_question(
+    query: str = typer.Argument(
+        ...,
+        help="Question to answer from the indexed lectures",
+    ),
+    top_k: int = typer.Option(
+        5,
+        "--top-k",
+        "-k",
+        help="Number of retrieved chunks supplied to the answer model",
+    ),
+):
+    """Answer a question using only retrieved lecture material."""
+
+    result = answer_question(
+        query,
+        Settings(),
+        top_k=top_k,
+    )
+
+    console.print()
+
+    console.print(
+        f"[bold]Question:[/bold] "
+        f"{result.query}"
+    )
+
+    console.print()
+
+    if result.sufficient_context:
+        console.print(
+            "[green]Answer:[/green]"
+        )
+    else:
+        console.print(
+            "[yellow]Insufficient context:[/yellow]"
+        )
+
+    console.print(
+        result.rendered_answer
+    )
+
+    console.print()
+
+    console.print(
+        f"[dim]Retrieved chunks: "
+        f"{', '.join(result.retrieved_chunk_ids)}"
+        f"[/dim]"
+    )
+
+    if result.cited_chunk_ids:
+        console.print(
+            f"[dim]Used in answer: "
+            f"{', '.join(result.cited_chunk_ids)}"
+            f"[/dim]"
+        )
 
 
 if __name__ == "__main__":
