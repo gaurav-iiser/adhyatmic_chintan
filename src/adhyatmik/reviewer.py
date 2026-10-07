@@ -67,19 +67,71 @@ def migrate_v03_cleaner_outputs(lecture_dir: Path) -> bool:
         legacy_report.replace(proposed_report)
     return True
 
+def _segment_needs_human_review(
+    segment: dict[str, Any],
+) -> bool:
+    """
+    Human Review v2:
 
-def _new_state(lecture_id: str, proposal: dict[str, Any]) -> dict[str, Any]:
+    Prefer the cleaner's explicit needs_human_review flag.
+
+    For older cleaner outputs that do not contain that field,
+    fall back to the old behavior.
+    """
+    explicit_flag = segment.get(
+        "needs_human_review"
+    )
+
+    if explicit_flag is not None:
+        return bool(explicit_flag)
+
+    # Backward compatibility with old cleaner outputs.
+    return bool(
+        segment.get("changes")
+        or segment.get("review_notes")
+    )
+
+def _new_state(
+    lecture_id: str,
+    proposal: dict[str, Any],
+) -> dict[str, Any]:
     decisions: dict[str, Any] = {}
+
     for segment in proposal.get("segments", []):
         idx = str(segment["index"])
-        has_review_work = bool(segment.get("changes") or segment.get("review_notes"))
-        if not has_review_work:
+
+        # New Human Review v2 behavior:
+        # trust the cleaner's explicit review gate.
+        #
+        # Backward compatibility:
+        # older proposed transcripts may not contain
+        # needs_human_review, so fall back to the old rule.
+        needs_human_review = segment.get(
+            "needs_human_review"
+        )
+
+        if needs_human_review is None:
+            has_review_work = bool(
+                segment.get("changes")
+                or segment.get("review_notes")
+            )
+            should_auto_accept = not has_review_work
+        else:
+            should_auto_accept = not bool(
+                needs_human_review
+            )
+
+        if should_auto_accept:
             decisions[idx] = {
                 "decision": "auto_accept_unchanged",
-                "final_text": segment.get("cleaned_text", ""),
+                "final_text": segment.get(
+                    "cleaned_text",
+                    "",
+                ),
                 "reviewer_note": "",
                 "reviewed_at": _utc_now(),
             }
+
     return {
         "lecture_id": lecture_id,
         "status": "in_progress",
@@ -88,16 +140,103 @@ def _new_state(lecture_id: str, proposal: dict[str, Any]) -> dict[str, Any]:
         "decisions": decisions,
     }
 
+def _sync_auto_accepted_segments(
+    proposal: dict[str, Any],
+    state: dict[str, Any],
+) -> bool:
+    """
+    Add automatic decisions for safe segments that
+    do not already have a decision.
 
-def load_or_create_review_state(lecture_dir: Path, lecture_id: str, proposal: dict[str, Any]) -> dict[str, Any]:
-    state_path = lecture_dir / "human_review_state.json"
+    This is especially important for review states
+    created before Human Review v2.
+    """
+    decisions = state.setdefault(
+        "decisions",
+        {},
+    )
+
+    changed = False
+
+    for segment in proposal.get(
+        "segments",
+        [],
+    ):
+        idx = str(segment["index"])
+
+        # Never overwrite an existing human decision.
+        if idx in decisions:
+            continue
+
+        if _segment_needs_human_review(
+            segment
+        ):
+            continue
+
+        decisions[idx] = {
+            "decision": "auto_accept_unchanged",
+            "final_text": segment.get(
+                "cleaned_text",
+                "",
+            ),
+            "reviewer_note": "",
+            "reviewed_at": _utc_now(),
+        }
+
+        changed = True
+
+    return changed
+
+
+def load_or_create_review_state(
+    lecture_dir: Path,
+    lecture_id: str,
+    proposal: dict[str, Any],
+) -> dict[str, Any]:
+    state_path = (
+        lecture_dir
+        / "human_review_state.json"
+    )
+
     if state_path.exists():
-        state = _read_json(state_path)
-        if state.get("lecture_id") != lecture_id:
-            raise ValueError("Existing review state belongs to a different lecture ID.")
+        state = _read_json(
+            state_path
+        )
+
+        if (
+            state.get("lecture_id")
+            != lecture_id
+        ):
+            raise ValueError(
+                "Existing review state belongs "
+                "to a different lecture ID."
+            )
+
+        changed = (
+            _sync_auto_accepted_segments(
+                proposal,
+                state,
+            )
+        )
+
+        if changed:
+            _save_state(
+                lecture_dir,
+                state,
+            )
+
         return state
-    state = _new_state(lecture_id, proposal)
-    _write_json(state_path, state)
+
+    state = _new_state(
+        lecture_id,
+        proposal,
+    )
+
+    _write_json(
+        state_path,
+        state,
+    )
+
     return state
 
 
@@ -161,18 +300,33 @@ def _display_segment(segment: dict[str, Any], position: int, total: int) -> None
             console.print(f"  • {note}")
 
 
-def pending_segment_indexes(proposal: dict[str, Any], state: dict[str, Any]) -> list[int]:
-    decisions = state.get("decisions", {})
+def pending_segment_indexes( proposal: dict[str, Any],
+    state: dict[str, Any],
+    ) -> list[int]:
+    decisions = state.get(
+        "decisions",
+        {},
+    )
+
     pending: list[int] = []
+
     for segment in proposal.get("segments", []):
         idx = int(segment["index"])
-        has_review_work = bool(segment.get("changes") or segment.get("review_notes"))
-        if has_review_work and str(idx) not in decisions:
-            pending.append(idx)
+        if (
+            _segment_needs_human_review(
+                segment
+            )
+            and str(idx) not in decisions
+            ):
+            pending.append(
+                idx
+            )
+
     return pending
 
 
 def finalize_review(lecture_dir: Path, proposal: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
+    _sync_auto_accepted_segments( proposal, state,)
     pending = pending_segment_indexes(proposal, state)
     if pending:
         raise RuntimeError(f"Cannot finalize: {len(pending)} segment(s) still need review.")
@@ -273,13 +427,21 @@ def review_lecture(lecture_id: str, settings: Settings) -> dict[str, Any]:
     ]
 
     if not review_segments:
-        report = finalize_review(lecture_dir, proposal, state)
-        console.print("[green]No pending segments. Final human-reviewed transcript written.[/green]")
+        report = finalize_review(lecture_dir, proposal, state,)
+
+        console.print(
+            "[green]"
+            "No segments require human review. "
+            "All segments were automatically accepted "
+            "and the final clean transcript was written."
+            "[/green]"
+        )
+
         return report
 
     console.print(
         f"[bold]Human review: {lecture_id}[/bold]\n"
-        f"{len(review_segments)} segment(s) need a decision. Unchanged segments are accepted automatically.\n"
+        f"{len(review_segments)} segment(s) need human review. All other segments are accepted automatically.\n"
         "[dim]A=accept AI proposal, R=reject and use raw, E=edit in Notepad, S=skip for now, Q=save and quit[/dim]"
     )
 

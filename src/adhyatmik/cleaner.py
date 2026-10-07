@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from typing import Literal
 from openai import OpenAI
 from pydantic import BaseModel, Field
 
@@ -11,19 +12,126 @@ from .models import CleanedSegment, CleaningChange, CleaningResult, TranscriptRe
 from .pipeline import format_timestamp
 
 
+
 class _ModelChange(BaseModel):
     original: str
     corrected: str
     category: str
     reason: str
-    confidence: str
-
+    # confidence: str
+    confidence: Literal[
+        "high",
+        "medium",
+        "low",
+    ]
 
 class _ModelCleanedSegment(BaseModel):
     cleaned_text: str
     changes: list[_ModelChange] = Field(default_factory=list)
     review_notes: list[str] = Field(default_factory=list)
 
+_CONFIDENCE_SCORES = {
+    "high": 0.95,
+    "medium": 0.85,
+    "low": 0.50,
+}
+
+def _calculate_review_status(
+    *,
+    raw_text: str,
+    cleaned_text: str,
+    changes: list[CleaningChange],
+    threshold: float,
+) -> tuple[float, bool, str | None]:
+    """
+    Decide whether this cleaned segment needs human review.
+
+    Sanskrit changes are intentionally excluded from the
+    human-review trigger.
+
+    Human review is required only when a non-Sanskrit
+    textual modification has confidence below the configured
+    threshold.
+    """
+
+    review_eligible_changes = [
+        change
+        for change in changes
+        if change.category != "sanskrit"
+    ]
+
+    # Safety check:
+    # cleaned text changed, but the model did not explain
+    # any change at all.
+    if (
+        cleaned_text.strip() != raw_text.strip()
+        and not changes
+    ):
+        return (
+            0.0,
+            True,
+            (
+                "Cleaned text differs from raw text, "
+                "but no cleaning changes were recorded."
+            ),
+        )
+
+    # No non-Sanskrit modification needs assessment.
+    #
+    # This includes:
+    # - no changes
+    # - only Sanskrit changes
+    if not review_eligible_changes:
+        return 1.0, False, None
+
+    scores = [
+        _CONFIDENCE_SCORES[
+            change.confidence
+        ]
+        for change
+        in review_eligible_changes
+    ]
+
+    review_confidence = min(scores)
+
+    low_confidence_changes = [
+        change
+        for change
+        in review_eligible_changes
+        if (
+            _CONFIDENCE_SCORES[
+                change.confidence
+            ]
+            < threshold
+        )
+    ]
+
+    if not low_confidence_changes:
+        return (
+            review_confidence,
+            False,
+            None,
+        )
+
+    descriptions = [
+        (
+            f"{change.category}: "
+            f"{change.original!r} "
+            f"→ {change.corrected!r}"
+        )
+        for change in low_confidence_changes
+    ]
+
+    reason = (
+        "Low-confidence cleaning modification: "
+        + "; ".join(descriptions)
+    )
+
+    return (
+        review_confidence,
+        True,
+        reason,
+    )
 
 CLEANER_INSTRUCTIONS = """You are the conservative transcript-cleaning stage for the Adhyatmik project.
 The input is an automatic Hindi lecture transcript that may contain Sanskrit, Vedanta vocabulary, English code-switching, proper names, quotations, and shlokas.
@@ -37,7 +145,13 @@ Rules:
 4. Never delete a meaningful sentence merely because it sounds repetitive or informal.
 5. Preserve Hindi/English code-switching as spoken.
 6. Treat the supplied glossary as recognition hints, not as words that must be inserted.
-7. For Sanskrit quotations or shlokas, correct only when the intended wording is sufficiently clear from the transcript/context. If uncertain, preserve the raw wording and add a review note.
+7. For Sanskrit quotations, mantras, or shlokas:
+   - Correct clear transcription errors when the intended wording is sufficiently clear from the transcript/context.
+   - If uncertain, preserve the raw wording rather than guessing.
+   - Do NOT add a human-review note merely because the text is Sanskrit,
+     a mantra, a quotation, or a shloka.
+   - Do NOT ask for verification against a canonical Sanskrit source.
+   - Do NOT reconstruct a verse from external knowledge.
 8. If a possible correction could materially change doctrinal/philosophical meaning, prefer preserving the raw wording and flagging it for human review.
 9. Do not include timestamps in cleaned_text; timestamps are preserved by the application.
 10. Each change entry must describe an actual textual change. Do not log punctuation-only changes unless they materially improve sentence boundaries.
@@ -150,15 +264,36 @@ def clean_lecture(lecture_id: str, settings: Settings, *, force: bool = False) -
             f"Segment {segment.index}: {note}" for note in parsed.review_notes if note.strip()
         )
 
+        cleaned_text = parsed.cleaned_text.strip()
+
+        (
+            review_confidence,
+            needs_human_review,
+            review_reason,
+        ) = _calculate_review_status(
+            raw_text=segment.text,
+            cleaned_text=cleaned_text,
+            changes=changes,
+            threshold=(
+                settings.human_review_confidence_threshold
+            ),
+        )
+
         cleaned_segments.append(
             CleanedSegment(
                 index=segment.index,
                 start_seconds=segment.start_seconds,
                 end_seconds=segment.end_seconds,
+
                 raw_text=segment.text,
-                cleaned_text=parsed.cleaned_text.strip(),
+                cleaned_text=cleaned_text,
+
                 changes=changes,
                 review_notes=parsed.review_notes,
+
+                review_confidence=review_confidence,
+                needs_human_review=needs_human_review,
+                review_reason=review_reason,
             )
         )
 
@@ -183,13 +318,45 @@ def clean_lecture(lecture_id: str, settings: Settings, *, force: bool = False) -
         json.dumps(result.model_dump(), ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    segments_needing_review = [
+        segment
+        for segment in cleaned_segments
+        if segment.needs_human_review
+    ]
+
     report = {
         "lecture_id": raw.lecture_id,
         "cleaning_model": settings.cleaning_model,
-        "total_segments": len(cleaned_segments),
-        "total_changes": len(all_changes),
+
+        "total_segments": len(
+            cleaned_segments
+        ),
+
+        "total_changes": len(
+            all_changes
+        ),
+
+        "segments_needing_human_review": len(
+            segments_needing_review
+        ),
+
+        "segments_auto_accepted": (
+            len(cleaned_segments)
+            - len(segments_needing_review)
+        ),
+
+        "review_segment_indexes": [
+            segment.index
+            for segment
+            in segments_needing_review
+        ],
+
         "review_notes": review_notes,
-        "changes": [change.model_dump() for change in all_changes],
+
+        "changes": [
+            change.model_dump()
+            for change in all_changes
+        ],
     }
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     return result

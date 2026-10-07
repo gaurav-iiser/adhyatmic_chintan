@@ -19,23 +19,60 @@ class TranscriptResult(BaseModel):
     segments: list[TranscriptSegment] = Field(default_factory=list)
 
 
+# class CleaningChange(BaseModel):
+#     segment_index: int
+#     original: str
+#     corrected: str
+#     category: str
+#     reason: str
+#     confidence: str
+
+
+# class CleanedSegment(BaseModel):
+#     index: int
+#     start_seconds: float
+#     end_seconds: float
+#     raw_text: str
+#     cleaned_text: str
+#     changes: list[CleaningChange] = Field(default_factory=list)
+#     review_notes: list[str] = Field(default_factory=list)
+
 class CleaningChange(BaseModel):
     segment_index: int
     original: str
     corrected: str
     category: str
     reason: str
-    confidence: str
+    confidence: Literal[
+        "high",
+        "medium",
+        "low",
+    ]
 
 
 class CleanedSegment(BaseModel):
     index: int
     start_seconds: float
     end_seconds: float
+
     raw_text: str
     cleaned_text: str
-    changes: list[CleaningChange] = Field(default_factory=list)
-    review_notes: list[str] = Field(default_factory=list)
+
+    changes: list[CleaningChange] = Field(
+        default_factory=list
+    )
+
+    review_notes: list[str] = Field(
+        default_factory=list
+    )
+
+    # Confidence used specifically for deciding
+    # whether a human needs to see this segment.
+    review_confidence: float = 1.0
+
+    needs_human_review: bool = False
+
+    review_reason: str | None = None
 
 
 class CleaningResult(BaseModel):

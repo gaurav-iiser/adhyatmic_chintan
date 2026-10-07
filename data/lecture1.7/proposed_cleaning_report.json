@@ -1,0 +1,555 @@
+{
+  "lecture_id": "lecture1.7",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 15,
+  "total_changes": 65,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 15,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: Several phrases were left largely as in the raw transcript where canonical reading was uncertain (e.g., 'कुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन', 'लुप्तपिण्डोदकक्रियाः', 'अहो बत महत् पापं'). Please review these Sanskrit compounds for canonical accuracy if needed.",
+    "Segment 0: I corrected only high-confidence ASR errors and clear sandhi/splitting issues. If a strict edition of the Gītā text is required, compare the cleaned text against that edition before final publication.",
+    "Segment 1: Preserved several Sanskrit/phrase forms as in raw (no change) where certainty was low: 'कर्तुं व्यवसिता वयम्', 'अशस्त्रं शस्त्रपाणयः', 'धार्तराष्ट्रा रणे हन्युः', 'तन्मे क्षेमतरं भवेत्', 'शोकसंविग्नमानसः', 'ते उपस्थिताः', 'रथोपस्थ उपाविशत्', and 'घनतोपि'. Please review these for exact classical/Sanskrit orthography and intended sandhi (if human correction is desired).",
+    "Segment 1: I made only minimal, high-confidence corrections (spacing and an obvious ASR word error). No substantive doctrinal or content changes were made.",
+    "Segment 2: The word 'कामान' was left as in the raw transcript; ASR may have misrecognized this term but the intended word is not sufficiently clear from context—please review.",
+    "Segment 2: Sanskrit phrases such as 'कुलक्षयकृतं दोषं', 'वयं धृतराष्ट्रान् हन्तुं न अर्हाः', 'मित्रद्रोहे च पातकम्' were retained; they appear coherent but should be checked by a human reviewer familiar with the source if exact canonical wording is required.",
+    "Segment 3: Please review medium-confidence changes for faithfulness to speaker intent: insertion of 'का' in the opening sentence (change 1), addition of 'था' (change 3), rephrasing 'सोल्जर एक सैनिक का धर्म निभाता है' (change 5), punctuation around the description of भीष्म and apposition (change 7), and correction of 'खाली कराओ' to 'खाली कराया गया' (change 8). These were grammatical/idiomatic fixes made with moderate confidence but may benefit from human verification against the speaker's original wording.",
+    "Segment 3: Unclear fragment 'कहीं स्कूल के आते में पड़े हुए हैं लोग महीनों' was left as in original because the intended wording was uncertain; please verify and correct if speaker meant a different phrase (e.g., 'कहीं स्कूल के आने में पड़े हुए' or 'कहीं स्कूल के कमरे में पड़े हुए').",
+    "Segment 7: Phrases that appear to be Sanskrit or heavily garbled (e.g., 'हरिओम तत्सत', 'मर्यादा माने मर्यै ही आद्रियते', 'जो मरणधर्मा मनुष्य है') were left as in the raw text because their intended wording is unclear; please review these for possible Sanskrit corrections.",
+    "Segment 7: Speaker's use of code-switching (English phrases) was preserved as spoken.",
+    "Segment 8: The phrase 'जय जीव' and the Ramayana example (mention of सुमंत्र जी and दशरथ) were noisy in the ASR. I preserved the quoted phrase 'जय जीव' as in the raw text but removed an apparent misrecognized pronoun ('तुम्हारा') and adjusted punctuation; please review the original audio to confirm the intended names/wording and whether 'जय जीव' is the correct greeting intended by the speaker.",
+    "Segment 8: I standardized the Sanskrit phrase 'अधर्मोऽभिभवति' and related forms where ASR introduced variants; please verify against the speaker's exact pronunciation if a precise Sanskrit citation is required.",
+    "Segment 9: संदर्भित संस्कृत/पारंपरिक उद्धरण-सीक्वेंस 'अधर्मोऽभिभवत्युत, अधर्मः अभिभवति।' अस्पष्ट है और सम्भवतः ट्रांसक्रिप्शन में त्रुटि है। अनसुलझा होने पर मौलिक अर्थ बदलने से बचते हुए कच्चा रूप रखा गया — कृपया मानव-समीक्षा करें।",
+    "Segment 9: पंक्ति 'दंड जतिन कर, भेद जहँ नर्तक नृत्य समाज।' स्पष्ट रूप से संस्कृत/Hindi छंद-सूत्र जैसा है पर कई शब्द असमंजसजनक हैं; अर्थात्मक परिवर्तन की सम्भावना के कारण मूल रूप बरकरार रखा गया — मानव-समीक्षा पर ध्यान दें।",
+    "Segment 10: Numerical population phrases appear inconsistent/unclear (\"करीब सौ करोड़ से ज़्यादा, करीब एक सौ पाँच से दस करोड़ लोग रहते हैं\", \"एक करोड़ दस लाख लोगों में सात हज़ार थाने?\"). These may contain ASR errors affecting factual numbers and should be checked against the original audio or speaker notes.",
+    "Segment 10: The code-switched phrase 'कोर्स स्मूथली' is preserved as spoken. If intended as an English phrase ('course smoothly'), confirm with the speaker recording before normalizing.",
+    "Segment 11: I corrected an early Sanskrit/phrase fragment ('अधर्मः अभिभवति उत' -> 'अधर्मो अभिभवात्') and the preceding ASR segment ('ये छह होता है' -> 'यह छूट जाता है'); these are medium-confidence corrections and should be reviewed by a human familiar with the speaker's intended Sanskrit phrasing to ensure doctrinal accuracy.",
+    "Segment 11: The proper name 'राजवर्धन' was left as in the raw text; if this was an ASR error (a different name intended), please verify.",
+    "Segment 12: Preserved several uncertain/ambiguous Sanskrit terms as in the raw transcript (e.g., \"अवद्याः\", \"वार्ष्णेय\", \"स्त्रीषु दुष्टासु वार्ष्णेय\"). These terms were unclear in the ASR output and have not been altered to avoid changing doctrinal meaning—please verify against the original audio or a subject-matter reviewer if required.",
+    "Segment 12: Speaker uses code-switching (English words like 'प्रोटेक्शन', 'कंट्रीब्यूशन', and 'our scriptures'). These have been preserved or corrected conservatively.",
+    "Segment 14: Phrase 'चाऊँ-चाऊँ करने वाले चैनल' preserved as in raw; unclear if ASR distorted colloquial expression.",
+    "Segment 14: Phrase 'बेचहीं धर्म, बेचहीं वेद, धर्म दुहि लेहीं।' is likely garbled/dialectal; preserved verbatim for human review because correction could change meaning."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान् स्वबान्धवान्।",
+      "corrected": "तस्मात् नाहं वयं हन्तुं धार्तराष्ट्रान् स्वजनान्।",
+      "category": "sanskrit",
+      "reason": "Corrected multiple clear ASR/Speech-to-text errors to match the expected Sanskrit phrasing of the Gītā verse (तस्मात् नाहं वयं ... स्वजनान्).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः।",
+      "corrected": "यद्यपि एते न पश्यन्ति लोभोपहतचेतसः।",
+      "category": "sanskrit",
+      "reason": "Inserted space to reflect the correct split 'यद्यपि एते' as in the verse; fixes ASR concatenation.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "कथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम्।",
+      "corrected": "कथं न ज्ञेयेत् अस्माभिः पापात् अस्मान् निवर्तितुम्।",
+      "category": "sanskrit",
+      "reason": "Restored expected sandhi/splitting and word forms to match the intended verse reading (पापात् अस्मान् निवर्तितुम्).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "अधर्मो अभिभवत्युत। अधर्माभिभवात् कृष्ण।",
+      "corrected": "अधर्मोऽभिभवति। अधर्माभिभवात् कृष्ण।",
+      "category": "sanskrit",
+      "reason": "Adjusted elision (अधर्मोऽभिभवति) and punctuation to reflect the Sanskrit vocative address 'कृष्ण' and more natural verse phrasing; fixes ASR segmentation.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "एवमुक्त्वार्जुनः संख्ये।",
+      "corrected": "एवमुक्त्वा अर्जुनः संख्ये।",
+      "category": "sanskrit",
+      "reason": "Inserted space between 'एवमुक्त्वा' और 'अर्जुनः' to reflect separation of words (spacing error in ASR).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "विसृज्य सशरं चापम्।",
+      "corrected": "विसृज्य शरं चापम्।",
+      "category": "sanskrit",
+      "reason": "Removed an extra 'स' before 'शरं' — likely ASR duplication; intended phrase 'विसृज्य शरं चापम्' (having cast away the bow/arrow).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "जिने",
+      "corrected": "जीने",
+      "category": "asr_term",
+      "reason": "Corrected ASR error: 'जिने' -> 'जीने' (Hindi infinitive 'जीने' = 'to live').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "हमको साँफ लगता है कि इस युद्ध से हम लोग केवल पाप के भागीदार होंगे।",
+      "corrected": "हमें साफ लगता है कि इस युद्ध से हम लोग केवल पाप के भागीदार होंगे।",
+      "category": "asr_term",
+      "reason": "ASR misrecognized 'हमें साफ' as 'हमको साँफ'; corrected to standard Hindi phrasing without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "यद्यप्येते, एते कौरवाः, एते धृतराष्ट्राः।",
+      "corrected": "यद्यपि एते, एते कौरवाः, एते धृतराष्ट्राः।",
+      "category": "spelling",
+      "reason": "Fixed run-together transcription 'यद्यप्येते' to the intended 'यद्यपि एते' (separated words) matching surrounding usage.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "तो उस कुल से जो कुलक्षय से जो दोष उत्पन्न होगा, वो ऐसा भयंकर दोष होगा,",
+      "corrected": "तो उस कुलक्षय से जो दोष उत्पन्न होगा, वो ऐसा भयंकर दोष होगा,",
+      "category": "asr_term",
+      "reason": "Removed an obvious duplicated fragment 'जो कुलसे जो कुलक्षय से' to restore intended phrasing 'उस कुलक्षय से जो दोष'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "वहाँ तो सबके सब युध्दसभा, वहाँ तो योद्धा, कामान सब लड़ने के लिए आए थे,",
+      "corrected": "वहाँ तो सबके सब युद्ध सभा, वहाँ तो योद्धा, कामान सब लड़ने के लिए आए थे,",
+      "category": "spelling",
+      "reason": "Corrected misspelling 'युध्दसभा' to 'युद्ध सभा' to reflect standard Hindi spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "ऐसे योद्धा धर्म बड़ा कठिन होता है।",
+      "corrected": "योद्धा का धर्म बड़ा कठिन होता है।",
+      "category": "other",
+      "reason": "ASR omitted the possessive particle 'का'; added for grammatical clarity and to reflect likely intended phrasing.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "पहले इंडियन आर्मी एक ही थी, जो बँटी बाद में कुछ पाकिस्तान में जनरल्स गए, कुछ इधर गए।",
+      "corrected": "पहले इंडियन आर्मी एक ही थी, जो बँटी — बाद में कुछ पाकिस्तान में जनरल्स गए, कुछ इधर गए।",
+      "category": "punctuation",
+      "reason": "Inserted punctuation to separate clauses and improve readability where ASR ran clauses together.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "तो उनको पाकिस्तान बाद में बुलाया गया भी, दस-पंद्रह साल पहले की बात है।",
+      "corrected": "तो उनको पाकिस्तान बाद में बुलाया गया भी था, दस-पंद्रह साल पहले की बात है।",
+      "category": "punctuation",
+      "reason": "Added 'था' to complete the verbal phrase and make the sentence grammatically coherent.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "और मेरे ख्याल से शोभना शर्मा जी की जब ये हो रही थी आखिरी रजत जयंती या शायद कुछ सेलिब्रेशन था, तो उसमें उनको वहाँ भी बुलाया गया था, और उन लोगों को भी यहाँ बुलाया गया था।",
+      "corrected": "और मेरे ख्याल से शोभना शर्मा जी की जब ये हो रही थी — आखिरी रजत जयंती या शायद कुछ सेलिब्रेशन था, तो उसमें उनको वहाँ भी बुलाया गया था, और उन लोगों को भी यहाँ बुलाया गया था।",
+      "category": "punctuation",
+      "reason": "Inserted punctuation to mark the parenthetical phrase and improve flow.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "सोल्जर एक सैनिक धर्म का निर्वाह करता है,",
+      "corrected": "सोल्जर एक सैनिक का धर्म निभाता है,",
+      "category": "other",
+      "reason": "Replaced awkward phrasing with standard Hindi idiom ('धर्म निभाना') for clarity; this corrects an ASR/phrasing error.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "वहाँ पे वो तोपों की गर्जना से वो दरवाजे हिलते थे,",
+      "corrected": "वहाँ तो तोपों की गर्जना से दरवाजे हिलते थे,",
+      "category": "asr_term",
+      "reason": "Removed duplicated 'वो' which appears to be an ASR insertion; streamlines the sentence.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "भीष्म पितामह कौरव पक्ष में हैं, लेकिन तो परम सुहृद हैं अर्जुन के, पांडवों के, द्रोणाचार्य, कृपाचार्य।",
+      "corrected": "भीष्म पितामह कौरव पक्ष में हैं, लेकिन तो परम सुहृद हैं — अर्जुन के, पांडवों के; द्रोणाचार्य, कृपाचार्य।",
+      "category": "punctuation",
+      "reason": "Added punctuation to clarify apposition/listing and reading cadence.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "हटाया गया, खाली कराओ।",
+      "corrected": "हटाया गया, खाली कराया गया।",
+      "category": "asr_term",
+      "reason": "Corrected an ASR fragment 'खाली कराओ' to the grammatically coherent passive 'खाली कराया गया' to match surrounding past-tense narration.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "तो ताला हिल-हिल के गड्ढे पड़ गए थे लकड़ी में।",
+      "corrected": "तो ताला हिल-हिल के, लकड़ी में गड्ढे पड़ गए थे।",
+      "category": "punctuation",
+      "reason": "Reordered/punctuated phrase for clearer syntax and natural Hindi word order.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "यद्यपि एते न पश्यन्ति, हालांकि यद्यपि शब्द का अनुवाद क्या किया जाता है, हालांकि, ऐसे लोकभाषा में।",
+      "corrected": "यद्यपि एते न पश्यन्ति। 'यद्यपि' शब्द का अनुवाद क्या किया जाता है, हालांकि ऐसे लोकभाषा में।",
+      "category": "sentence_boundary",
+      "reason": "Separated the Sanskrit phrase from the following explanatory clause to improve sentence boundaries and clarity while preserving original words and meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "ते न अबुद्धयः, ये मूर्ख लोग नहीं हैं, बड़े-बड़े विद्वान लोग हैं।",
+      "corrected": "ते न अबुद्धयः। ये मूर्ख लोग नहीं हैं, बड़े-बड़े विद्वान लोग हैं।",
+      "category": "sentence_boundary",
+      "reason": "Changed comma to sentence break after the Sanskrit phrase to reflect a natural pause and improve readability without altering content.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "लड़ी लेते हैं।",
+      "corrected": "लड़ लें।",
+      "category": "asr_term",
+      "reason": "ASR misrecognition of verb form; corrected to idiomatic Hindi 'लड़ लें' meaning 'let's fight/engage in battle'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "चलो लड़ी जाएँ।",
+      "corrected": "चलो लड़ जाएँ।",
+      "category": "asr_term",
+      "reason": "ASR error in verb form; corrected to 'लड़ जाएँ' which fits the spoken intent 'let's go fight'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "युद्ध कोई बड़ा वांछित वस्तु नहीं है कि आतुर है व्यक्ति कि चलो चलो, लड़ी लेते हैं।",
+      "corrected": "युद्ध कोई बड़ा वांछित वस्तु नहीं है कि व्यक्ति आतुर है कि चलो चलो, लड़ लें।",
+      "category": "asr_term",
+      "reason": "Adjusted word order and verb form to correct ASR-induced awkward phrasing while preserving speaker meaning and emphasis.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 5,
+      "original": "एते लोभोपहतचेतसः न पश्यन्ति दोषम्, पातकम् न पश्यन्ति।",
+      "corrected": "एते लोभोपहतचेतसः न पश्यन्ति। दोषम्, पातकम् न पश्यन्ति।",
+      "category": "punctuation",
+      "reason": "Inserted sentence boundary to better reflect the Sanskrit clause separation and improve readability without altering wording.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "नीचेले श्लोक",
+      "corrected": "नीचे के श्लोक",
+      "category": "spelling",
+      "reason": "Obvious ASR/spacing error: 'नीचेले' → correct Hindi phrase 'नीचे के' to match spoken meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "कथं न प्रपश्यन्, नहीं, अन्वय देखो, कथं न प्रपश्यद्भिः अस्माभिः।",
+      "corrected": "कथं न प्रपश्यन् — नहीं, अन्वय देखो: कथं न प्रपश्यद्भिः अस्माभिः।",
+      "category": "punctuation",
+      "reason": "Added punctuation to clarify sentence boundaries and speaker's aside ('नहीं, अन्वय देखो'). No content changed.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "प्रपश्यद्भिरस्माभिः",
+      "corrected": "प्रपश्यद्भिः अस्माभिः",
+      "category": "sanskrit",
+      "reason": "Fixed spacing between Sanskrit compounds for readability and to match earlier occurrence 'प्रपश्यद्भिः अस्माभिः'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "कथं न केयम्?",
+      "corrected": "कथं न गेयं?",
+      "category": "asr_term",
+      "reason": "Likely ASR error: 'केयम्' appears to be misrecognition of the earlier repeated phrase 'गेयं'/'गेयम्' in context; corrected to preserve intended questioning form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "प्रपश्यद्भिरस्माभिः हमको जब वो दिखाई दे रहा है,",
+      "corrected": "प्रपश्यद्भिः अस्माभिः हमको जब वो दिखाई दे रहा है,",
+      "category": "sanskrit",
+      "reason": "Fixed spacing in Sanskrit compound to match corrected form used elsewhere.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "निकट्टू",
+      "corrected": "निपट",
+      "category": "asr_term",
+      "reason": "Probable ASR misrecognition; 'निपट' (meaning 'completely'/'bilkul') fits the context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "एक मर्यादाएँ ओवर द पीरियड",
+      "corrected": "एक मर्यादा ओवर द पीरियड",
+      "category": "asr_term",
+      "reason": "Number/grammar correction: singular 'एक मर्यादा' is consistent with surrounding phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "ढेर सारे कुल मर्यदाएँ",
+      "corrected": "ढेर सारी कुल मर्यादाएँ",
+      "category": "asr_term",
+      "reason": "Gender/number agreement correction to 'ढेर सारी कुल मर्यादाएँ'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "मुझे याद नहीं आता है कि हमें कभी बताया नहीं गया कि कुल देव आपके ये हैं।",
+      "corrected": "मुझे याद नहीं आता है कि हमें कभी बताया गया कि कुल देव आपके ये हैं।",
+      "category": "asr_term",
+      "reason": "Removed inadvertent double negative; likely intended meaning is that speaker does not recall being told about family deities.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "धर्मे नष्टे सति, धर्म नष्ट होने पर कुलं कृत्स्नम् अधर्मो अभिभवत्युत।",
+      "corrected": "धर्मे नष्टे सति — धर्म नष्ट होने पर कुलं कृत्स्नम्; अधर्मोऽभिभवति।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit sandhi/inflection and added punctuation to clarify sentence boundaries (adharmo abhibhavati).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "तो धर्म के नष्ट होने पर उस परिवार को अधर्मः अभिभवति, उत अधर्म चारों ओर से उस परिवार को दबा लेगा,",
+      "corrected": "तो धर्म के नष्ट होने पर उस परिवार को अधर्मः अभिभवति, वह अधर्म चारों ओर से उस परिवार को दबा लेगा,",
+      "category": "spelling",
+      "reason": "Replaced 'उत' (likely ASR artifact) with 'वह' to restore coherent Hindi sentence.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "अभिवादन का जो शब्द है, वो भी निश्चित होता है। जैसे रघुकुल में जय जीव, ये शब्द था, जय जीव। ऐसे रामायण में कोई किसी को याद हो तो, सुमंत्र जी जब जाते हैं वापस राम जी को छोड़के... तुम्हारा दशरथ को अभिवादन करते हैं, क्या बोलके? जय जीव।",
+      "corrected": "अभिवादन का जो शब्द है, वो भी निश्चित होता है। जैसे रघुकुल में 'जय जीव' — ये शब्द था: 'जय जीव'। रामायण में कोई किसी को याद हो तो, सुमंत्र जी जब जाते हैं वापस, राम जी को छोड़के... दशरथ को अभिवादन करते हैं, क्या बोलकर? 'जय जीव'।",
+      "category": "sentence_boundary",
+      "reason": "Fixed sentence boundaries and removed an apparent misrecognized pronoun ('तुम्हारा') to improve clarity; preserved quoted greeting 'जय जीव'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "तो ये सारी चीजें जब नष्ट हो गईं, तो मर्यादा माने आजकल एक शब्द बहुत बोलते हैं लोग, लक्ष्मण रेखा।",
+      "corrected": "तो ये सारी चीजें जब नष्ट हो गईं, तो मर्यादा — माने आजकल लोग एक शब्द बहुत बोलते हैं: 'लक्ष्मण रेखा'।",
+      "category": "punctuation",
+      "reason": "Added punctuation to clarify the explanatory pause and quotation.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "जहाँ पर परंपरा से कोई संस्कार आगे की पीढ़ी में ट्रांसमिट नहीं हुए, कहीं जीवन मूल्यों को अगली पीढ़ी को नहीं दिया गया,",
+      "corrected": "जहाँ पर परंपरा से कोई संस्कार आगे की पीढ़ी में ट्रांसमिट नहीं हुए हैं, कहीं जीवन मूल्यों को अगली पीढ़ी को नहीं दिया गया है,",
+      "category": "other",
+      "reason": "Added auxiliary 'हैं/है' for grammatical completeness and clearer tense.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "बाहरी नियंत्रण की... जरूरत कम से कम पड़ती है,",
+      "corrected": "बाहरी नियंत्रण की जरूरत कम से कम पड़ती है;",
+      "category": "punctuation",
+      "reason": "Removed ellipsis and adjusted punctuation to restore sentence flow.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "तो अधर्मोऽभिभवत्युत।",
+      "corrected": "तो अधर्मोऽभिभवति।",
+      "category": "sanskrit",
+      "reason": "Normalized to standard Sanskrit verbal form 'अधर्मोऽभिभवति' used elsewhere in the segment.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "नवधनाढ्य हैं ये, नए धनी हैं।",
+      "corrected": "नव धनाढ्य हैं ये, नए धनी हैं।",
+      "category": "spelling",
+      "reason": "Inserted spacing to reflect correct compound 'नव धनाढ्य' (newly wealthy).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "फ्रिक्वेंटली जाते-आते रहते हैं लोग...",
+      "corrected": "फ्रिक्वेंटली आते-जाते रहते हैं लोग...",
+      "category": "asr_term",
+      "reason": "Corrected word order to common collocation 'आते-जाते' (high-confidence ASR/spoken error).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "कैमरे पे",
+      "corrected": "कैमरे पर",
+      "category": "spelling",
+      "reason": "Standard Hindi preposition spelling 'पे' -> 'पर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "उन्होंने कहा कि वहाँ चलते समय सड़क पर, I don't feel free, क्योंकि वो तो सड़कों पर कैमरे लगे हैं, है ना? And you are under watch.",
+      "corrected": "उन्होंने कहा कि वहाँ चलते समय — I don't feel free — क्योंकि सड़कों पर कैमरे लगे हैं। And you are under watch.",
+      "category": "sentence_boundary",
+      "reason": "Punctuation and sentence-boundary adjustment to clarify the inserted English phrase and remove redundant comma; preserves original meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "नियंत्रक तत्त्व जिसके भीतर हो, माने हम आपके संदर्भ में बोलें तो हम मानते हैं कोर्स स्मूथली तब हम मानते हैं जब हमें कहीं टोकने की ज़रूरत न पड़े।",
+      "corrected": "नियंत्रक तत्त्व, जिसके भीतर हो, माने हम आपके संदर्भ में बोलें तो हम मानते हैं, कोर्स स्मूथली तब हम मानते हैं जब हमें कहीं टोकने की ज़रूरत न पड़े।",
+      "category": "punctuation",
+      "reason": "Inserted commas to clarify clause boundaries and reflect spoken pauses, improving readability without altering wording.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "स्वयं ही जो होना चाहिए वो होता जाए, होना चाहिए वो होता जाए।",
+      "corrected": "स्वयं ही जो होना चाहिए, वो होता जाए; होना चाहिए, वो होता जाए।",
+      "category": "punctuation",
+      "reason": "Added comma and semicolon to separate closely connected clauses and mirror spoken pauses.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "अब ग्यारह हज़ार पुलिस कहाँ कहाँ खड़ी, ग्यारह हज़ार चौकियाँ कहाँ कहाँ लगाओगे आप?",
+      "corrected": "अब ग्यारह हज़ार पुलिस कहाँ-कहाँ खड़ी, ग्यारह हज़ार चौकियाँ कहाँ-कहाँ लगाओगे आप?",
+      "category": "punctuation",
+      "reason": "Hyphenated 'कहाँ-कहाँ' to indicate repetition/emphasis and improve readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तो यहाँ जो नियंत्रित हैं लोग अपने आप में, कोई एक दूसरे को मारता-नोचता नहीं है।",
+      "corrected": "तो यहाँ जो नियंत्रित हैं लोग अपने आप में, कोई एक-दूसरे को मारता-नोचता नहीं है।",
+      "category": "punctuation",
+      "reason": "Hyphenated 'एक-दूसरे' for clarity and to reflect standard orthography.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "क्यों दौड़े जाते हो?",
+      "corrected": "क्यों दौड़ते जाते हो?",
+      "category": "asr_term",
+      "reason": "Verb form correction for natural Hindi ('दौड़े जाते' -> 'दौड़ते जाते').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "कुल धर्म",
+      "corrected": "कुलधर्म",
+      "category": "spelling",
+      "reason": "Compound term written without space for consistency with usage ('कुलधर्म').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "और जब ये छह होता है, तब अधर्मः अभिभवति उत।",
+      "corrected": "और जब यह छूट जाता है, तब अधर्मो अभिभवात्।",
+      "category": "asr_term",
+      "reason": "Corrected apparent ASR errors ('ये छह होता है' -> 'यह छूट जाता है') and normalized Sanskrit ending ('अधर्मः अभिभवति उत' -> 'अधर्मो अभिभवात्').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "वो चारों साल संध्या करता रहा, कभी उसने नहीं छोड़ी, फ्लोरिडा में, विवेक की बात कर रहा हूँ।",
+      "corrected": "वो चारों साल संध्या करता रहा, कभी उसने नहीं छोड़ी — फ्लोरिडा में। विवेक की बात कर रहा हूँ।",
+      "category": "punctuation",
+      "reason": "Inserted punctuation to clarify sentence boundaries and speaker pauses.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "भीतर का कोई चीज।",
+      "corrected": "भीतर की कोई चीज़ है।",
+      "category": "spelling",
+      "reason": "Corrected gender/inflection and added verb for grammatical completeness ('का' -> 'की', 'चीज' -> 'चीज़', added 'है').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "कल करेंगे चर्चा हम इस पर विशेष, जितना थोड़ा करना चाहिए।",
+      "corrected": "कल इस पर विशेष चर्चा करेंगे, जितना थोड़ा करना चाहिए।",
+      "category": "sentence_boundary",
+      "reason": "Reordered phrase for natural Hindi word order while preserving meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "आवर स्क्रिप्चर",
+      "corrected": "our scriptures",
+      "category": "asr_term",
+      "reason": "Automatic speech recognition misrendered the spoken English phrase; corrected to the intended English wording while preserving code-switching.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "जायते वर्ण संकरः।",
+      "corrected": "जायते वर्णसंकरः।",
+      "category": "sanskrit",
+      "reason": "Combined the Sanskrit compound into standard sandhi form (वर्णसंकरः) where the intended Sanskrit phrasing is clear.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "पुराण पोंगापंथी लोग हैं",
+      "corrected": "पुराणपंथी लोग हैं",
+      "category": "asr_term",
+      "reason": "ASR inserted extra syllables ('पोंगा'); intended word is 'पुराणपंथी' (followers of Purāṇas).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "कुत्ते नोचें",
+      "corrected": "कुत्ते नोच लें",
+      "category": "spelling",
+      "reason": "Verb form corrected to standard colloquial Hindi ('नोच लें').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "उसको करने बड़ा जंजट है।",
+      "corrected": "उसको करने में बड़ा जंजट है।",
+      "category": "sentence_boundary",
+      "reason": "Missing postposition 'में' restored for grammatical correctness.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "नई चीज ज़रूर एक करी है",
+      "corrected": "नई चीज़ ज़रूर एक कर दी है",
+      "category": "asr_term",
+      "reason": "'करी है' appears to be ASR misrecognition; corrected to the likely intended phrase 'कर दी है'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "अगर कोई विरोध करे उसका वेलेंटाइन डे का, तो वो कहेंगे",
+      "corrected": "अगर कोई उसके वेलेंटाइन डे का विरोध करे, तो वे कहेंगे",
+      "category": "sentence_boundary",
+      "reason": "Word order adjusted for natural Hindi syntax ('उसके ... का विरोध करे'); pronoun updated to plural formal 'वे'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "और बच्चों को, मैंने आनंद बनाने से रोकते हैं।",
+      "corrected": "और बच्चों को आनंद मनाने से रोकते हैं।",
+      "category": "asr_term",
+      "reason": "'मैंने आनंद बनाने' is an ASR error; corrected to 'आनंद मनाने' which matches the intended meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते।",
+      "corrected": "पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते।",
+      "category": "sanskrit",
+      "reason": "Corrected transcription of a well-known Sanskrit śloka (joined and restored expected phonetic consonant 'प' to match the canonical form).",
+      "confidence": "high"
+    }
+  ]
+}

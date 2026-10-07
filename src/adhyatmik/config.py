@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     cleaning_model: str = "gpt-5-mini"
     cleaner_context_chars: int = 900
 
+    human_review_confidence_threshold: float = 0.80
+
     enrichment_model: str = "gpt-5-mini"
     enrichment_context_chars: int = 1200
 

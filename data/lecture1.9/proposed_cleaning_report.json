@@ -1,0 +1,517 @@
+{
+  "lecture_id": "lecture1.9",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 15,
+  "total_changes": 60,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 15,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: हिंदी/अंग्रेज़ी कोड-स्विचिंग और वेदान्तिक शब्दावली यथावत रखी गई है।",
+    "Segment 0: कोई संस्कृत श्लोक नहीं था; संस्कृत शब्दों में संशोधन केवल उच्च-आत्मिक ASR त्रुटियों के संदर्भ में किया गया है।",
+    "Segment 0: सेगमेंट के अर्थ और क्रम को संरक्षित रखा गया; केवल स्पष्ट ASR/वर्तनी और वाक्य-रणनीतिक सुधार किए गए।",
+    "Segment 1: शब्द 'हीरामोती' को जैसा दर्ज किया गया है, वैसा ही रखा गया। यह सम्भवतः मुंशी प्रेमचंद की किसी कथा का नाम है; सुनिश्चित करने के लिए मानव समीक्षा कर सकते हैं।",
+    "Segment 1: वाक्यों में हाथियों के व्यवहार के आसपास सर्वनामों (एकवचन/बहुवचन) को संगत बनाने के लिए बहुवचन रूप अपनाया गया (\"झुंड... चले जाते हैं\", \"वे सहलाते हैं\") — यह भाषाई सुसंगति के लिए किया गया है, पर वक्ता ने अलग-अलग सर्वनाम भी बोले थे; अगर 原 वाक्यशैली बरकरार रखनी हो तो इन्हें पुन: जांचें।",
+    "Segment 1: ट्रांसक्रिप्ट में मौजूद 'निर्णय के दिन' शब्दांश को अपरिवर्तित छोड़ा गया क्योंकि संदर्भ में संभव है कि वक्ता 'Day of Judgment' का उल्लेख कर रहे हों; निश्चित न होने पर इसे बदले बिना रखा गया।",
+    "Segment 1: कुछ बदलाव (विशेषकर वाक्य-संयोजन और सर्वनाम-संगति) संशोधन-उद्देश्य से किए गए हैं ताकि पठनीयता बढ़े; अर्थ में कोई दार्शनिक/सामग्रीगत परिवर्तन नहीं किया गया है।",
+    "Segment 2: Sanskrit phrase/phrasing 'प्रेत माने प्रकर्षेण इतः गतः इत्यर्थः' is preserved from the raw transcript but its exact canonical wording is uncertain — please verify the intended Sanskrit formulation if doctrinal precision is required.",
+    "Segment 3: ट्रांसक्रिप्शन में कुछ अंश (उदाहरण: 'नव,' और 'सीदन्ति मम... गात्राणि ये') अस्पष्ट हैं; इन्हें वक्ता की मूल रिकॉर्डिंग देखकर पुष्ट करने की सिफारिश है।",
+    "Segment 3: कुछ प्रवेशों में संस्कृत-आशय और मुखर बोलचाल दोनों मिश्रित हैं; जहाँ स्पष्टता कम थी वहाँ कन्नी काटते हुए मूल शब्दों को यथावत रखा गया है।",
+    "Segment 6: Please verify the speaker's intended proper name: the transcript contained 'हनुमानदास पोद्दार' which was corrected to 'हनुमानप्रसाद पोद्दार' (Hanuman Prasad Poddar) based on common historical reference; confirm against the original audio.",
+    "Segment 6: The term 'दुंदुकारी' was left as in the raw transcript because its intended form/meaning is unclear; please review that word from audio if possible.",
+    "Segment 8: Please verify the preferred spelling of the name (कागभूशुण्डि) and the quoted Ramcharitmanas line \"कुटिल काक कइव सबहीं डराहीं\" against authoritative text, if precise orthography is required.",
+    "Segment 9: Sanskrit fragments such as “सुचीनां श्रीमतां गेहे योगभ्रष्टो विजायते” and surrounding Sanskritized phrases were left as in the raw text where uncertain; recommend human review for exact classical wording/transliteration if needed.",
+    "Segment 10: The Sanskrit/quoted phrase 'अथवा योगिनामेव कुले भवति धीमताम्, एतद्धि दुर्लभतरम्' was left as in the raw transcript. Its exact intended classical wording is unclear and should be checked by a human reviewer familiar with the source text.",
+    "Segment 10: The term 'सर्गिक' (in 'एक नई सर्गिक व्यवस्था है') may be an ASR rendering; please confirm whether the speaker meant 'सर्गिक', 'सार्गिक', or another term.",
+    "Segment 11: Verify the intended reference 'संपाती' — confirm whether the speaker meant the proper name 'संपाती' (सम्पाती) or some other word; original had an extra token 'तुम्हारा' that was removed as likely ASR error.",
+    "Segment 11: The final clause about percentage and weight ('वो कह रहे थे कि शरीर का, कि वजन का दो percent शायद होता है सिर का वजन।') is garbled/unclear; please review for accurate reconstruction if desired.",
+    "Segment 11: Multiple English code-switches and the phrase 'we have failed to understand that there is a big, big systems, not system' were preserved as spoken. Confirm if any edits are desired for the English fragments.",
+    "Segment 12: The phrase 'धर्म वेदार्थ सारसंग्रह भूतम्' was left as in the raw transcript; its exact Sanskritization/spacing may need human review.",
+    "Segment 12: Phrases with colloquial grammar (e.g., 'वो कुछ विधानों को देखकर के') were preserved to retain speaker style; review if a formal correction is desired.",
+    "Segment 13: Two Sanskrit lines were adjusted with medium confidence; please review these renderings against the original lecture audio or authoritative text to ensure doctrinal accuracy before publication.",
+    "Segment 13: Otherwise, only high-confidence ASR/grammar corrections were made; original speaker style, repetitions, and code-switching preserved.",
+    "Segment 14: The token 'उपांशु विशत' appears uncertain (possible ASR error or Sanskrit/phrasing). Preserved as in the raw transcript for accuracy; please verify against the original audio or speaker notes if possible."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "तो श्राद्ध जीव के किए हुए कर्मों के अनुसार उसको गति देने में सहायता करने वाली एक विधि है।",
+      "corrected": "तो श्राद्ध जीव के किए हुए कर्मों के अनुसार उसे गति देने में सहायता करने वाली एक विधि है।",
+      "category": "spelling",
+      "reason": "प्रोनाउन 'उसको' को सामान्य और संक्षिप्त रूप 'उसे' से बदला गया; अर्थ अपरिवर्तित रखा गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "मने जो प्रक्रिया अपनाई जाती है, वह प्रक्रिया इतनी समर्थ हो जिसमें प्रेम की आग्रह की, दुःख की, वियोग जनित दुःख की अभिव्यक्ति अवश्य होनी चाहिए।",
+      "corrected": "माने जो प्रक्रिया अपनाई जाती है, वह प्रक्रिया इतनी समर्थ हो जिसमें प्रेम की, आग्रह की, दुःख की, वियोग-जनित दुःख की अभिव्यक्ति अवश्य होनी चाहिए।",
+      "category": "spelling",
+      "reason": "कहने के संदर्भ में 'मने' को 'माने' से सुधारा गया; सूची को स्पष्ट करने हेतु उपयुक्त अल्पविराम जोड़े गए और 'वियोग-जनित' को हाइफ़न से जोड़ा गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "वो प्रेम को कहते हैं कि वो प्रेम को पहचानता है।",
+      "corrected": "वह प्रेम को पहचानता है।",
+      "category": "sentence_boundary",
+      "reason": "अवांछित दोहराव और अनावश्यक क्लॉज़ को हटाकर वाक्य को स्पष्ट और संक्षेप किया गया, अर्थ संरक्षित रखा गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "निष्ठा, लायल्टी जिसको बोलते हैं, ये वृत्ति ऊपर चली जाती है।",
+      "corrected": "निष्ठा, 'लायल्टी' जिसे बोलते हैं, ये वृत्ति ऊपर चली जाती है।",
+      "category": "spelling",
+      "reason": "व्याकरणिक सुधार: 'जिसको' को 'जिसे' से बदल कर वाक्य को स्वाभाविक बनाया गया; अंग्रेज़ी शब्द को उद्धरण चिह्नों में रखा गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "ऐंद्रियक",
+      "corrected": "ऐंद्रियिक",
+      "category": "spelling",
+      "reason": "कई स्थानों पर प्रयुक्त 'ऐंद्रियक' को अधिक सामान्य रूप 'ऐंद्रियिक' से बदला गया (अर्थ अपरिवर्तित)।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "वो जो दो बैलों की जोड़ी है, तो वो बैल उसको स्वामी को अपने छोड़ के जाते नहीं, वापस लौट आते हैं।",
+      "corrected": "वो जो दो बैलों की जोड़ी है, तो वो बैल अपने स्वामी को छोड़कर वापस लौट आते हैं।",
+      "category": "sentence_boundary",
+      "reason": "व्याकरण और शब्द क्रम को सुधारा गया ताकि वाक्य स्पष्ट और संक्षिप्त हो; 'उसे स्वामी को अपने छोड़ के' ASR-जनित असंगत क्रम था।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "कोई गैर वफादार होते हैं, कोई वफादार होते हैं, ऐसे.",
+      "corrected": "कुछ गैर-वफादार होते हैं, कुछ वफादार होते हैं।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य को प्राकृतिक हिंदी क्रम में बदला गया और अस्पष्ट 'कोई...कोई' को स्पष्ट 'कुछ...कुछ' किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "जैसा मैंने देखा डिस्कवरी चैनल पे,",
+      "corrected": "जैसा मैंने देखा डिस्कवरी चैनल पर,",
+      "category": "asr_term",
+      "reason": "जनरल प्रेपोजिशन 'पे' को सामान्य मानक हिन्दी 'पर' में बदला गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "हाथी के बारे में हमने देखा कि जो वृद्ध हाथी मर गया जंगल में, तो वो झुंड जो है खड़ा होकर के रोता रहता है, और फिर थोड़े दिनों बाद वापस चले जाता है।",
+      "corrected": "हाथी के बारे में हमने देखा कि जो वृद्ध हाथी जंगल में मर गया, तो वह झुंड खड़ा होकर रोता रहता है, और फिर थोड़े दिनों बाद वापस चले जाते हैं।",
+      "category": "sentence_boundary",
+      "reason": "शब्द क्रम और सर्वनाम/वचन-संगति सुधारी गई (वाक्य को पढ़ने में सहजीकरण के लिए)।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "जब, तो फिर छह महीने, साल भर बाद जैसे मानो बरसी मनाने आता हो, वो वहीं आता है।",
+      "corrected": "और फिर छह महीने, साल-भर बाद, जैसे मानो बरसी मनाने आता हो, वह वहीं आता है।",
+      "category": "sentence_boundary",
+      "reason": "टुकड़ों और अव्यवस्थित शब्दों को समेकित कर वाक्य प्रवाह सुधारा गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "और वो जो अस्थियाँ बची रहती हैं, उसको उठा-उठा के वो सहलाता है, और याद करता है और रोते हैं।",
+      "corrected": "और जो अस्थियाँ बची रहती हैं, उनको उठा-उठाकर वे सहलाते हैं, याद करते हैं और रोते हैं।",
+      "category": "sentence_boundary",
+      "reason": "ASR-जनित 'उठा-उठा के' को सामान्य रूप 'उठा-उठाकर' किया गया और सर्वनामों को झुंड के साथ मेल खाने के लिए बहुवचन बनाया गया ताकि वाक्य तार्किक रहे।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "तो ये जो उनका व्यवहार है, वो उस योनि में... संवेदना का जो स्तर है उसके अनुसार है।",
+      "corrected": "तो ये जो उनका व्यवहार है, वह उस योनि में संवेदना के स्तर के अनुसार है।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य को संयोजित कर स्पष्ट वाक्य संरचना दी गई; अनावश्यक विच्छेद हटाया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "तो हमें अपने सगे संबंधी, पूज्य और प्रेयियों की कम से कम अंतिम क्रिया करने का वह तरीका आना ही चाहिए,",
+      "corrected": "तो हमें अपने सगे संबंधियों, पूज्य और प्रेयियों की कम से कम अंतिम क्रिया करने का वह तरीका आना ही चाहिए,",
+      "category": "spelling",
+      "reason": "संज्ञा का बहुवचन रूप ('संबंधी' -> 'संबंधियों') व्याकरणानुकूल किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "उस सभी विधियों में",
+      "corrected": "उन सभी विधियों में",
+      "category": "spelling",
+      "reason": "सहयोगी सर्वनाम का सही रूपांतर कर वाक्य व्याकरणानुकूल बनाया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "चाहे वो कोई दफनाता हो, फातिहा पढ़ता हो, या क्रिश्चियन लोग हैं, वो भी उसको एक सेरेमनी करते हैं, एक विधि करते हैं, तो उसमें ये सब बातें प्रकट होती हैं।",
+      "corrected": "चाहे वे किसी को दफनाते हों, फातिहा पढ़ते हों, या क्रिश्चियन लोग हों, वे भी एक सेरेमनी करते हैं, एक विधि करते हैं, तो उसमें ये सब बातें प्रकट होती हैं।",
+      "category": "sentence_boundary",
+      "reason": "वचन-संगति (एकवचन/बहुवचन) और पहचानार्थक सर्वनामों को समायोजित किया गया ताकि वाक्य प्रवाह और व्याकरण सही रहे।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "और उसको जाना है तो उसको कोई माध्यम की बीच में जरूरत पड़ेगी।",
+      "corrected": "और उसको जाना है तो उसको किसी माध्यम के बीच में जरूरत पड़ेगी।",
+      "category": "spelling",
+      "reason": "\"कोई माध्यम की बीच में\" is ungrammatical in Hindi; corrected to \"किसी माध्यम के बीच में\" for grammatical accuracy while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "तो जाना है तो कोई मीडियम होगा, कोई मीडियम होगा। He has to cover the distance. अगर गति शब्द का उपयोग हो रहा है, इसका मतलब है कि उसको जाना है और उसको कोई माध्यम की बीच में जरूरत पड़ेगी।",
+      "corrected": "तो जाना है तो कोई मीडियम होगा, कोई मीडियम होगा। He has to cover the distance. अगर 'गति' शब्द का उपयोग हो रहा है, इसका मतलब है कि उसको जाना है और उसको किसी माध्यम के बीच में जरूरत पड़ेगी।",
+      "category": "punctuation",
+      "reason": "Added quotes around 'गति' to mark it as a cited term and improve sentence clarity; also consolidated the corrected phrase for consistency.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "या जाने के लिए कोई वो शरीर धारण करता है?",
+      "corrected": "या जाने के लिए कोई और शरीर धारण करता है?",
+      "category": "asr_term",
+      "reason": "आम भाषा में सुस्पष्ट करने के लिए 'कोई वो' को 'कोई और' में बदला गया। अर्थ में परिवर्तन नहीं किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "जीव स्वयं व्यवहार—सीधे बैठो—जीव स्वयं व्यवहार का आस्पद नहीं होता।",
+      "corrected": "जीव स्वयं व्यवहार—सीधे बैठो—जीव स्वयं व्यवहार का आधार नहीं होता।",
+      "category": "spelling",
+      "reason": "'आस्पद' स्पष्ट रूप से असामान्य/गलत शब्द है; यहाँ 'आधार' अधिक सुसंगत और स्पष्ट है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "जीवस्यात् व्यवहारिक जब वो स्थूल शरीर से संपर्क करता है, जीव का सीधा इस जगत के साथ व्यवहार देखा नहीं जाता।",
+      "corrected": "जीव वास्तव में व्यावहारिक तब बनता है जब वह स्थूल शरीर से संपर्क करता है। जीव का सीधा इस जगत के साथ व्यवहार देखा नहीं जाता।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य संरचना और व्याकरण सुधारे गए ताकि विचार स्पष्ट रहे; मूल अर्थ बनाए रखा गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "इसीलिए इस स्थूल शरीर को विश्व बोलते हैं।",
+      "corrected": "इसीलिए इस स्थूल शरीर को 'विश्व' कहा गया है।",
+      "category": "punctuation",
+      "reason": "वाक्य को शुद्ध हिंदी व्याकरणानुसार स्वाभाविक बनाया गया (कथन का रूप)।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "जीवत्यास्य व्यावहारिकः, वो तभी बनता है जब स्थूल शरीर उसके पास हो।",
+      "corrected": "जीव व्यावहारिकः तभी बनता है जब स्थूल शरीर उसके पास हो।",
+      "category": "sanskrit",
+      "reason": "ट्रांसक्रिप्शन में 'जीवस्य' जैसा जुड़ा स्वर था जो वाक्य को अस्वाभाविक बना रहा था; सरल सन्स्कृत/हिंदी रूप में बदला गया। अर्थ नहीं बदला गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "गरुड़ पुराण",
+      "corrected": "गरुड़पुराण",
+      "category": "proper_name",
+      "reason": "प्रसिद्ध ग्रंथ का संयोजित नाम सामान्यतः 'गरुड़पुराण' लिखते हैं; मानक वर्तनी के अनुरूप किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "फेसिलिटेशन",
+      "corrected": "फैसिलिटेशन",
+      "category": "spelling",
+      "reason": "Corrected Hindi transliteration of English word 'facilitation' to common spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "देरेजे सिस्टम",
+      "corrected": "there is a system",
+      "category": "asr_term",
+      "reason": "ASR likely transcribed English phrase 'there is a system' as 'देरेजे सिस्टम'; corrected to intended English phrase while preserving code-switching.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "देरेजे सिस्टम",
+      "corrected": "there is a system",
+      "category": "asr_term",
+      "reason": "Second occurrence of the same ASR error corrected to 'there is a system'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "मने",
+      "corrected": "माने",
+      "category": "spelling",
+      "reason": "Corrected colloquial spelling to standard 'माने' (meaning 'that is to say').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "अगर गति करनी है, तो धन और लक्ष्य मात्र से वो गति संपन्न नहीं होती।",
+      "corrected": "तो जब गति करनी होती है व्यक्ति को, अगर गति करनी है, तो धन और लक्ष्य मात्र से वो गति संपन्न नहीं होती।",
+      "category": "sentence_boundary",
+      "reason": "Added sentence boundary and slight reordering to preserve speaker's phrasing and improve readability without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "नौ। यहाँ जीव है, जीव के कर्म हैं",
+      "corrected": "यहाँ जीव है, जीव के कर्म हैं",
+      "category": "asr_term",
+      "reason": "उपयोग में आया 'नौ' असंबंधित/ASR-प्रविष्टि प्रतीत होता है; वाक्य प्रवाह के लिए हटाया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "पजेस",
+      "corrected": "प्रवेश",
+      "category": "asr_term",
+      "reason": "संदर्भ से स्पष्ट है कि अर्थ 'दूसरे के शरीर में प्रवेश करना' है; 'पजेस' ASR त्रुटि है, 'प्रवेश' सही शब्द है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "उनको मने अगला देह मानो प्राप्त नहीं हुआ,",
+      "corrected": "उनको माने अगला देह मानो प्राप्त नहीं हुआ,",
+      "category": "spelling",
+      "reason": "'मने' यहाँ प्रयुक्त समासिक/मुहावरेदार रूप 'माने' का त्रुटिपूर्ण रूप प्रतीत होता है; अर्थ वही बनाए रखने हेतु सुधार किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "गीता प्रेस में एक निकला कि हनुमानदास पोद्दार टहलने जाते थे जहाँ, उन्होंने खुद लिखा ये।",
+      "corrected": "गीता प्रेस के 'कल्याण' में लिखा है कि हनुमानप्रसाद पोद्दार टहलने जाते थे, उन्होंने खुद लिखा है।",
+      "category": "proper_name",
+      "reason": "Clarified reference to Gita Press's magazine 'कल्याण' and corrected the likely proper name to 'हनुमानप्रसाद पोद्दार' to match commonly known historical figure; improved sentence flow.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "हनुमानदास पोद्दार",
+      "corrected": "हनुमानप्रसाद पोद्दार",
+      "category": "proper_name",
+      "reason": "Corrected probable misrecognition of the person's name (Hanuman Prasad Poddar).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "एक गीता प्रेस में कल्याण में उन्होंने खुद लिखा।",
+      "corrected": "गीता प्रेस के 'कल्याण' में उन्होंने खुद लिखा।",
+      "category": "proper_name",
+      "reason": "Consolidated and clarified magazine reference; removed duplication and fixed case to 'के \"कल्याण\" में' for readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "तो बोले कि मेरा श्राद्ध गया में करवाइए, तो मेरी गति नहीं बन प रही।",
+      "corrected": "तो बोले, \"मेरा श्राद्ध गया में करवाइए, तो मेरी गति नहीं बन पा रही।\"",
+      "category": "punctuation",
+      "reason": "Marked direct speech with quotes and fixed spacing; retained 'गया में' (place) which is meaningful for the ritual context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "तो आदमी भेजा उन्होंने, श्राद्ध करवाया उसका, एक गीता प्रेस में कल्याण में उन्होंने खुद लिखा।",
+      "corrected": "तो आदमी भेजा उन्होंने, श्राद्ध करवाया उसका, गीता प्रेस के 'कल्याण' में उन्होंने खुद लिखा।",
+      "category": "sentence_boundary",
+      "reason": "Removed redundancy and clarified placement of the magazine reference within the sentence for coherence.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "गति सिद्धांत को उन्होंने जब समझा ही नहीं",
+      "corrected": "गति के सिद्धांत को उन्होंने जब समझा ही नहीं",
+      "category": "other",
+      "reason": "Inserted missing postposition 'के' for grammatical correctness.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "अब कोई हिंदू वहाँ जाकर के उनका श्राद्ध कर दे तो उठ जाएंगे कब्र में से。",
+      "corrected": "अब कोई हिंदू वहाँ जाकर उनका श्राद्ध कर दे तो कब्र से उठ जाएंगे。",
+      "category": "sentence_boundary",
+      "reason": "Removed colloquial 'के' after 'जाकर' and reordered 'कब्र से उठ जाएंगे' for clearer, grammatical sentence flow.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो कदाचित कर्म से, कर्ममात्र से जीव अपने अगले डेस्टिनेशन को जा सकता है",
+      "corrected": "तो कदाचित कर्म से, कर्म मात्र से जीव अपने अगले डेस्टिनेशन पर जा सकता है",
+      "category": "spelling",
+      "reason": "Separated 'कर्म मात्र' for clarity and replaced incorrect postposition 'को' with 'पर' to reflect intended Hindi usage.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "लेकिन वह यात्रा उतनी सुखद होगी, ये कहने में कठिनाई है。",
+      "corrected": "लेकिन वह यात्रा उतनी सुखद होगी, यह कहना कठिन है。",
+      "category": "sentence_boundary",
+      "reason": "Normalized phrasing to a more standard form ('ये कहने में कठिनाई है' → 'यह कहना कठिन है') without changing meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो वो जब शरीर में मरते हैं अपने, तो उनकी गति कैसे होती है?",
+      "corrected": "तो वे जब अपने शरीर में मरते हैं, तो उनकी गति कैसे होती है?",
+      "category": "sentence_boundary",
+      "reason": "Reordered words and used 'वे' for clearer syntax and conventional phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो मनुष्य थोड़ा-सा बढ़ा सकते हैं。",
+      "corrected": "तो मनुष्य थोड़ा-सा बढ़ सकते हैं。",
+      "category": "spelling",
+      "reason": "Corrected verb form 'बढ़ा' → 'बढ़' to match intended meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "यात्रा पे गया है",
+      "corrected": "यात्रा पर गया है",
+      "category": "spelling",
+      "reason": "Replaced colloquial 'पे' with standard 'पर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "सद्गति होगी, है न, ये कहना कठिन है。",
+      "corrected": "सद्गति होगी, है न, यह कहना कठिन है。",
+      "category": "spelling",
+      "reason": "Standardized demonstrative 'ये' to 'यह' for consistency.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "कागभुशुण्डि जी",
+      "corrected": "कागभूशुण्डि जी",
+      "category": "proper_name",
+      "reason": "Corrected the proper name of the Ramcharitmanas character (common spelling with long vowel) from likely ASR misrendering.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "उस्थित्वा शाश्वतीः समाः।",
+      "corrected": "उषित्वा शाश्वतीः समाः।",
+      "category": "sanskrit",
+      "reason": "Clear transcription/typo error in the Sanskrit phrase; corrected to match the earlier occurrence and intended form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "उसके कर्मों का भोग कराने के लिए, जिससे वो क्षीण हो जाए, और उसके स्वभाव को क्षीण करने के लिए, जिससे वो हल्का होके फिर से आवे, and he will be given another chance to start his journey.",
+      "corrected": "उसके कर्मों का भोग कराने के लिए, जिससे वो क्षीण हो जाए, और उसके स्वभाव को क्षीण करने के लिए, जिससे वो हल्का होके फिर से आवे। And he will be given another chance to start his journey.",
+      "category": "sentence_boundary",
+      "reason": "Inserted a full stop to separate the Hindi clause from the following English clause, improving sentence boundary and readability while preserving the speaker's code-switching.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "There is a system. नॉट मैन मेड, गॉड मेड।",
+      "corrected": "There is a system. नॉट मैन मेड — गॉड मेड।",
+      "category": "punctuation",
+      "reason": "Replaced comma with an em dash to reflect the emphatic contrast in the spoken phrase and improve readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "तुम्हारा संपाती जैसे गिद्धों को भी दिखाई देती थी।",
+      "corrected": "संपाती जैसे गिद्धों को भी दिखाई देती थी।",
+      "category": "asr_term",
+      "reason": "Likely an extraneous/erroneous insertion 'तुम्हारा' from ASR; removed to restore plausible intended phrasing referring to the proper name 'संपाती' (a vulture).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "चार लड्डू आंटों के ही, और क्या।",
+      "corrected": "चार लड्डू आटे के ही, और क्या।",
+      "category": "asr_term",
+      "reason": "Clear ASR misrecognition: 'आंटों' corrected to 'आटे'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "मैं एक दृष्टांत देता हूँ लौकिक।",
+      "corrected": "मैं एक लौकिक दृष्टांत देता हूँ।",
+      "category": "sentence_boundary",
+      "reason": "Reordered phrase to standard Hindi word order for clarity while preserving speaker meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "I am sorry, आपका भोजन में बिगाड़ना नहीं चाहता, लंच का टाइम हो गया है, but देखा जाए तो आप आटा और सब्जी और दाल, this is what you are giving.",
+      "corrected": "I am sorry, आपका भोजन बिगाड़ना नहीं चाहता। लंच का टाइम हो गया है, but देखा जाए तो आप आटा और सब्जी और दाल। This is what you are giving.",
+      "category": "sentence_boundary",
+      "reason": "Removed spurious 'में' and split the long clause into clearer sentence boundaries between Hindi and English segments.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "आपका भोजन में बिगाड़ना नहीं चाहता",
+      "corrected": "आपका भोजन बिगाड़ना नहीं चाहता",
+      "category": "asr_term",
+      "reason": "Removed an inserted/erroneous 'में' likely introduced by ASR.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "दाल, this is what you are giving.",
+      "corrected": "दाल। This is what you are giving.",
+      "category": "sentence_boundary",
+      "reason": "Replaced comma with sentence boundary to separate the Hindi clause from the following English clause.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "लुप्त पिण्डोदक क्रियाः, पतन्ति पितरः।",
+      "corrected": "लुप्त पिण्डोदक क्रियाः पतन्ति पितरः।",
+      "category": "sanskrit",
+      "reason": "Removed an interrupting comma within a Sanskrit phrase to preserve phrase continuity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "अहो बत महत् पापं कर्तुं व्यवसिता वयम्।",
+      "corrected": "अहो! बहु महत् पापं कर्तुम् व्यवसिता वयम्।",
+      "category": "sanskrit",
+      "reason": "Probable Sanskrit quotation; corrected spacing, punctuation, and likely intended words ('बहु' and 'कर्तुम्') to match a recognizable Sanskrit phrase.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "विसृज्य सशरं चापं शोक-संविग्नमानसः।",
+      "corrected": "विसृज्य शरं चापं शोकसंविग्नमानसः।",
+      "category": "sanskrit",
+      "reason": "Adjusted likely Sanskrit phrase spacing and compound formation to a form that fits the surrounding Sanskrit recitation; preserved original sense.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "चढ़के जो आ जा हैं कुरुक्षेत्र में, वो हमसे क्या अपेक्षा करता है।",
+      "corrected": "चढ़कर जो आ गए हैं कुरुक्षेत्र में, वो हमसे क्या अपेक्षा करते हैं।",
+      "category": "asr_term",
+      "reason": "Corrected ASR misrecognitions and verb agreement ('आ जा' → 'आ गए', 'क्या अपेक्षा करता है' → 'क्या अपेक्षा करते हैं') to match plurality and grammar.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "वो बेचारा फिर वो, उसका खड़ा होना मुश्किल हो गया।",
+      "corrected": "वो बेचारा, फिर उसका खड़ा होना मुश्किल हो गया।",
+      "category": "punctuation",
+      "reason": "Fixed punctuation to improve sentence boundary and readability without changing wording or meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 14,
+      "original": "मैं तो बैठता हूँगा।",
+      "corrected": "मैं तो बैठ जाऊँगा।",
+      "category": "asr_term",
+      "reason": "Corrected an apparent ASR rendering 'बैठता हूँगा' to the standard spoken Hindi 'बैठ जाऊँगा' which fits the context.",
+      "confidence": "medium"
+    }
+  ]
+}

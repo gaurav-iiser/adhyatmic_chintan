@@ -1,0 +1,505 @@
+{
+  "lecture_id": "lecture1.8",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 14,
+  "total_changes": 58,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 14,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: The Sanskrit śloka contains multiple segments that may be partially misrecognized (e.g., repeated 'उत्सन्नकुलधर्माणां' lines). These were preserved as in the raw transcript where the intended reading was unclear; please review the verse spacing/words against a canonical text if required.",
+    "Segment 2: Sanskrit segments (the quoted shloka/phrases) were lightly corrected for spacing/orthography. Please verify the exact intended Bhagavadgītā wording and punctuation against the speaker's original, as small changes in Sanskrit can alter meaning.",
+    "Segment 2: Several English/Hinglish code-switches (e.g., 'इकोनॉमिकल रीज़न', 'insulting every day') were preserved as spoken.",
+    "Segment 3: रॉ ट्रांसक्रिप्ट में 'संकादि ऋषियों' जैसा शब्द आया है; इसे यथावत रखा गया क्योंकि स्पष्ट प्रतिस्थापन सुनिश्चित नहीं था।",
+    "Segment 3: 'वो तो किस कंदा कांड में है' वाक्यांश में 'कंदा कांड' संभवतः ASR-विकृति है; इसे अपरिवर्तित रखा गया।",
+    "Segment 3: अंग्रेज़ी वाक्यांश 'the amount of people are going to die' को वक्ता जैसा बोला गया वैसा ही रखा गया (व्याकरण सुधार नहीं किया)।",
+    "Segment 4: वाक्यांश 'अधर्मः अभिभवत्युत।' संभवतः संस्कृत उद्धरण का आंशिक या विकृत रूप है; संशय होने पर मानव-समीक्षा कर शुद्ध संस्कृत रूप ('अधर्मोऽभिभवति' इत्यादि) की पुष्टि करें।",
+    "Segment 5: The phrase 'विचार-प्रवूढ़' may be an ASR error or a colloquial pronunciation; original intended word (e.g., 'विचार-प्रवृत्त/प्रवर्धित') is unclear — please verify against the audio.",
+    "Segment 5: Sanskrit forms appear variably (e.g., 'कुलघ्नानां' vs 'कुलघ्नानाम्', 'शंकरो नरकायैव', 'लुप्तपिण्डोदकक्रियाः'). I preserved the speaker's rendered forms; verify against the original recitation if strict canonical orthography is required.",
+    "Segment 6: The correction of 'वर्णसंकर कारकैः' → 'वर्णसंकरकारकैः' is done with medium confidence; please verify against the intended Sanskrit wording (could also appear as 'वर्णसंकरकर्तृकैः' in some recensions).",
+    "Segment 6: The phrase 'हंस वंश अवतंस' appears garbled and was preserved as in the raw transcript; please review and correct if the speaker referenced a standard epithet or Sanskrit compound.",
+    "Segment 6: Consider verifying the precise Sanskrit phrasing 'उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन' against the source text if an exact transliteration is required.",
+    "Segment 7: Several Sanskrit fragments/quotations are preserved as in the raw transcript but are somewhat uncertain (e.g., 'इति अनुश्रुष्म', 'अहो बत महत् पापं कर्तुं व्यवसिता वयम्', 'मामप्रतीकारम् अशस्त्रम्', 'अशस्त्रम् अप्रतीकारम्'). I did not alter them where the intended canonical wording was not unambiguous. Please have a human reviewer verify these Sanskrit segments against the speaker's intended quotations if fidelity to a canonical verse is required.",
+    "Segment 7: Also preserved repetitions and colloquial phrasings (e.g., duplicate phrases, sentence fragments) per instructions to avoid rewriting the speaker's style.",
+    "Segment 8: The quoted Sanskrit clause beginning with 'धृतराष्ट्रा रणे...' may need human verification against the speaker's intended original text (sandhi/declension and exact wording are uncertain).",
+    "Segment 8: The phrase 'रथ के महती सेंदन' in the paragraph remains unclear; ASR may have misrendered a technical term describing the chariot — please verify from audio or source notes if this should be a different Sanskrit/Hindi term.",
+    "Segment 9: The term 'अजानज लोक' (as in 'अजानज लोक में होंगे') is unclear and may be an ASR misrecognition of a doctrinal term (e.g., 'अजन्मज' or similar). Please review against the speaker audio/transcript for intended wording.",
+    "Segment 9: Change from 'जीवन' to 'जीव' was made based on contextual consistency, but verify against audio to ensure speaker used 'जीव'.",
+    "Segment 10: Several short words/phrases look like ASR artifacts or colloquial code-switching and were left unchanged: 'नेचर', 'नाउ'. Please review for speaker intent.",
+    "Segment 10: The word 'सांकेत' (महाराज दशरथ का जो सांकेत वहाँ हुआ) may be misrecognized; speaker might have intended a different term (e.g., 'संकट' or 'संदेश'). Left as-is for fidelity; please verify.",
+    "Segment 10: The token 'अस्रद्धा' was preserved from the raw transcript though it may be an ASR error or nonstandard; please verify the intended word (possibly 'अश्रद्धा' or another).",
+    "Segment 10: The term 'निष्पत्ति' was left unchanged though 'निष्कर्ष' might be intended; please confirm.",
+    "Segment 11: The token \"आँटा\" in \"आँटा यहाँ पानी में गिराया तुमने\" may be an ASR error (unclear intended word). Preserved as in raw transcript; please verify original word.",
+    "Segment 11: Phrases like \"अधिदैव\", \"गैस पिंड\" and \"कान में बाँधने से\" appear odd in context; they were preserved verbatim. Please verify these terms against the speaker audio for intended wording.",
+    "Segment 11: Speaker uses code-switching and colloquial forms (e.g., \"सडनली साइंटिस्ट\", \"event\", \"major events\"). These were left as spoken.",
+    "Segment 12: 1) 'कबूवों' → 'चीलों' का सुधार ASR-गलती मानकर किया गया; मानव-समीक्षा के लिए सुनिश्चित करें कि वक्ता वास्तव में पारसी आचार-व्यवहार के क्रम में 'चीलों के लिए छोड़ना' ही कहना चाह रहे थे।",
+    "Segment 12: 2) 'ये जीव का पहला और आखिरी है' में सुधार किया गया — मूल वाक्यांश असमंजसपूर्ण था; कृपया सत्यापित करें कि वक्ता ने वास्तव में यही अर्थ व्यक्त किया।",
+    "Segment 12: 3) 'होती है ये।' से 'ये' हटाया गया है क्योंकि यह वाक्य-भराव जैसा प्रतीत हुआ; पुष्टि के लिए देखें कि वक्ता ने पैजैंटर रूप से 'ये' कहा था या नहीं।"
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "धार्तराष्ट्रा रणे हन्युः।",
+      "corrected": "धृतराष्ट्रा रणे हन्युः।",
+      "category": "proper_name",
+      "reason": "Clear misrecognition of the proper name 'धृतराष्ट्र' (name of the Kuru king); corrected spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "विसृज्य सशरं चापम्।",
+      "corrected": "विसृज्य सशरम् चापम्।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit ending 'सशरं' → 'सशरम्' to match expected sandhi/ending in the phrase (releasing the bow and arrow).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "एवमुक्त्वा अर्जुनः संख्ये।",
+      "corrected": "एवमुक्त्वा अर्जुनः सङ्ख्ये।",
+      "category": "sanskrit",
+      "reason": "Corrected the Sanskrit term 'सङ्ख्ये' (in the army-array); original appeared as a likely ASR variant 'संख्ये'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "के औचित्य पर प्रश्न उठाया है।",
+      "corrected": "युद्ध के औचित्य पर प्रश्न उठाया है।",
+      "category": "asr_term",
+      "reason": "ASR omitted the word 'युद्ध' which is clear from context (Arjuna's question about the propriety of war).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "किम् राज्यसुखभोगेन?",
+      "corrected": "किं राज्यसुखभोगेन?",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit interrogative particle to 'किं' (standard transliteration/spelling).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "अपना देश छोड़ करके",
+      "corrected": "अपना देश छोड़कर",
+      "category": "spelling",
+      "reason": "Corrected common compound verb form ('छोड़कर' is the standard form).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "गोरी आए",
+      "corrected": "गोरे आए",
+      "category": "spelling",
+      "reason": "Corrected gender/number to refer to 'गोरे' (foreign/European invaders) as intended in context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "शासन किया उसके ऊपर।",
+      "corrected": "उस पर शासन किया।",
+      "category": "sentence_boundary",
+      "reason": "Adjusted word order for clearer, more natural sentence boundary ('उस पर शासन किया' instead of 'शासन किया उसके ऊपर').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "न समझ में न आवे",
+      "corrected": "न समझ में न आए",
+      "category": "spelling",
+      "reason": "Corrected verb form to standard Hindi ('आए').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "निहत्य धार्तराष्ट्रान् नः का प्रीतिः स्याज्जनार्दन।",
+      "corrected": "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन।",
+      "category": "sanskrit",
+      "reason": "Fixed spacing/orthography in the Sanskrit phrase (joined 'न् नः' to 'न्नः') to reflect likely intended sandhi; preserved original wording otherwise.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "वो कहता है, का प्रीतिः स्यात्?",
+      "corrected": "वो कहता है, कः प्रीति स्यात्?",
+      "category": "sanskrit",
+      "reason": "Corrected the Sanskrit interrogative pronoun and spacing to a more standard form as spoken in the context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "मने इराक का और अमेरिका की जो लड़ाई हुई,",
+      "corrected": "माने, इराक का और अमेरिका की जो लड़ाई हुई,",
+      "category": "asr_term",
+      "reason": "Corrected probable ASR error 'मने' to 'माने' (used here as 'माने' = 'for example').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "लड़ाई नहीं करी,",
+      "corrected": "लड़ाई नहीं की,",
+      "category": "spelling",
+      "reason": "Corrected colloquial/ASR form 'करी' to standard Hindi 'की'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "इकोनॉमिकल रीज़न्स हो सकते हैं, एक बात है।",
+      "corrected": "इकोनॉमिकल रीज़न हो सकते हैं, एक बात है।",
+      "category": "asr_term",
+      "reason": "Normalized English code-switch 'reasons' to a single 'रीज़न' to match speaker's intended usage.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "वो तो बेच दिया उन्होंने।",
+      "corrected": "वो तो बेच देते हैं।",
+      "category": "other",
+      "reason": "Corrected tense/agreement to match preceding general statement about people selling houses for revenge (likely ASR/inflection error).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "वो चोट करता है कि",
+      "corrected": "वो पूछता है कि",
+      "category": "asr_term",
+      "reason": "संदर्भ में 'चोट' अस्पष्ट है; स्पष्ट वाक्यांश 'वो पूछता है कि' सटीक रूप में मिल रहा है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "द्रौपदी के वस्त्रहरण का अपमान का बदला लेना है।",
+      "corrected": "द्रौपदी के वस्त्रहरण के अपमान का बदला लेना है।",
+      "category": "spelling",
+      "reason": "वाक्य में 'का' की पुनरावृत्ति हटाकर समुचित संबंधवाचक रूप लगाया गया (वस्त्रहरण के अपमान)।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "मैं क्यों नूँ?",
+      "corrected": "मैं क्यों जाऊँ?",
+      "category": "asr_term",
+      "reason": "'नूँ' स्पष्ट ASR-बाधित शब्द प्रतीत होता है; संदर्भ से 'जाऊँ' होना अधिक सुसंगत है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "हमारा प्रतिशोध इतना बड़ा नहीं हो सकता कि हम अपने गुरु को जाके मारें। से, तो ये दो कारण बताते हैं पहले,",
+      "corrected": "हमारा प्रतिशोध इतना बड़ा नहीं हो सकता कि हम अपने गुरु को जाके मारें। तो ये दो कारण बताते हैं पहले,",
+      "category": "punctuation",
+      "reason": "वाक्य में 'से,' एक ASR-अवशेष जैसा दिखता है; उसे हटाकर वाक्य प्रवाह सुधारा गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "मने कुल की जो मर्यादा है",
+      "corrected": "माने कुल की जो मर्यादा है",
+      "category": "spelling",
+      "reason": "'मने' को सामान्य हिंदी रूप 'माने' किया गया जो अर्थ स्पष्ट करता है।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "प्रदुष्यन्ति कुलस्त्रियः, धर्मे नष्टे कुलं कृत्स्नम् अधर्मोऽभिभवत्युत।",
+      "corrected": "प्रदुष्यन्ति कुलस्त्रियः, धर्मे नष्टे कुलं कृत्स्नम्; अधर्मोऽभिभवति।",
+      "category": "sanskrit",
+      "reason": "सांस्कृत पंक्ति को अधिक मानक/स्वरूप में व्यवस्थित किया गया; अंतिम क्रिया रूप का संशोधन मध्य-आतिरिक्त आवाज का सुधार है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "जो हमने इनहेरिट किया है,",
+      "corrected": "जो हमने इनहेरिट किए हैं,",
+      "category": "spelling",
+      "reason": "व्याकरणिक agreement: 'हमने' के साथ क्रिया का बहुवचन रूप सुधारना।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "तोले राजीव गांधी तक हमारी कोई बिगाड़ नहीं थी।",
+      "corrected": "तो लेकर राजीव गांधी तक हमारी कोई बिगाड़ नहीं थी।",
+      "category": "asr_term",
+      "reason": "ASR ने 'तो लेकर' को 'तोले' रूप में गलत लिखा; सरल सुधार।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "तो कोई रोने लगा उनके परिवार से, तो नेहरू, Nehrus do not weep on street, ये याद दिलाया गया किसी ने धीरे से कहा, नेहरूको खानदान के लोग सबके सामने रोते नहीं।",
+      "corrected": "तो कोई रोने लगा उनके परिवार से, तो किसी ने धीरे से कहा, 'नेहरू खानदान के लोग सबके सामने रोते नहीं' — 'Nehrus do not weep on street', ये याद दिलाया गया।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य विभाजन और उद्धरणों के आस-पास विराम चिन्ह जोड़े गए ताकि कथन स्पष्ट रहे। (मूल अर्थ कायम रखा गया।)",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "कोई चीज है जिसको पुलिस नहीं नियंत्रित करती है, कोई चीज है जो नियंत्रित करती है हमारे व्यवहार को।",
+      "corrected": "कोई चीज ऐसी है जिसे पुलिस नियंत्रित नहीं करती; कोई चीज है जो हमारे व्यवहार को नियंत्रित करती है।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य-क्रम और अस्पष्टता सुधारने के लिए शब्द क्रम और विराम जोड़ा गया, अर्थ अपरिवर्तित रखा गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "हम कुछ भी कपड़ा पहन के बाहर नहीं जा सकते।",
+      "corrected": "हम कुछ भी कपड़ा पहनकर बाहर नहीं जा सकते।",
+      "category": "spelling",
+      "reason": "संयुक्त क्रिया 'पहनकर' के सामान्य रूप की शुद्ध रूपांतरण।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "अठारह अक्षौहिणी सेना मारी गई",
+      "corrected": "अठारह अक्षौहिणी सेनाएँ मारी गईं",
+      "category": "spelling",
+      "reason": "संख्या के साथ संज्ञा का बहुवचन रूप और क्रिया का मिलान (व्याकरणिक सुधार)।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 5,
+      "original": "तब भी उनको समझ में नहीं आया। तब उनको लेकर के भगवान युधिष्ठिर के पास गए, पितामह भीष्म के पास गए।",
+      "corrected": "तब भी उन्हें समझ में नहीं आया। तब भगवान उन्हें लेकर पितामह भीष्म के पास गए।",
+      "category": "sentence_boundary",
+      "reason": "Pronoun form and word-order adjusted for grammatical clarity while preserving meaning (no doctrinal change).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "कुलक्षय तो हुए, इसमें कोई दो राय नहीं है।",
+      "corrected": "कुलक्षय तो हुआ, इसमें कोई दो राय नहीं है।",
+      "category": "spelling",
+      "reason": "Corrected verb form for grammatical agreement with 'कुलक्षय' (singular).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "उनको पिंड प्राप्त नहीं होता और जल प्राप्त नहीं होता। पिंड उदक क्रियाः, यानी पितृपक्ष में जो वंश के लोग जलांजलि देते हैं और पिंडदान करते हैं, वो उनको प्राप्त नहीं होता क्योंकि वो उस वंश के हैं ही नहीं।",
+      "corrected": "उन्हें पिंड प्राप्त नहीं होता और जल प्राप्त नहीं होता। पिंड उदक क्रियाः, यानी पितृपक्ष में जो वंश के लोग जलांजलि देते हैं और पिंडदान करते हैं, वे उन्हें प्राप्त नहीं करते क्योंकि वे उस वंश के हैं ही नहीं।",
+      "category": "spelling",
+      "reason": "Pronoun forms adjusted ('उनको'→'उन्हें', 'वो'→'वे') for standard Hindi grammar while keeping the speaker's meaning and explanatory structure.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "वर्णसंकर कारकैः",
+      "corrected": "वर्णसंकरकारकैः",
+      "category": "sanskrit",
+      "reason": "Removed erroneous space and formed the Sanskrit compound as used in context (term occurs multiple times in the segment).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "सष्ठी",
+      "corrected": "षष्ठी",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit ordinal spelling (षष्ठी) in the phrase 'कुलघ्ना नाम षष्ठी बहुवचन'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "रघुवंशीन कर सहज स्वभाव",
+      "corrected": "रघुवंशियों का सहज स्वभाव",
+      "category": "asr_term",
+      "reason": "ASR produced a garbled phrase; corrected to coherent Hindi matching the immediately following repetition ('रघुवंशियों का सहज स्वभाव है').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो मनुष्याणां नरके नियतो वासः।",
+      "corrected": "तो मनुष्याणां नृके नियतः वासः।",
+      "category": "sanskrit",
+      "reason": "Corrected the Sanskrit phrase to the canonical/grammatical form 'नृके नियतः वासः' (fixed dwelling in hell).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "ऐसा मैंने अपने तो आचार्यों से सुना है, प्रमाण है ये।",
+      "corrected": "ऐसा मैंने अपने आचार्यों से सुना है, प्रमाण है ये।",
+      "category": "asr_term",
+      "reason": "Removed an extraneous spoken particle 'तो' that appears to be an ASR insertion and interrupts the sentence.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "धार्तराष्ट्रा रणे हन्युः तन् मे क्षेमतरं भवेत्।",
+      "corrected": "धृतराष्ट्रा रणे हन्युः तन् मे क्षेमतरं भवेत्।",
+      "category": "sanskrit",
+      "reason": "Probable ASR error in the Sanskrit name/word 'धार्तराष्ट्रा' — corrected to 'धृतराष्ट्रा' which matches prior mentions and common form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "रथ के पिछले भाग में जाकर के उपांविशत बैठ गया है अर्जुन।",
+      "corrected": "रथ के पिछले भाग में जाकर के उपाविशत बैठ गया है अर्जुन।",
+      "category": "spelling",
+      "reason": "Corrected obvious spelling/typo 'उपांविशत' → 'उपाविशत' to match earlier 'उपाविशत्' and intended meaning ('seated at the rear of the chariot').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "विसृज्य सशरं चापं, चापं विसृज्य।",
+      "corrected": "विसृज्य शरं चापं, चापं विसृज्य।",
+      "category": "sanskrit",
+      "reason": "Fixed an extra/erroneous 'स' before 'शरं' in the Sanskrit phrase; intended is 'शरं' (arrow).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "तक सींचित नहीं रहेगा",
+      "corrected": "तक सीमित नहीं रहेगा",
+      "category": "asr_term",
+      "reason": "'सींचित' appears to be an ASR error; context indicates 'सीमित' (limited) is intended.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "जीवन रहेगा",
+      "corrected": "जीव रहेगा",
+      "category": "asr_term",
+      "reason": "Context earlier refers to 'जीव' (the individual soul); 'जीवन' seems an ASR substitution.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "माइक रहतु बस पर्याप्त है।",
+      "corrected": "माइक रहना बस पर्याप्त है।",
+      "category": "asr_term",
+      "reason": "'रहतु' is a clear ASR misrecognition of 'रहना'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "त्रैतरीय में ढेर सारे देवलोक हैं",
+      "corrected": "त्रेतायुग में ढेर सारे देवलोक हैं",
+      "category": "asr_term",
+      "reason": "Likely intended reference to 'त्रेतायुग' (Treta Yuga); 'त्रैतरीय' appears to be an ASR error.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 10,
+      "original": "ऐसे बहुत के कथानक हैं।",
+      "corrected": "ऐसे बहुत से कथानक हैं।",
+      "category": "spelling",
+      "reason": "Correct Hindi usage: 'बहुत से' is the standard form here.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "पिण्डदान अथवा जलांजलि मानी जाती है।",
+      "corrected": "पिंडदान अथवा जलांजलि मानी जाती है।",
+      "category": "spelling",
+      "reason": "Standard spelling is 'पिंडदान' rather than 'पिण्डदान'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तो लोगों को जो प्रश्न होता है, वो होता है कि ये श्राद्ध नाम की जो चीज है, वो तो एक बड़ा पखंड लगता है।",
+      "corrected": "तो लोगों को जो प्रश्न होता है, वो होता है कि ये श्राद्ध नाम की जो चीज है, वो तो एक बड़ा पाखंड लगता है।",
+      "category": "spelling",
+      "reason": "Correct Hindi spelling 'पाखंड' (hypocrisy).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "और इसलिए महाराज दशरथ जब पितृलोक गए, आरंभ में वहीं गए, तो वो युद्ध के बाद आपको रामायण में पढ़ने को मिला होगा, युद्ध के बाद स्वयं दशरथ जी आए हैं श्रीराम का अभिनंदन करने के लिए।",
+      "corrected": "और इसलिए महाराज दशरथ जब पितृलोक गए, आरंभ में वहीं गए। तो युद्ध के बाद आपको रामायण में पढ़ने को मिला होगा, युद्ध के बाद स्वयं दशरथ जी आए हैं श्रीराम का अभिनंदन करने के लिए।",
+      "category": "sentence_boundary",
+      "reason": "Inserted a sentence break to improve readability while preserving original meaning and order.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "पितामह भीष्म ने जब जलांजलि दी महाभारत में आता है, पिंडदान किया पितृपक्ष में, तो शंतनु महाराज जो उनके पिता थे,",
+      "corrected": "पितामह भीष्म ने जब जलांजलि दी (महाभारत में आता है) पितृपक्ष में पिंडदान किया, तो शंतनु महाराज जो उनके पिता थे,",
+      "category": "punctuation",
+      "reason": "Added punctuation to clarify the parenthetical reference to the Mahabharata and improve sentence flow.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "मैंने हँसी उड़ाते हैं कई बार लोग,",
+      "corrected": "मैंने कई बार लोगों को हँसी उड़ाते हुए देखा;",
+      "category": "sentence_boundary",
+      "reason": "ASR word-order/grammar error; reordered to a grammatical Hindi phrase preserving speaker intent.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "वहाँ पानी गिराएंगे लोटा से, कहेंगे तुमको मिल गया होगा, पी लिया होगा तुमने पानी।",
+      "corrected": "वहाँ पानी गिराएंगे लोटा से, कहेंगे, \"तुमको मिल गया होगा, पी लिया होगा तुमने पानी।\"",
+      "category": "punctuation",
+      "reason": "Added punctuation and quotation marks to clarify direct reported speech and improve sentence boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "लो, अब उनका प्रयास का स्वागत होना चाहिए क्योंकि वो कोशिश करते हैं बेचारे आपकी मान्यताओं को... चोट लगने से बचाने के लिए उनकी अपनी कोशिश है।",
+      "corrected": "लो, अब उनका प्रयास का स्वागत होना चाहिए क्योंकि वे, बेचारे, आपकी मान्यताओं को चोट लगने से बचाने की कोशिश करते हैं।",
+      "category": "sentence_boundary",
+      "reason": "Reordered and tightened the clause to correct ASR fragmentation and preserve intended meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "इन पारसी लोग चील कबूवों के लिए फेंकते हैं,",
+      "corrected": "पारसी लोग चीलों के लिए फेंकते हैं,",
+      "category": "asr_term",
+      "reason": "कथन में 'कबूवों' स्पष्ट ASR-गलती लगती है; संदर्भ से स्पष्ट कि वे शव चीलों के लिए छो़ड़ने का संकेत कर रहे हैं। 'इन' हटाकर वाक्य प्राकृतिक कराया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "अरे ऐसा कोई तौर-तरीका व्यक्ति नहीं अपनावेगा।",
+      "corrected": "अरे ऐसा कोई तौर-तरीका व्यक्ति नहीं अपनाएगा।",
+      "category": "asr_term",
+      "reason": "'अपनावेगा' गैर-मानक रूप है; स्पष्ट श्रृजित वचन है 'अपनाएगा'।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "ये जीव का पहला है और आखिरी है,",
+      "corrected": "ये जीव का पहला और आखिरी है,",
+      "category": "sentence_boundary",
+      "reason": "वाक्य में प्रवाह के अनुसार 'पहला और आखिरी' जोड़कर अर्थ स्पष्ट किया गया; मूल बोलचाल में यही अभिप्राय अधिक संभावित है।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "होती है ये।",
+      "corrected": "होती है।",
+      "category": "punctuation",
+      "reason": "वाक्य अंत में अनावश्यक फीलर 'ये' हटाया गया ताकि वाक्य सीमा स्पष्ट हो; अर्थ में परिवर्तन नहीं।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "और इसलिए उसके यहाँ जाते हैं, वो हाजरी देने जाते हैं, तिवहारों पर मिलते हैं।",
+      "corrected": "और इसलिए वे यहाँ हाजरी देने जाते हैं, त्योहारों पर मिलते हैं।",
+      "category": "sentence_boundary",
+      "reason": "Pronoun and phrase reordered for clear sentence flow; 'तिवहारों' corrected to standard spelling 'त्योहारों'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "तिवहारों",
+      "corrected": "त्योहारों",
+      "category": "spelling",
+      "reason": "Obvious misspelling corrected to standard Hindi 'त्योहारों'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "कल करना पड़ेगा चर्चा उसकी।",
+      "corrected": "कल उसकी चर्चा करनी पड़ेगी।",
+      "category": "sentence_boundary",
+      "reason": "Reordered to standard Hindi word order for clarity; preserves original meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "मूल में हमारे यह है",
+      "corrected": "मूल में हमारा यह है",
+      "category": "spelling",
+      "reason": "Grammar correction from 'हमारे' to 'हमारा' to match intended possessive construction.",
+      "confidence": "high"
+    }
+  ]
+}
