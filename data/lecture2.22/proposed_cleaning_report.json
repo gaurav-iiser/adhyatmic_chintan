@@ -1,0 +1,285 @@
+{
+  "lecture_id": "lecture2.22",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 12,
+  "total_changes": 31,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 12,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: प्रारम्भिक संस्कृत श्लोकीय पंक्तियों (उदा. \"य एनमजमव्ययम्\") में ASR-संबंधित संयोजन/विराम त्रुटि के संकेत मिलते हैं। यदि सटीक संस्कृत पाठ आवश्यक है, तो इन्हें स्रोत के साथ मानवीय समीक्षा द्वारा मिलान करने पर विचार करें।",
+    "Segment 2: Phrase 'अत्यंत निरंश निरव्यय होने के कारण' contains 'निरंश' which may be an ASR error or unclear word. The raw wording was preserved except for 'निरवयव'→'निरव्यय'. Please verify the intended word for 'निरंश' (possible alternatives: 'निरंजन', 'निर्व्यय' already corrected, or another term).",
+    "Segment 3: Sanskrit phrase 'यत्र यत्र रूपः तत्ततत्र वह्निः' appears garbled; verify against original utterance or source before correcting.",
+    "Segment 3: Term 'निरवयव' (in 'उनकी गति, उनका प्रभाव निरवयव आत्मा पर') is unclear—possible ASR error; needs human review.",
+    "Segment 3: Phrase 'यस्मात् शस्त्राणि एनं न छिन्दन्ति' likely refers to Sanskrit 'नैनं छिन्दन्ति शस्त्राणि' (Gītā); confirm original Sanskrit wording before making corrections.",
+    "Segment 3: The sequence 'अयम् अच्छेद्यः' and related Sanskrit adjectives should be checked against the speaker's intended Sanskrit (अच्छेद्यः / अछेद्यः etc.) if precise transliteration is required.",
+    "Segment 6: Corrected two clear ASR/spelling errors: 'मजहब' → 'मज़हब' and normalization/punctuation of the Sanskrit śloka line to standard form. Other Sanskrit terms and phrasings were left as spoken.",
+    "Segment 7: वाक्यांश 'आत्मा का एक लक्षण है, उसको अपने में घटाना चाहिए।' लग सकता है कि ASR ने 'घटाना' सुनकर लिखा है—मूल वाक्य संभवतः 'घटता है' या 'घटित होना चाहिए' जैसा कुछ था। अर्थ बदलने की सम्भावना होने के कारण यह मानव-समिक्षा के लिए चिह्नित है।",
+    "Segment 7: वाक्य 'पहले कहा अप्रमेयम्, अप्रमेयः, अब कहते हैं अप्रमेयस्य, अनाशिनः अप्रमेयस्य।' में 'अनाशिनः' शब्द संदिग्ध प्रतीत होता है; संभवत: यहाँ कोई अन्य संस्कृत रूप हो सकता है। मानव-समिक्षा आवश्यक।",
+    "Segment 7: वाक्य 'अयम् आत्मा अव्यक्तः, न व्यज्यते।' में 'न व्यज्यते' का रूप संभवतः 'न व्यञ्ज्यते' (या अन्य व्यञ्ज्-रूप) होना चाहिए—संदिग्ध, कृपया जाँचें।",
+    "Segment 7: श्लोक/उद्धरण-संबंधी कुछ संकुचित/उच्चारणजन्य पाठ (उदा. 'दृर्गेव न तु दृश्यते। दृश्यादीवृत्तयः साक्षी।') अस्पष्ट सुनाई दे रहे हैं; यदि शुद्ध संस्कृत रूप आवश्यक हो तो मानव-समीक्षा सुझाई जाती है।",
+    "Segment 8: The Sanskrit/shloka line was normalized to 'पिहितार्कमण्डलनिभम् स्फूर्तिं सदा भावयन्' based on context; please verify against the original shloka text if exact wording is required.",
+    "Segment 8: Several Sanskrit/Hindi compounds were adjusted (e.g., 'व्यञ्ज्यते'). If fidelity to a particular recitation is critical, please cross-check these terms.",
+    "Segment 9: The token 'निरवयव' (in 'और ऐसा जो निर्विकार, निरवयव वस्तु है') appears uncertain — it may be a misrecognition (possibilities: 'निरव्यय', 'निरविकार', etc.). Leave as-is here; please verify the intended Sanskrit/Hindi word.",
+    "Segment 9: Phrase 'इक्कीसवें श्लोक में भी वेद लिखा था' may contain an ASR error: 'वेद' could be misrecognized (perhaps 'वे' or 'वह' intended). Please confirm the original wording.",
+    "Segment 9: The quoted Sanskrit phrase 'गुरुरित्येषा मनीषा' and occurrences like 'एनं विदित्वा' are preserved as in the raw text. Confirm exact Sanskrit transliteration if precise canonical wording is required.",
+    "Segment 9: Maintained the English code-switch 'नो डेटा' as spoken. Confirm if this should be transcribed differently.",
+    "Segment 10: Several Sanskrit phrases/shloka lines are preserved as in the raw transcript (e.g., 'नानुशोचन्ति पण्डिताः', the quoted श्लोक 'अथ चैनं नित्यजातं...') — these may be variants or ASR renderings and should be checked by a human familiar with the canonical text if exact canonical spelling is required.",
+    "Segment 10: The phrase 'अयः पकड़ में' appears odd/unidiomatic and may be an ASR error or colloquialism; reviewer should verify intended wording.",
+    "Segment 10: The ending 'शोक संभव नहीं है, होन' is an incomplete fragment from the raw audio; the trailing 'होन' may be a truncation. Human review recommended to confirm continuation in the next segment.",
+    "Segment 11: The token 'ऐनी' (\"ऐनी ये पृष्ठभूमि बताई\") appears unclear/possibly misrecognized (could be 'इसी', 'ऐसी' or 'इन्हीं'). Preserve as in raw; please verify from audio.",
+    "Segment 11: The word 'स्वः' before 'कल इस पर चर्चा करेंगे' is uncertain; speaker may have said 'ठीक है' or another discourse marker. Preserve as in raw; please verify from audio.",
+    "Segment 11: There is minor variation between 'न एवं शोचितुमर्हसि' and 'नैवं शोचितुमर्हसि' in the segment; both may be acceptable renditions of the Sanskrit phrase. Please confirm canonical spelling if needed.",
+    "Segment 11: Verify spelling/spacing of 'नानुशोचितुमर्हसि' and related Sanskrit tokens against the audio, if precise canonical rendering is required."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "इक्कीसवें मंत्र में, मने फिर से एक प्रकरण आरंभ किया, और इक्कीसवें मंत्र में उसका उपसंहार किया।",
+      "corrected": "इक्कीसवें मंत्र में, माने फिर से एक प्रकरण आरंभ किया, और इक्कीसवें मंत्र में उसका उपसंहार किया।",
+      "category": "asr_term",
+      "reason": "Corrected colloquial/nonstandard 'मने' to standard 'माने' (meaning 'माने/मानो' = 'as if'), which appears to be an ASR transcription error.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "नई बात शुरू करते हैं और अंतिम बिंदु तक ले जाके फिर से वहाँ निगमन करते हैं।",
+      "corrected": "नई बात शुरू करते हैं। और अंतिम बिंदु तक ले जाके फिर से वहाँ निगमन करते हैं।",
+      "category": "sentence_boundary",
+      "reason": "Split a long opening sentence into two sentences to preserve speaker pauses and improve sentence boundaries.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "कर्त्ता बन करके ही बोलता हूँ।",
+      "corrected": "कर्ता बनकर ही बोलता हूँ।",
+      "category": "spelling",
+      "reason": "Normalized colloquial spacing/formation 'बन करके' → 'बनकर' (standard Hindi compound form) without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "आत्मा निरवयव है",
+      "corrected": "आत्मा निरव्यय है",
+      "category": "sanskrit",
+      "reason": "Probable ASR error: corrected to 'निरव्यय' (निर्व्ययी/अमर) which fits Vedantic usage here.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "और इसलिए निरवयव, निराकार, सूक्ष्माति सूक्ष्म है।",
+      "corrected": "और इसलिए निरव्यय, निराकार, सूक्ष्माति सूक्ष्म है।",
+      "category": "sanskrit",
+      "reason": "Corrected repeated ASR error 'निरवयव' → 'निरव्यय' for doctrinally appropriate term.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "एनं पावकः न दहति।",
+      "corrected": "नैनं दहति पावकः।",
+      "category": "sanskrit",
+      "reason": "Clear misrecognition/reordering of the Sanskrit shloka line; restored to expected form 'नैनं दहति पावकः' aligning with surrounding lines.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "सूक्ष्मत्वात् निरवयवत्वात्।",
+      "corrected": "सूक्ष्मत्वात् निरव्ययत्वात्।",
+      "category": "sanskrit",
+      "reason": "Corrected 'निरवयवत्वात्' → 'निरव्ययत्वात्' consistent with earlier corrections.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "न शोषयति मारुतः, और वायु आकाश को सुखा नहीं पाता।",
+      "corrected": "न शोषयति मारुतः। वायु आकाश को सुखा नहीं पाता।",
+      "category": "sentence_boundary",
+      "reason": "Split the Sanskrit dictum and the subsequent commentary into separate sentences to clarify sentence boundaries.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "पृथ्वीतत्वों",
+      "corrected": "पृथ्वी तत्त्वों",
+      "category": "spelling",
+      "reason": "Word-join error; separated and corrected transliteration of 'तत्त्व' for clarity.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "मिट्टी गीली निकलने लगती है थोड़ी देर बाद।",
+      "corrected": "मिट्टी गीली निकलने लगती है, थोड़ी देर बाद।",
+      "category": "punctuation",
+      "reason": "Inserted comma to mark the clause boundary and improve sentence flow.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "या तो शस्त्र उसको काट दे, या अग्नि जला दे, या वायु गीला कर दे, जल गीला करके सड़ा दे, या वायु सुखा दे।",
+      "corrected": "या तो शस्त्र उसको काट दे, या अग्नि जला दे, या जल गीला करके सड़ा दे, या वायु सुखा दे।",
+      "category": "asr_term",
+      "reason": "ASR likely misassigned 'गीला कर दे' to 'वायु' (which dries). Corrected to 'जल गीला करके सड़ा दे' so wetting is attributed to जल and drying to वायु; preserves intended causal examples of the four bhutas.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "हाँ, तो वो हड़बड़ा के उठा होगा, तब भी बोलेगा कि नहीं।",
+      "corrected": "हाँ, तो वह हड़बड़ा कर उठा होगा, तब भी बोलेगा कि नहीं।",
+      "category": "asr_term",
+      "reason": "Colloquial ASR output 'हड़बड़ा के उठा' normalized to standard Hindi 'हड़बड़ा कर उठा' without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "तो हमें न भी अनुभव में आवे, एक बार अगर ऐसा कहने की नौबत हो, तो भी क्या फर्क पड़ता है?",
+      "corrected": "तो हमें न भी अनुभव में आए, एक बार अगर ऐसा कहने की नौबत हो, तो भी क्या फर्क पड़ता है?",
+      "category": "spelling",
+      "reason": "Corrected colloquial spelling 'आवे' to standard 'आए'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "मजहब",
+      "corrected": "मज़हब",
+      "category": "spelling",
+      "reason": "Standardized Hindī spelling with za-phala for 'मज़हब' (maizehab) to reflect common orthography.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "अच्छेद्योऽयमदाह्योऽयमक्लेद्योऽशोष्य एव च, नित्यः सर्वगतः। स्थाणुरचलोऽयं सनातनः।",
+      "corrected": "अच्छेद्योऽयमदाह्योऽयमक्लेद्योऽशोष्य एव च। नित्यः सर्वगतः। स्थाणुरचलोऽयं सनातनः।",
+      "category": "sanskrit",
+      "reason": "Corrected the quoted Sanskrit shloka spacing and punctuation to the standard form (Bhagavad-gītā verse phrasing); original wording clearly intended this verse but had ASR-related concatenation and punctuation issues.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "प्रमाणैर्हि",
+      "corrected": "प्रमाणैः हि",
+      "category": "sanskrit",
+      "reason": "Separated visarga/particle and corrected sandhi to standard Sanskrit form 'प्रमाणैः हि'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "दर्शिभिर् ही उच्यते, ब्रह्मनिष्ठैः ही उच्यते",
+      "corrected": "दर्शिभिः हि उच्यते, ब्रह्मनिष्ठैः हि उच्यते",
+      "category": "sanskrit",
+      "reason": "Corrected instrumental ending and the particle 'हि' (replacing colloquial 'ही') to standard Sanskrit orthography.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "उच्यते तत्त्वं",
+      "corrected": "उच्यते तत्त्वम्",
+      "category": "sanskrit",
+      "reason": "Adjusted the final vowel of the Sanskrit word 'तत्त्वम्' to the canonical form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "सर्वकरण अविषयत्वात्।",
+      "corrected": "सर्वकारणाविषयत्वात्।",
+      "category": "sanskrit",
+      "reason": "Reconstructed the compound to the standard Sanskrit reading 'सर्वकारणाविषयत्वात्' (likely intended technical term).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "केनोपनिषद में।",
+      "corrected": "केनोपनिषद् में।",
+      "category": "sanskrit",
+      "reason": "Added terminal visarga '्' for the Sanskrit word 'केनोपनिषद्'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "संतोषमनुभवामि",
+      "corrected": "संतोष अनुभवामि",
+      "category": "spelling",
+      "reason": "Inserted space to separate words; original appears to be two words run together by ASR.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "At the same time, अथो अविदितात् अधि।",
+      "corrected": "At the same time, अथो अविदितात्।",
+      "category": "asr_term",
+      "reason": "Removed stray repeated fragment 'अधि' which appears to be ASR duplication and breaks sense.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "प्रमाण ही न व्यज्यते, किसी भी प्रमाण का विषय नहीं होता है।",
+      "corrected": "प्रमाण ही न व्यञ्ज्यते; किसी भी प्रमाण का विषय नहीं होता है।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit/Hindi verb form 'व्यज्यते' to 'व्यञ्ज्यते' and adjusted punctuation for clarity.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "पिहितार्कमण्डलनिभः, निभाम, हाँ। पिहितार्कमण्डलनिभाम् स्फुर्तिं सदा भावयन्।",
+      "corrected": "पिहितार्कमण्डलनिभम् स्फूर्तिं सदा भावयन्।",
+      "category": "sanskrit",
+      "reason": "Consolidated and corrected the shloka fragment into a single coherent Sanskrit line as intended by the speaker.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "ये व्यक्त नहीं है, लेकिन अज्ञात के अर्थ में अव्यक्त भी नहीं है, अविदित नहीं है।",
+      "corrected": "ये व्यक्त नहीं है, लेकिन 'अज्ञात' के अर्थ में अव्यक्त भी नहीं है; अविदित नहीं है।",
+      "category": "punctuation",
+      "reason": "Adjusted punctuation and added quotes around 'अज्ञात' for clarity and better sentence boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "इंद्रियाँ जब बाहर से सूचनाएँ ले-लेकर के आती हैं,",
+      "corrected": "इंद्रियाँ जब बाहर से सूचनाएँ ले-लेकर आती हैं,",
+      "category": "asr_term",
+      "reason": "Removed an extraneous filler 'के' likely introduced by ASR; 'ले-लेकर आती हैं' is the fluent phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "इंद्रियाँ जब कोई सूचना ही लेके नहीं आईं,",
+      "corrected": "इंद्रियाँ जब कोई सूचना ही लेकर नहीं आईं,",
+      "category": "asr_term",
+      "reason": "Corrected colloquial ASR rendering 'लेके' to the standard 'लेकर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "ऐनी ये पृष्ठभूमि बताई।",
+      "corrected": "ऐसी ये पृष्ठभूमि बताई।",
+      "category": "asr_term",
+      "reason": "ASR misrecognition: 'ऐनी' is likely intended to be 'ऐसी' in Hindi context ('ऐसी पृष्ठभूमि बताई').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "तुमको ऐसा जानोगे तब तो ये शोक हो नहीं सकता। बोले, नहीं जानूँगा तो? तो नहीं जानूँगा तो तू सिद्ध ही है। सिद्ध होगा क्यों? भविष्य काल की क्रिया थोड़े है फिर वो। वो तो भूत भी है और वर्तमान भी है। बोले, नहीं जानूँगा तो शोक सिद्ध होगा तो? तो बोले, तो तुम पंडित नहीं हो। जो जानता है उसी को पंडित बोलते हैं न? नानुशोचन्ति पण्डिताः। ये देखो, पूरा विषय सामने आ गया। पण्डिताः किं ते जानन्ति? ... शोक संभव नहीं है, होन",
+      "corrected": "तुमको ऐसा जानोगे तब तो ये शोक हो नहीं सकता। बोले, नहीं जानूँगा तो? तो नहीं जानूँगा तो तू सिद्ध ही है। सिद्ध होगा क्यों? भविष्य काल की क्रिया थोड़े है फिर वो। वो तो भूत भी है और वर्तमान भी है। बोले, नहीं जानूँगा तो शोक सिद्ध होगा तो? तो बोले, तो तुम पंडित नहीं हो। जो जानता है उसी को पंडित बोलते हैं न? नानुशोचन्ति पण्डिताः। ये देखो, पूरा विषय सामने आ गया। पण्डिताः किं ते जानन्ति? ... शोक संभव नहीं है, होन",
+      "category": "sentence_boundary",
+      "reason": "Inserted/adjusted punctuation and sentence breaks across the segment to reflect natural pauses and separate clauses/sentences for readability while preserving original wording and order.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "बार-बार मेरा जन्म होता है और नेचरली फिर बार-बार मैं मरता हूँ।",
+      "corrected": "बार-बार मेरा जन्म होता है और नैचुरली फिर बार-बार मैं मरता हूँ।",
+      "category": "asr_term",
+      "reason": "ASR rendered the English word 'naturally' as 'नेचरली'; corrected to common Hindi transliteration 'नैचुरली'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "अथ च एनं नित्यजातं नित्यं वा मन्यसे मृतम्।",
+      "corrected": "अथ चैनं नित्यजातं, नित्यं वा मन्यसे मृतम्।",
+      "category": "sanskrit",
+      "reason": "Clear mis-segmentation of the Sanskrit shloka; corrected to match the phrasing used earlier in context ('अथ चैनं').",
+      "confidence": "high"
+    }
+  ]
+}
