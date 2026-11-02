@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 from .config import Settings
 from .models import (
+    AnswerReference,
     AnswerResult,
     GroundedAnswerDraft,
     RetrievalResult,
@@ -44,15 +45,56 @@ ANSWER STYLE
 
 Answer in the same primary language as the user's question.
 
+Give one natural, clear, synthesized answer to the user's actual
+question.
+
+Do NOT present the answer as a list of what different lecture excerpts
+say.
+
+Do NOT write phrases such as:
+- "the lecturer says"
+- "in this lecture"
+- "at this timestamp"
+- "according to chunk..."
+unless the user specifically asks about the source itself.
+
+Do NOT include citations, lecture IDs, chunk IDs, or timestamps inside
+the answer text. References will be shown separately by the application.
+
+Prefer:
+1. a simple direct answer first
+2. a short explanation when useful
+
+Usually keep the answer concise and easy to understand rather than
+turning it into a long lecture summary.
+
 If the question is in Hindi, answer naturally in Hindi.
 
 Use Sanskrit terms when they occur naturally in the lecture material.
 
 Prefer the terminology and framing used by the speaker.
 
-Explain clearly, but do not make the speaker's teaching more systematic,
-certain, or explicit than the retrieved source supports.
+USER CONTEXT
 
+The user may provide optional personal/background context.
+
+When user context is supplied:
+- use it to understand what the user is actually asking
+- tailor the explanation to that situation
+- connect the retrieved teaching to the supplied situation when supported
+- you may treat details in USER CONTEXT as facts supplied by the user
+
+However:
+- USER CONTEXT is NOT a source of spiritual or scriptural teaching
+- teaching claims must still come from the retrieved lecture sources
+- do not invent additional facts about the user's situation
+- do not make assumptions beyond what the user provided
+
+When no user context is supplied:
+- interpret the question according to its natural plain meaning
+- do not invent a personal background
+- give a simple, direct explanation of what the question is asking about
+  and answer it from the retrieved sources
 
 GROUNDING
 
@@ -175,7 +217,11 @@ def _render_answer(
     *,
     draft: GroundedAnswerDraft,
     retrieval: RetrievalResult,
-) -> tuple[str, list[str]]:
+) -> tuple[
+    str,
+    list[str],
+    list[AnswerReference],
+]:
     chunks_by_id = {
         hit.chunk.chunk_id: hit.chunk
         for hit in retrieval.hits
@@ -185,59 +231,75 @@ def _render_answer(
         message = (
             draft.insufficiency_message
             or (
-                "उपलब्ध lecture excerpts में इस प्रश्न का "
+                "उपलब्ध व्याख्यान सामग्री में इस प्रश्न का "
                 "पर्याप्त उत्तर नहीं मिला।"
             )
         )
 
-        return message, []
+        return message, [], []
 
     rendered_points: list[str] = []
     cited_ids: list[str] = []
 
     for point in draft.answer_points:
-        citations: list[str] = []
+        text = point.text.strip()
+
+        if text:
+            rendered_points.append(
+                text
+            )
 
         for chunk_id in point.source_chunk_ids:
-            chunk = chunks_by_id[
-                chunk_id
-            ]
-
             if chunk_id not in cited_ids:
                 cited_ids.append(
                     chunk_id
                 )
 
-            citations.append(
-                (
-                    f"{chunk.lecture_id} "
-                    f"[{_format_seconds(chunk.start_seconds)}"
-                    f"–"
-                    f"{_format_seconds(chunk.end_seconds)}]"
-                )
-            )
-
-        citation_text = "; ".join(
-            citations
+    references = [
+        AnswerReference(
+            chunk_id=chunk_id,
+            lecture_id=(
+                chunks_by_id[
+                    chunk_id
+                ].lecture_id
+            ),
+            start_seconds=(
+                chunks_by_id[
+                    chunk_id
+                ].start_seconds
+            ),
+            end_seconds=(
+                chunks_by_id[
+                    chunk_id
+                ].end_seconds
+            ),
         )
-
-        rendered_points.append(
-            f"{point.text} ({citation_text})"
-        )
+        for chunk_id in cited_ids
+    ]
 
     return (
-        "\n\n".join(rendered_points),
+        "\n\n".join(
+            rendered_points
+        ),
         cited_ids,
+        references,
     )
-
 
 def answer_question(
     query: str,
     settings: Settings,
     *,
+    context: str | None = None,
     top_k: int | None = None,
 ) -> AnswerResult:
     query = query.strip()
+
+    context = (
+        context.strip()
+        if context
+        and context.strip()
+        else None
+    )
 
     if not query:
         raise ValueError(
@@ -247,8 +309,17 @@ def answer_question(
     if top_k is None:
         top_k = settings.answer_top_k
 
+    if context:
+        retrieval_query = (
+            f"Question:\n{query}\n\n"
+            f"User context:\n{context}"
+        )
+    else:
+        retrieval_query = query
+
+
     retrieval = retrieve(
-        query,
+        retrieval_query,
         settings,
         top_k=top_k,
     )
@@ -259,7 +330,17 @@ def answer_question(
         )
     )
 
+    context_block = (
+        context
+        if context
+        else "(No additional user context provided.)"
+    )
+
     prompt = f"""
+USER CONTEXT
+
+{context_block}
+
 USER QUESTION
 
 {query}
@@ -269,8 +350,18 @@ RETRIEVED LECTURE SOURCES
 
 {source_packet}
 
+Answer the USER QUESTION.
 
-Answer the user's question using ONLY the retrieved lecture sources.
+Use USER CONTEXT to understand and tailor the answer when it is
+provided.
+
+Use ONLY the retrieved lecture sources for spiritual, philosophical,
+scriptural, or doctrinal claims.
+
+Give one clear, natural answer.
+
+Do not mention chunk IDs, timestamps, or retrieval mechanics in the
+answer itself.
 
 If those sources are insufficient, say so rather than using outside
 knowledge.
@@ -318,15 +409,18 @@ knowledge.
         retrieval=retrieval,
     )
 
-    rendered_answer, cited_ids = (
-        _render_answer(
-            draft=draft,
-            retrieval=retrieval,
-        )
+    (
+        rendered_answer,
+        cited_ids,
+        references,
+    ) = _render_answer(
+        draft=draft,
+        retrieval=retrieval,
     )
 
     return AnswerResult(
         query=query,
+        context=context,
         answer_model=(
             settings.answer_model
         ),
@@ -336,6 +430,7 @@ knowledge.
         rendered_answer=(
             rendered_answer
         ),
+        references=references,
         retrieved_chunk_ids=[
             hit.chunk.chunk_id
             for hit in retrieval.hits

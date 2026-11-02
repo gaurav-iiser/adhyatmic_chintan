@@ -395,7 +395,7 @@ def finalize_review(lecture_dir: Path, proposal: dict[str, Any], state: dict[str
     return report
 
 
-def review_lecture(lecture_id: str, settings: Settings) -> dict[str, Any]:
+def review_lecture(lecture_id: str, settings: Settings, *, interactive: bool = True) -> dict[str, Any]:
     lecture_dir = settings.data_dir / lecture_id
     if not lecture_dir.exists():
         raise FileNotFoundError(f"Lecture folder not found: {lecture_dir}")
@@ -438,6 +438,20 @@ def review_lecture(lecture_id: str, settings: Settings) -> dict[str, Any]:
         )
 
         return report
+    
+    if not interactive:
+        _save_state(lecture_dir, state,)
+
+        return {
+            "status": "in_progress",
+            "remaining": len(
+                review_segments
+            ),
+            "review_segment_indexes": [
+                int(segment["index"])
+                for segment in review_segments
+            ],
+        }
 
     console.print(
         f"[bold]Human review: {lecture_id}[/bold]\n"

@@ -2,6 +2,7 @@ from pathlib import Path
 
 import typer
 from rich.console import Console
+from rich.table import Table
 
 from .cleaner import clean_all_lectures, clean_lecture
 from .config import Settings
@@ -12,6 +13,10 @@ from .rag_chunker import chunk_lecture
 from .indexing import build_index
 from .retrieval import retrieve
 from .answering import answer_question
+from .orchestrator import (all_lecture_statuses,
+    process_all_lectures,
+    process_lecture,
+    )
 
 app = typer.Typer(help="Adhyatmik lecture ingestion, transcription, cleaning,"
                         " human review tools, and semantic enrichment tools.")
@@ -140,6 +145,42 @@ def chunk_transcript(
         f"{len(result.chunks)}"
     )
 
+@app.command("process")
+def process_pipeline(
+    lecture_id: str = typer.Option(
+        ...,
+        "--lecture-id",
+        "-i",
+        help="Lecture to process",
+    ),
+):
+    """
+    Resume one lecture through clean, review,
+    enrichment, and RAG chunking.
+    """
+
+    result = process_lecture(
+        lecture_id,
+        Settings(),
+    )
+
+    status = result["status"]
+
+    console.print()
+
+    if status == "complete":
+        console.print(
+            f"[green]✓ {lecture_id} "
+            "is fully processed.[/green]"
+        )
+
+    elif status == "needs_review":
+        console.print(
+            f"[yellow]{lecture_id} still has "
+            "segments requiring human review."
+            "[/yellow]"
+        )
+
 @app.command("index")
 def index_rag_chunks(
     force: bool = typer.Option(
@@ -182,6 +223,237 @@ def index_rag_chunks(
         f"[cyan]Embedding dimensions:[/cyan] "
         f"{result.embedding_dimensions}"
     )
+
+@app.command("process-all")
+def process_all_pipeline(
+    rebuild_index: bool = typer.Option(
+        False,
+        "--index",
+        help=(
+            "Rebuild the global RAG index after "
+            "all lectures finish processing"
+        ),
+    ),
+):
+    """
+    Resume every lecture through the complete
+    processing pipeline.
+    """
+
+    settings = Settings()
+
+    results = process_all_lectures(
+        settings
+    )
+
+    review_needed_results = [
+        result
+        for result in results
+        if result["status"] == "needs_review"
+    ]
+
+    console.print()
+
+    complete = 0
+    needs_review = 0
+    errors = 0
+
+    for result in results:
+        lecture_id = result[
+            "lecture_id"
+        ]
+
+        status = result[
+            "status"
+        ]
+
+        if status == "complete":
+            complete += 1
+
+            console.print(
+                f"[green]✓[/green] "
+                f"{lecture_id}"
+            )
+
+        elif status == "needs_review":
+            needs_review += 1
+
+            console.print(
+                f"[yellow]![/yellow] "
+                f"{lecture_id} "
+                "needs human review"
+            )
+
+        else:
+            errors += 1
+
+            console.print(
+                f"[red]✗[/red] "
+                f"{lecture_id}: "
+                f"{result.get('error')}"
+            )
+
+    console.print()
+
+    console.print(
+        f"[green]Complete:[/green] "
+        f"{complete}"
+    )
+
+    console.print(
+        f"[yellow]Needs review:[/yellow] "
+        f"{needs_review}"
+    )
+
+    console.print(
+        f"[red]Errors:[/red] "
+        f"{errors}"
+    )
+
+    if review_needed_results:
+        console.print()
+
+        console.print(
+            "[bold yellow]"
+            "Human review required:"
+            "[/bold yellow]"
+        )
+
+        for result in review_needed_results:
+            indexes = result.get(
+                "review_segment_indexes",
+                [],
+            )
+
+            indexes_text = ", ".join(
+                str(index)
+                for index in indexes
+            )
+
+            console.print(
+                f"  • {result['lecture_id']}: "
+                f"{result.get('remaining', len(indexes))} "
+                f"segment(s)"
+                + (
+                    f" [{indexes_text}]"
+                    if indexes_text
+                    else ""
+                )
+            )
+
+    # -----------------------------------------
+    # Optional global index rebuild
+    # -----------------------------------------
+
+    if rebuild_index:
+        if needs_review or errors:
+            console.print()
+            console.print(
+                "[yellow]"
+                "Index was NOT rebuilt because "
+                "some lectures are incomplete."
+                "[/yellow]"
+            )
+
+        else:
+            console.print()
+            console.print(
+                "[cyan]"
+                "Rebuilding global RAG index..."
+                "[/cyan]"
+            )
+
+            index = build_index(
+                settings,
+                force=True,
+            )
+
+            console.print(
+                f"[green]✓ Index rebuilt:[/green] "
+                f"{index.source_chunk_count} chunks "
+                f"from "
+                f"{len(index.source_lecture_ids)} "
+                "lectures."
+            )
+
+@app.command("status")
+def pipeline_status():
+    """
+    Show pipeline progress for every lecture.
+    """
+
+    settings = Settings()
+
+    statuses = all_lecture_statuses(
+        settings
+    )
+
+    table = Table(
+        title="Adhyatmik Pipeline Status"
+    )
+
+    table.add_column(
+        "Lecture",
+        style="bold",
+    )
+
+    table.add_column(
+        "Raw",
+        justify="center",
+    )
+
+    table.add_column(
+        "Clean",
+        justify="center",
+    )
+
+    table.add_column(
+        "Review",
+        justify="center",
+    )
+
+    table.add_column(
+        "Enrich",
+        justify="center",
+    )
+
+    table.add_column(
+        "Chunk",
+        justify="center",
+    )
+
+    def mark(
+        value: bool,
+    ) -> str:
+        return (
+            "[green]✓[/green]"
+            if value
+            else "[dim]-[/dim]"
+        )
+
+    for status in statuses:
+        if (
+            status["clean"]
+            and not status["review"]
+        ):
+            review_mark = (
+                "[yellow]![/yellow]"
+            )
+        else:
+            review_mark = mark(
+                status["review"]
+            )
+
+        table.add_row(
+            status["lecture_id"],
+            mark(status["raw"]),
+            mark(status["clean"]),
+            review_mark,
+            mark(status["enrich"]),
+            mark(status["chunk"]),
+        )
+
+    console.print(table)
 
 @app.command("retrieve")
 def retrieve_chunks(
@@ -266,8 +538,17 @@ def ask_question(
         ...,
         help="Question to answer from the indexed lectures",
     ),
+    context: str | None = typer.Option(
+        None,
+        "--context",
+        "-c",
+        help=(
+            "Optional background/context "
+            "for the question"
+        ),
+    ),
     top_k: int = typer.Option(
-        5,
+        7,
         "--top-k",
         "-k",
         help="Number of retrieved chunks supplied to the answer model",
@@ -278,6 +559,7 @@ def ask_question(
     result = answer_question(
         query,
         Settings(),
+        context=context,
         top_k=top_k,
     )
 
@@ -305,18 +587,34 @@ def ask_question(
 
     console.print()
 
-    console.print(
-        f"[dim]Retrieved chunks: "
-        f"{', '.join(result.retrieved_chunk_ids)}"
-        f"[/dim]"
-    )
+    if result.references:
+        console.print()
 
-    if result.cited_chunk_ids:
         console.print(
-            f"[dim]Used in answer: "
-            f"{', '.join(result.cited_chunk_ids)}"
-            f"[/dim]"
+            "[bold]References[/bold]"
         )
+
+        for reference in result.references:
+            console.print(
+                "• "
+                f"{reference.lecture_id} — "
+                f"{_format_seconds(reference.start_seconds)}"
+                "–"
+                f"{_format_seconds(reference.end_seconds)}"
+            )
+
+    # console.print(
+    #     f"[dim]Retrieved chunks: "
+    #     f"{', '.join(result.retrieved_chunk_ids)}"
+    #     f"[/dim]"
+    # )
+
+    # if result.cited_chunk_ids:
+    #     console.print(
+    #         f"[dim]Used in answer: "
+    #         f"{', '.join(result.cited_chunk_ids)}"
+    #         f"[/dim]"
+    #     )
 
 
 if __name__ == "__main__":

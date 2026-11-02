@@ -260,14 +260,25 @@ class GroundedAnswerDraft(BaseModel):
 
     insufficiency_message: str | None = None
 
+class AnswerReference(BaseModel):
+    chunk_id: str
+    lecture_id: str
+    start_seconds: float
+    end_seconds: float
 
 class AnswerResult(BaseModel):
     query: str
+    context: str | None = None
     answer_model: str
-
     sufficient_context: bool
 
     rendered_answer: str
+
+    references: list[
+        AnswerReference
+    ] = Field(
+        default_factory=list
+    )
 
     retrieved_chunk_ids: list[str] = Field(
         default_factory=list
@@ -276,3 +287,4 @@ class AnswerResult(BaseModel):
     cited_chunk_ids: list[str] = Field(
         default_factory=list
     )
+
