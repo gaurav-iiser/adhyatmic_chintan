@@ -1,0 +1,430 @@
+{
+  "lecture_id": "lecture2.41",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 14,
+  "total_changes": 48,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 14,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: Several short Sanskrit phrases appear garbled or repeated (e.g., 'प्रक्षुभितम्', 'धीमता', 'रागं रागश्च... वीत। विगत। यस्मात्।'). I preserved the original wording where meaning was uncertain rather than guessing canonical forms.",
+    "Segment 0: Many lines are verbatim repetitions from the Bhagavad-gītā and later exegesis; repetitions have been preserved as in the raw text.",
+    "Segment 0: Recommend human review for the Sanskrit fragments around 'नोद्विग्नं न प्रक्षुभितम्', 'दुःखप्राप्तौ। मनो यस्य सः। अयं अनुद्विग्नमनाः।' and the concluding short clauses, to confirm intended canonical readings and correct sandhi where appropriate.",
+    "Segment 2: Sanskrit quotation 'यदि हि एवानन्दो न स्यात्, को हिवान्यात्, कः प्राण्यात्।' appears garbled/uncertain. I preserved the original wording; please verify against the intended Taittiriya Upanishad text.",
+    "Segment 2: Phrase 'आवे संतोष धन' (or 'संतोष धन') might be an ASR rendering; left as in the raw transcript. Please confirm the intended compound/term from the speaker or source text.",
+    "Segment 2: Term 'प्रत्युपस्थित' was left as in the raw; verify whether the speaker intended 'प्रत्यूपस्थित', 'प्रतिपस्थित' or another Sanskrit/Hindi term.",
+    "Segment 3: Proper name 'तपोनजी महाराज' could be an ASR error or nonstandard spelling of a name (e.g., 'तपोवन जी', 'तपोनी जी', etc.). Please verify the correct proper-name spelling from the audio or source material.",
+    "Segment 3: The Sanskrit correction 'आत्मान्येवात्मना तुष्टः' was applied with medium confidence. If this is a quoted śloka or phrase, please confirm against the speaker's intended wording.",
+    "Segment 4: The correction 'जीकोगे' → 'जीतोगे' is likely but not certain; retained as a best-effort ASR fix (flagged for human review if fidelity to the original utterance is critical).",
+    "Segment 4: The Sanskrit phrase was normalized to 'दुःखेष्वनुद्विग्नमनाः' based on common Bhagavad Gita usage; if the speaker quoted a variant, confirm against the original audio.",
+    "Segment 4: Left other colloquial or unclear renderings (e.g., 'कन्वे') unchanged to avoid introducing doctrinal or semantic shifts.",
+    "Segment 5: The Sanskritic phrase 'वीतराग भय क्रोधः' (rendered in transcript as 'वितराग भय क्रोधः'/'वीतराग भय क्रोधः') may be garbled or mis-transcribed; its exact intended wording or sandhi should be checked by a human reviewer familiar with the source text.",
+    "Segment 5: The fragment 'वो मैसेज कन्वे करते...' is ambiguous (code-switching English/Hinglish). Left as transcribed; please verify whether speaker meant 'मैनेज कर लेते', 'मैसेज कन्वे करते', or another phrase.",
+    "Segment 7: The Sanskrit compounds/phrases 'वीत राग भय क्रोधः स्थितधीः' and 'सुवीतरागभयक्रोधः स्थितधीः' in the segment are unclear/fragmented as transcribed. I preserved the raw wording but flag them for human review in case a canonical or more accurate Sanskrit rendering is preferred.",
+    "Segment 7: Confirmed that the Bhagavad-gītā phrase was corrected to a standard form; verify preferred orthography if strict canonical fidelity is required.",
+    "Segment 8: Left code-switched English phrases (e.g., 'now the whole system starts fighting with it', 'the whole system revolts against it', 'फ्लश out') as spoken; these appear intentional.",
+    "Segment 8: The phrase 'सभी लोगों को कुछ कन्वे हो जाए' was preserved despite possible ASR uncertainty ('कन्वे' may reflect 'convey' or another English/Hindi usage); please review for intended wording.",
+    "Segment 8: The initial Sanskrit phrase 'प्रतिकूलं वेदनीयम्' was retained as spoken; confirm if this exact wording is intended.",
+    "Segment 9: The term 'बेवलता' (\"जाने की जो बात आने पर बेवलता आती है\") is unclear — may be an ASR error for 'बेचैनी' or another word; please verify against audio.",
+    "Segment 9: Verify the Sanskrit/Hindi technical terms 'हंता' and 'हता' as used in the Sankhya discussion to ensure they match the speaker's intended technical terms.",
+    "Segment 9: The phrases 'एनीबडी कैन से, इवन आई कैन से' reflect spoken English; confirm if a more literal rendering ('Anybody can say, even I can say') is preferred for downstream uses.",
+    "Segment 9: Confirm the proper name 'नंडी निलय' (hostel/place) — may be a place-name that needs verification/spelling correction.",
+    "Segment 9: The ending 'चट्ट चट्ट' is left as transcribed; please verify whether it represents an onomatopoeic sound or another word.",
+    "Segment 10: The phrase 'वो कलम उठाए रहते हैं' may be an ASR error ('कलम' seems contextually odd). Preserved as in raw; please review whether speaker said 'कदम' or another word.",
+    "Segment 10: The token 'आर-व्यार' (\"आर-व्यार\") is unclear (could be an acronym or initials). Preserved as in raw; please verify.",
+    "Segment 10: The phrase 'सोहन-सोहन परिस्थितियाँ' is unusual; left unchanged but may need verification of intended wording.",
+    "Segment 11: Left several English/Hinglish renderings (e.g., 'चैलेंजेस', 'रीजन', 'compromises', 'immune') as spoken to preserve speaker style and code-switching.",
+    "Segment 11: The terms 'विगतस्पृहः' and 'दुःखेषु अनुद्विग्न मनाः' were adjusted to more standard Sanskrit forms based on context; please review for doctrinal/lexical accuracy against the speaker's intended quotations.",
+    "Segment 11: The unclear token 'विसलरी' was left unchanged because its intended word was not confidently inferable from context.",
+    "Segment 12: Some Sanskrit phrases/shlokas (e.g., “हविषा, हाँ, कृष्णवर्त्मेन भूय एवाभिवर्धते”, “यादाने सुखानि अनुविवर्धते…”, and “वीतरागभयक्रोधाः स्थितधीर्मुनिरुच्यते”) look possibly garbled by ASR; please verify against the original audio or canonical text if exact Sanskrit rendering is required.",
+    "Segment 13: The token 'यादане' at the start may be a transcription artifact (unclear Sanskrit/Hindi form). Please verify the intended wording of this opening phrase/word in the source audio.",
+    "Segment 13: The word 'मिचोर' (\"जो व्यवहार में मिचोर लोग हैं\") is unclear and may be a misrecognition; please check the speaker's original wording.",
+    "Segment 13: Sanskrit lines and the ending mantra are preserved as in the raw transcript. If a canonical rendering is desired, please have a Sanskrit-literate reviewer confirm exact shloka/mantra wording."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "आचार्यमुपसंगम्य",
+      "corrected": "आचार्य उपसंगम्य",
+      "category": "sanskrit",
+      "reason": "Separated compound where ASR merged words; restores expected sandhi/break between 'आचार्य' and 'उपसंगम्य'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "राजा वचनमब्रवीत्",
+      "corrected": "राजा वचनम् अब्रवीत्",
+      "category": "sanskrit",
+      "reason": "Inserted missing space between words 'वचनम्' and 'अब्रवीत्' for correct word boundary.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्",
+      "corrected": "पश्यैतां पाण्डुपुत्राणाम् आचार्य महतीं चमूम्",
+      "category": "sanskrit",
+      "reason": "Separated merged tokens 'पाण्डुपुत्राणामाचार्य' into 'पाण्डुपुत्राणाम् आचार्य' to reflect expected phrase boundary.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "नोद्विग्नं न प्रक्षुभितम्",
+      "corrected": "न उद्विग्नं न प्रक्षुभितम्",
+      "category": "sanskrit",
+      "reason": "Inserted space between negation particle 'न' and following word 'उद्विग्नं' (ASR had merged them). Applied to both repeated occurrences.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "सहवीतरागभयक्रोधः।",
+      "corrected": "वीतरागभयक्रोधः।",
+      "category": "asr_term",
+      "reason": "Extra 'सह' appears to be an ASR insertion; context (previous segment) shows the correct shloka begins with 'वीतरागभयक्रोधः'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "आत्मविषयी का बुद्धि",
+      "corrected": "आत्मविषयी की बुद्धि",
+      "category": "asr_term",
+      "reason": "Grammatical ASR error: 'का' misrecognized instead of 'की'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "जो अपनी प्रमा को, जो अपनी प्रज्ञा को तो दृढ़ करने का प्रयास कर रहा है",
+      "corrected": "जो अपनी प्रज्ञा को दृढ़ करने का प्रयास कर रहा है",
+      "category": "asr_term",
+      "reason": "Likely ASR misrecognition 'प्रमा' for 'प्रज्ञा' and an extra filler 'तो' — corrected to the intended phrase preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "प्रमाणव्यापार",
+      "corrected": "प्रमाणव्यवहार",
+      "category": "asr_term",
+      "reason": "'व्यापार' here is likely an ASR error for the intended technical term 'व्यवहार' (प्रमाणव्यवहार).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "अन्यस्मात् अलं प्रत्यहवान।",
+      "corrected": "अन्यस्मात् अलं प्रत्ययवान।",
+      "category": "asr_term",
+      "reason": "ASR error: 'प्रत्यहवान' is a misrecognition; context and subsequent segment use 'प्रत्ययवान'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "अलम किसके लिए है?",
+      "corrected": "अलं किसके लिए है?",
+      "category": "spelling",
+      "reason": "Restore visarga/diacritic in 'अलं' which was earlier used elsewhere as 'अलं' and is the standard form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "बहुत भूखों के से अकाल पीड़ित देश हो",
+      "corrected": "बहुत भूखे से अकाल पीड़ित दशा हो",
+      "category": "asr_term",
+      "reason": "Corrected obvious ASR misrecognitions: 'भूखों के से' -> 'भूखे से' and 'देश' -> 'दशा' to make the phrase coherent ('very hungry, become famine-afflicted state').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "साधन काल",
+      "corrected": "साधना काल",
+      "category": "asr_term",
+      "reason": "ASR likely misrecognized 'साधना काल' (period of practice) as 'साधन काल'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "आत्मन्येवात्मना तुष्टः।",
+      "corrected": "आत्मान्येवात्मना तुष्टः।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit sandhi/orthography to match likely intended phrasing.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "पजेसिव",
+      "corrected": "possessive",
+      "category": "asr_term",
+      "reason": "Clear ASR rendering of the English word 'possessive'; normalized to English orthography to preserve code-switching.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "वी रिमेन पजेसिव.",
+      "corrected": "we remain possessive.",
+      "category": "asr_term",
+      "reason": "Clear ASR of the English phrase 'we remain possessive' rendered in Hindi phonetics; restored to standard English spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "डरी लगा रहता है, पता नहीं।",
+      "corrected": "डर लगा रहता है, पता नहीं।",
+      "category": "asr_term",
+      "reason": "High-confidence ASR error: 'डरी' is incorrect here; intended spoken word is 'डर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "असम्भव है।",
+      "corrected": "असंभव है।",
+      "category": "spelling",
+      "reason": "Orthographic correction of 'असम्भव' to standard 'असंभव'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "दुख:खेष्वनुद्विग्नमनाः",
+      "corrected": "दुःखेष्वनुद्विग्नमनाः",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit transliteration to the expected form of the quoted phrase.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "ऑस्ट्रेलिया, इंग्लैंड का मैच",
+      "corrected": "ऑस्ट्रेलिया-इंग्लैंड का मैच",
+      "category": "punctuation",
+      "reason": "Punctuation change to reflect a compound team name (Australia-England).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "इष्ट के, हमारा इष्ट है, कोई हमें चाहिए, कोई चीज, और उसके नष्ट होने का, इष्ट के नष्ट होने की आशंका।",
+      "corrected": "इष्ट के, हमारा इष्ट है, कोई हमें चाहिए, कोई चीज, और उसके नष्ट होने का — इष्ट के नष्ट होने की आशंका।",
+      "category": "punctuation",
+      "reason": "Added punctuation (dash) to preserve the speaker's repetitive phrasing while improving sentence boundary clarity.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "कि आप जीकोगे आज कि नहीं जीकोगे",
+      "corrected": "कि आप जीतोगे आज कि नहीं जीतोगे",
+      "category": "asr_term",
+      "reason": "Probable ASR misrecognition: 'जीकोगे' corrected to the more likely spoken 'जीतोगे' in this betting context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "रुपया",
+      "corrected": "रुपये",
+      "category": "spelling",
+      "reason": "Plural/case-correct form 'रुपये' is more appropriate in this context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "अजरुद्दीन",
+      "corrected": "अजहरुद्दीन",
+      "category": "proper_name",
+      "reason": "Speaker refers to the Indian cricketer Mohammad Azharuddin; ASR rendered the name as 'अजरुद्दीन'. Corrected to standard spelling.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "कैप्टन",
+      "corrected": "कप्तान",
+      "category": "spelling",
+      "reason": "Standard Hindi spelling 'कप्तान' for the English word 'captain'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "खराब बाल पर आउट हो जाना",
+      "corrected": "खराब बॉल पर आउट हो जाना",
+      "category": "asr_term",
+      "reason": "Cricket term 'बॉल' (ball) was misrecognized as 'बाल'. Corrected to reflect intended sporting context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "हर बाल पे",
+      "corrected": "हर बॉल पे",
+      "category": "asr_term",
+      "reason": "Same cricket-related ASR error: 'बाल' -> 'बॉल'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "तो वीत राग, पहला जो नाम लेते हैं भगवान, ये आप देखेंगे बेस में है।",
+      "corrected": "तो वीतराग, पहला जो नाम लेते हैं भगवान, ये आप देखेंगे बेस में है।",
+      "category": "sanskrit",
+      "reason": "Compound term 'वीतराग' (वीतराग भय क्रोधः) was split by ASR; joining restores the standard term.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "सयोग को ना दुख का नाम दे दिया",
+      "corrected": "संयोग को ना दुख का नाम दे दिया",
+      "category": "spelling",
+      "reason": "'सयोग' is likely an ASR misrecognition of 'संयोग' (common Hindi/Sanskrit word); corrected to standard form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "ये तीनों के तीनों ज्ञानी पुरुष में।",
+      "corrected": "ये तीनों के तीनों ज्ञानी पुरुषों में।",
+      "category": "other",
+      "reason": "Grammar/number correction: context indicates plural 'ज्ञानी पुरुषों में' (in wise persons) rather than singular; improves readability without changing meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "दुःखेष्वनुद्विग्नमनाः, सुखेषु... विगतस्पृहः।",
+      "corrected": "दुःखेषु अनुद्विग्नमनाः, सुखेषु विगतस्पृहः।",
+      "category": "sanskrit",
+      "reason": "Normalized spacing and compound segmentation of a Sanskrit/Gītā phrase (दुःखेषु अनुद्विग्नमनाः, सुखेषु विगतस्पृहः) for clarity; intended wording is clear from context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "परिणमित",
+      "corrected": "परिणत",
+      "category": "spelling",
+      "reason": "ASR appears to have rendered the intended word incorrectly. 'परिणत' (परिणत हुआ) fits the context meaning 'how the mind was affected/changed'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "गला बिगड़ बढ़ाया",
+      "corrected": "गला बिगड़ गया",
+      "category": "asr_term",
+      "reason": "Extra/malformed word 'बढ़ाया' seems to be an ASR artifact. 'गला बिगड़ गया' matches the contextual description of coughing/voice being affected.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "ऐसा थोड़े है कि ठंडा पानी, उसके ऊपर गिराने से उसको ठंडा नहीं लगेगा।",
+      "corrected": "ऐसा तो थोड़े है कि ठंडा पानी उसके ऊपर गिराने से उसको ठंडा नहीं लगेगा।",
+      "category": "spelling",
+      "reason": "Inserted missing particle 'तो' for idiomatic Hindi and removed an unnecessary comma to improve sentence flow.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "स्वरूपावस्थान है उसका, उसकी सांख्य बुद्धि बिल्कुल सुदृढ़ है।",
+      "corrected": "स्वरूपावस्था है उसका, उसकी सांख्य बुद्धि बिल्कुल सुदृढ़ है।",
+      "category": "spelling",
+      "reason": "Corrected 'स्वरूपावस्थान' to the standard form 'स्वरूपावस्था'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "अम्यून होना।",
+      "corrected": "इम्यून होना।",
+      "category": "spelling",
+      "reason": "Corrected ASR of English 'immune' to the standard Hindi transliteration 'इम्यून'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "डिफरेंट सिचुएशन में",
+      "corrected": "different situation में",
+      "category": "asr_term",
+      "reason": "Standardized the English code-switch to Latin-script 'different situation' as spoken.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "इतना पुअर है कि",
+      "corrected": "इतना poor है कि",
+      "category": "asr_term",
+      "reason": "Corrected ASR 'पुअर' to English 'poor' consistent with speaker's code-switching.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "मिच्योर लोग",
+      "corrected": "मच्योर लोग",
+      "category": "spelling",
+      "reason": "Adjusted transliteration of English 'mature' to a more common Hindi rendering 'मच्योर'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 9,
+      "original": "कितना कौन सा शरीर इम्यून है, तो आदमी इतनी सावधानी से रहता है, और इम्यूनाइजेशन है न,",
+      "corrected": "कितना कौन सा शरीर इम्यून है। तो आदमी इतनी सावधानी से रहता है, और इम्यूनाइजेशन है न,",
+      "category": "sentence_boundary",
+      "reason": "Split a run-on sentence to clarify sentence boundary and improve readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "मक्खियाँ, देश, दैट, वो सब अपना पहले भोग लगा लेती हैं, बाकी लोग प्रसाद लेते हैं।",
+      "corrected": "मक्खियाँ, दिस एंड दैट, वो सब अपना पहले भोग लगा लेती हैं, बाकी लोग प्रसाद लेते हैं।",
+      "category": "asr_term",
+      "reason": "Clear ASR misrecognition of English phrase 'this and that' rendered as 'देश, दैट'. Corrected to maintain speaker's code-switching and intended phrase.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "अखिर प्रारब्ध रहित होके नहीं आया है वो।",
+      "corrected": "अखिर प्रारब्ध रहित होकर नहीं आया है वह।",
+      "category": "spelling",
+      "reason": "Grammatical normalization: 'होके' -> 'होकर' and colloquial 'वो' -> 'वह' to improve clarity without changing meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "विगतस्पृहः, कृपा करो, वो विकास नहीं हुआ।",
+      "corrected": "विगतस्पृहः, कृपा करो, वो विकास नहीं हुआ।",
+      "category": "sanskrit",
+      "reason": "Corrected likely Sanskrit term 'विगतस्पृहः' to standard form 'विगतस्पृहः'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "दुःखेष्वनुद्विग्नमनाः",
+      "corrected": "दुःखेषु अनुद्विग्न मनाः",
+      "category": "sanskrit",
+      "reason": "Separated and corrected Sanskrit compound to 'दुःखेषु अनुद्विग्न मनाः' to match intended phrasing ('अनुद्विग्न मनः' in context).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "हमारे राजनीति में लोग बड़े challenges फेस करने वाले दिखाई देते हैं, उद्विग्न नहीं होते, बड़े cool रहते हैं।",
+      "corrected": "हमारी राजनीति में लोग बड़े challenges फेस करने वाले दिखाई देते हैं, उद्विग्न नहीं होते, बड़े cool रहते हैं।",
+      "category": "spelling",
+      "reason": "Corrected grammatical agreement from 'हमारे राजनीति' to 'हमारी राजनीति'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "परस्थितियाँ",
+      "corrected": "परिस्थितियाँ",
+      "category": "spelling",
+      "reason": "Standard Hindi spelling for 'circumstances' is 'परिस्थितियाँ'; ASR likely omitted the medial syllable.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "वेरायटी",
+      "corrected": "वैरायटी",
+      "category": "spelling",
+      "reason": "Corrected English loanword spelling to more common Devanagari form 'वैरायटी'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "यादाने सुखानि अनुविवर्धते स विगतस्पृहः।",
+      "corrected": "यादाने सुखानि अनुवर्धते स विगतस्पृहः।",
+      "category": "sanskrit",
+      "reason": "Corrected apparent double 'वि' in the Sanskrit verb to the more likely form 'अनुवर्धते' (anuvardhate), matching earlier usage of 'वर्धते' in context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "न अनुविवर्धते स विगतस्पृहः, न ऊपर से आएगा।",
+      "corrected": "न अनुवर्धते स विगतस्पृहः। न ऊपर से आएगा।",
+      "category": "punctuation",
+      "reason": "Split into two sentences for clearer sentence boundary (comma-to-period) without changing content.",
+      "confidence": "high"
+    }
+  ]
+}

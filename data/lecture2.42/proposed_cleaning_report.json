@@ -1,0 +1,422 @@
+{
+  "lecture_id": "lecture2.42",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 15,
+  "total_changes": 47,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 15,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: The word 'अलंप्रत्यय' (\"जो तृप्त हैं, अलंप्रत्यय से युक्त हैं\") in the raw text may be an ASR error or a nonstandard term. Possible intended terms could be 'आलम्बप्रत्यय', 'आत्मप्रत्यय', or 'अलम्ब-प्रत्यय'. I preserved the original wording; please review and correct if needed.",
+    "Segment 0: The phrase 'स्वरूपावस्थान' was preserved as in the raw transcript. It may be intended as 'स्वरूपावस्था' or 'स्वरूपावस्थित' — please verify.",
+    "Segment 0: No other Sanskrit shlokas were altered beyond word-boundary and nominative-form corrections; repeated lines and speaker phrasing were preserved per instructions.",
+    "Segment 1: The term 'अलंप्रत्यय' appears unusual and may be an ASR artifact; left unchanged because intended word is not certain.",
+    "Segment 1: The phrase 'स्वरूपावस्थान' (earlier in context) was left as in the raw text; its exact intended form is uncertain and may merit human review.",
+    "Segment 1: The word 'वरण' (\"वरण नहीं करता\") was preserved from the raw transcript though context might have intended a different verb (e.g., 'वरण' vs. 'स्वीकार'); please review for speaker's intended word.",
+    "Segment 2: The term 'विप्राय' (दुःखेषु का विप्राय) may be an uncommon/formal usage or an ASR error; please verify the speaker's intended word (e.g., 'विप्राय' vs. 'विप्रय'/'विप्रित' etc.).",
+    "Segment 2: The word 'परमपर्यात' appears nonstandard or possibly mis-transcribed; confirm intended term (e.g., 'परम्पर्यात', 'परम्पर्याति', or another Sanskrit/Hindi term).",
+    "Segment 2: The phrase 'अधिष्ठान ज्ञान पूर्वक' may reflect Sanskrit technical wording (adhishthana-jnana). Confirm whether the intended compound/spacing is 'अधिष्ठानज्ञानपूर्वक', 'अधिष्ठान-ज्ञानपूर्वक', or another form.",
+    "Segment 3: The token 'प्रभाशेत' appears twice and may be an ASR error or a rare/formal/sanskritized term (possibly intended as 'प्रभावशेष' or 'प्रभासेत्'). I preserved the original wording because correcting it could change doctrinal meaning; please verify against the speaker's audio.",
+    "Segment 3: Several Sanskrit terms (दुःखेषु, विगतस्पृहः, प्रारब्धवशात) were left as in the transcript; if you want stricter Sanskrit orthography (diacritics or Sandhi forms), review those separately.",
+    "Segment 4: The phrase 'धर्मते विरति, गोस्वामीजी ने लिखा।' appears to be a quoted or referenced line; its exact original wording is uncertain. Left as in source but flagged for human review.",
+    "Segment 4: The fragment 'ए सब राम भगति के बाधक, कहहिं संत तब पद अवराधक।' seems to be in a colloquial/older dialect or a quoted line; preserved as in the transcript but should be checked against the speaker's source if precise wording is important.",
+    "Segment 4: I normalized multiple occurrences of the speaker's dispassion term to 'वैराग्य' / 'वैराग्य' and adjusted one sentence to 'साधक में भी वैराग्य होता है।' These normalizations preserve meaning but should be reviewed if the speaker intentionally used the adjective 'वितराग' or a different form.",
+    "Segment 5: The token 'प्रजस्विनेस' (\"... उतनी ही प्रजस्विनेस बढ़ती है ...\") appears to be an ASR or transcription error; the intended word is unclear and could materially change meaning. Left unchanged for fidelity; please review and correct if speaker meant a different term (e.g., प्रज्वलनशीलता / प्रस्फुटनशीलता etc.).",
+    "Segment 5: The phrase 'कोई भी अनात्मा, कोई भी अन्य आत्मा से हटकर' may reflect spoken hesitation or an ASR conflation; consider reviewing original audio to confirm intended wording (possible alternatives: 'कोई भी अनात्मा, कोई भी अन्य [वस्तु/चीज] से हटकर' or 'अनात्मा से हटकर').",
+    "Segment 5: Phrases appearing garbled/uncertain elsewhere (e.g., any occurrence of 'तदाकाराकारित' if present in adjacent segments) should be checked against audio for accurate rendering; no speculative corrections were made where meaning was uncertain.",
+    "Segment 6: Several Sanskrit corrections (sandhi and word completion) were made with medium confidence. Please verify the exact verse wording and sandhi as intended by the speaker.",
+    "Segment 6: The change 'वृत्ति तदाकारित' was made to remove an apparent duplication; confirm this preserves the speaker's intended phrasing.",
+    "Segment 9: Sanskrit fragments/words left as in the raw transcript but several may need human verification: e.g. \"तत् तत् प्राप्य शुभाशुभम्\", \"अभितः आनन्द\" — uncertain exact Sanskrit sandhi/orthography.",
+    "Segment 9: Phrase \"जो क्षमत्कार है\" may be an ASR or lexical error; meaning unclear and should be reviewed in audio for intended word.",
+    "Segment 9: The speaker's self-correction around 'संस्कृत, सॉरी, प्राकृतिक ... मतलब प्राकृतः, प्राकृतिकः' is preserved as spoken, but the intended technical term is likely 'प्राकृतः' — please verify.",
+    "Segment 9: The token 'साधु बाबा अनभिस्नेह' preserves spoken form; consider checking whether the intended Sanskrit term was 'अनभिस्नेहः' or similar.",
+    "Segment 10: कई अशुद्ध/अस्पष्ट शब्दों को यथावत रखा गया क्योंकि उनकी सही पहचान सुनिश्चित नहीं थी: 'महारास', 'नब्बे-पचानवे', 'परिकर', और 'कागभुशुण्डि'—इन पर मानव-समीक्षा आवश्यक हो सकती है।",
+    "Segment 10: कुछ वाक्य बोल-चाल की शैली में अस्पष्ट या टुकड़ों में हैं (उदा. 'अनेक कई बार कुपुत्रों जायेत', 'उसको दुख देने में हो सकता है कुछ कर देता हो'); अर्थ स्पष्ट होने पर भी मूल वक्ता की अभिव्यक्ति बरकरार रखी गई।",
+    "Segment 11: Possible uncertain/garbled phrases that may need human verification before doctrinal use: 'पद्ये शिव होने की जो वृत्ति है' (phrase unclear/possibly misrecognized).",
+    "Segment 11: The use and occurrences of 'अभिस्नेह' vs 'अनभिस्नेह' appear ambiguous in context — verify original wording and intended meaning.",
+    "Segment 11: The phrase 'स्वयं मंचित' may be an ASR mismatch; confirm whether speaker said 'स्वयं मंछित/मंचित' or a different word.",
+    "Segment 12: Left uncertain verb/terms unchanged where meaning was unclear or multiple plausible readings exist (examples: 'जय-विजय', 'ढबरा', 'संबोध्य').",
+    "Segment 12: Preserved English code-switching such as 'डेलिबरेटली' and 'everybody gets his हिस्सा' as spoken.",
+    "Segment 12: Corrected the Sanskrit quotation based on the speaker's subsequent self-correction in the segment.",
+    "Segment 13: Change of 'जो आसक्त है, उसी वही सबके लिए उपलब्ध है.' → 'जो अनासक्त है, वही सबके लिए उपलब्ध है.' may materially affect doctrinal meaning; please review this correction (ASR likely duplicated/incorrectly recognized 'आसक्त' vs 'अनासक्त').",
+    "Segment 14: Retained the phrase 'चाहे फोटो खींचती हो' from the raw transcript though it reads oddly; unsure if speaker intended 'फोटोग्राफर हो' or similar. Please review for speaker intent if available."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "स्थितधीः किं प्रभाषेत किमासीत व्रजेत किम्॥",
+      "corrected": "स्थितधीरः किं प्रभाषेत किमासीत व्रजेत किम्॥",
+      "category": "sanskrit",
+      "reason": "Corrected the Sanskrit nominative form 'स्थितधीः' to the standard 'स्थितधीरः' (स्थित + धीरः) to match the expected Bhagavad Gītā wording.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "दुःखेष्वनुद्विग्नमनाः... सुखेषु विगतस्पृहः।",
+      "corrected": "दुःखेषु अनुद्विग्न मनाः... सुखेषु विगतस्पृहः।",
+      "category": "sanskrit",
+      "reason": "Inserted word boundaries in the Sanskrit phrase (दुःखेषु अनुद्विग्न मनाः) to reflect correct segmentation and readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "मनोगतान् शब्द का भी प्रयाय होता है",
+      "corrected": "मनोगतान् शब्द का भी प्रयोग होता है",
+      "category": "asr_term",
+      "reason": "‘प्रयाय’ appears to be an ASR error; intended word is ‘प्रयोग’ (usage).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "वो कामना स्वतः त्यक्त हो जाती है। वास्तव में कामना का स्वभाव है मुझे को सुख देने की चेष्टा करना।",
+      "corrected": "वो कामना स्वतः त्यक्त हो जाती है। वास्तव में कामना का स्वभाव है मुझे सुख देने की चेष्टा करना।",
+      "category": "asr_term",
+      "reason": "Removed extraneous 'को' after 'मुझे' which is an ASR insertion; correct Hindi is 'मुझे सुख देने'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "तो तृप्त व्यक्ति, जिसकी स्वरूपनिष्ठा के कारण परम तृप्ति है,",
+      "corrected": "तो तृप्त व्यक्ति, जिसकी स्वरूपानिष्ठा के कारण परम तृप्ति है,",
+      "category": "spelling",
+      "reason": "Corrected to the standard Vedantic term 'स्वरूपानिष्ठा' (devotion/steadfastness in one's own nature).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "जो तृप्त हैं, अलंप्रत्यय से युक्त हैं, तो ऐसे तृप्ति की स्थिति में राग के अंकुरित होने की कोई संभावना रहती नहीं। कामनाओं के अंकुरण की भूमि समाप्त होती है, और इसलिए सारी ही कामनाओं का स्वाभाविक रूप से परित्याग होता है।",
+      "corrected": "जो तृप्त हैं, अलंप्रत्यय से युक्त हैं, तो ऐसे तृप्ति की स्थिति में राग के अंकुरित होने की कोई संभावना रहती नहीं। कामनाओं के अंकुरण की भूमि समाप्त होती है; और इसलिए सारी ही कामनाओं का स्वाभाविक रूप से परित्याग होता है।",
+      "category": "sentence_boundary",
+      "reason": "Inserted a semicolon to improve sentence boundary and readability between closely related clauses.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "प्रभाषेत वागिन्द्रिय का व्यवहार है। तो प्रभाषेत का एक अर्थ ये भी होता है कि वो रिएक्ट कैसे करता है। भिन्न-भिन्न परिस्थितियों में तो वह उसकी प्रतिक्रिया क्या होती है? वागिन्द्रिय के व्यवहार की उपलक्षणा, उपलक्षणा लेकर के अर्थ ये निकालना चाहिए कि उसकी क्रिया, उसकी प्रतिक्रिया भिन्न-भिन्न परिस्थितियों में किस प्रकार की होती है।",
+      "corrected": "प्रभाषेत वागिन्द्रिय का व्यवहार है। तो प्रभाषेत का एक अर्थ ये भी होता है कि वो रिएक्ट कैसे करता है। भिन्न-भिन्न परिस्थितियों में तो उसकी प्रतिक्रिया क्या होती है? वागिन्द्रिय के व्यवहार की उपलक्षणा, उपलक्षणा लेकर के अर्थ ये निकालना चाहिए कि उसकी क्रिया, उसकी प्रतिक्रिया भिन्न-भिन्न परिस्थितियों में किस प्रकार की होती है।",
+      "category": "sentence_boundary",
+      "reason": "Removed a stray pronoun 'वह' that made the sentence awkward; clarified the question to refer back to 'प्रतिक्रिया'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "दुःखेषु का विप्राय ये हुआ",
+      "corrected": "दुःखेषु का विप्राय यह हुआ",
+      "category": "spelling",
+      "reason": "Replaced colloquial/demonstrative 'ये' with standard 'यह' for clearer Hindi phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "परिस्थितियाँ हैं, वो जीवन में ज्ञानी के भी आती हैं।",
+      "corrected": "परिस्थितियाँ हैं, वे जीवन में ज्ञानी के भी आती हैं।",
+      "category": "spelling",
+      "reason": "Replaced colloquial 'वो' with correct plural pronoun 'वे' to agree with plural 'परिस्थितियाँ'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "दुःख जहाँ तक दुःख के हेतुभूत जो परिस्थितियाँ हैं",
+      "corrected": "दुःख, जहाँ तक दुःख के हेतुभूत जो परिस्थितियाँ हैं",
+      "category": "punctuation",
+      "reason": "Added comma to clarify clause boundary and improve readability.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 2,
+      "original": "जैसी मेरी समझ है। वैसा ही मैं कर्म करूँगा,",
+      "corrected": "जैसी मेरी समझ है, वैसा ही मैं कर्म करूँगा,",
+      "category": "sentence_boundary",
+      "reason": "Changed sentence boundary (period to comma) to reflect continuation of thought rather than a full stop.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "तो वो गलती कर रहा है।",
+      "corrected": "तो वह गलती कर रहा है।",
+      "category": "spelling",
+      "reason": "Replaced colloquial 'वो' with formal 'वह' for consistency in register.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 3,
+      "original": "अनेक जीवन में प्रतिकूल परिस्थितियाँ आती हैं।",
+      "corrected": "अनेक जीवनों में प्रतिकूल परिस्थितियाँ आती हैं।",
+      "category": "asr_term",
+      "reason": "Missing plural marker 'जीवनों' corrected to match intended meaning ('in many lives').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "अगर दुख ही दुख बना रहे, तो तो ये एकवचन हो जाएगा।",
+      "corrected": "अगर दुख ही दुख बना रहे, तो यह एकवचन हो जाएगा।",
+      "category": "other",
+      "reason": "Removed duplicated 'तो' and normalized demonstrative 'ये' to 'यह' for clarity.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "मैं कहा कि",
+      "corrected": "मैंने कहा कि",
+      "category": "asr_term",
+      "reason": "Missing auxiliary due to ASR error; corrected to grammatically match spoken Hindi.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "उसका कारण बोलते हैं वीतराग।",
+      "corrected": "उसका कारण बोलते हैं वैराग्य।",
+      "category": "asr_term",
+      "reason": "Normalized ASR-rendered 'वीतराग' to standard Vedanta term 'वैराग्य' which fits the context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "साधक भी वीतराग होता है।",
+      "corrected": "साधक में भी वैराग्य होता है।",
+      "category": "asr_term",
+      "reason": "Adjusted grammatical structure and normalized 'वीतराग' to 'वैराग्य' for clarity while preserving meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "चूँकि आत्मन् नेवात्मना तुष्टः है।",
+      "corrected": "चूँकि आत्मनेवात्मना तुष्टः है।",
+      "category": "sanskrit",
+      "reason": "Corrected spacing/compound in a Sanskrit phrase to reflect the likely intended form.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 4,
+      "original": "स्थरलग होता है, कारणलग होता है।",
+      "corrected": "स्तरगत होता है, कारणगत होता है।",
+      "category": "asr_term",
+      "reason": "ASR misrecognition: 'स्थरलग/कारणलग' corrected to 'स्तरगत/कारणगत' which fit the intended Hindi terms.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 5,
+      "original": "हट करके",
+      "corrected": "हटकर",
+      "category": "spelling",
+      "reason": "Compound verb/adverb forms in Hindi are conventionally written as a single word; 'हट करके' → 'हटकर' is a standard orthographic correction without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "तानी एव साधनानि उपदिश्यन्ते",
+      "corrected": "तानि एव साधनानि उपदिश्यन्ते",
+      "category": "sanskrit",
+      "reason": "Sanskrit word 'तानि' is the standard form here; corrected minor vowel spelling for accurate Sanskrit orthography.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "वृत्ति तदाकाराकारित रहेगी",
+      "corrected": "वृत्ति तदाकारित रहेगी",
+      "category": "asr_term",
+      "reason": "Repeated/garbled segment 'तदाकाराकारित' appears to be an ASR duplication; corrected to a single expected form to restore intended meaning.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "वीत राग",
+      "corrected": "वीतराग",
+      "category": "asr_term",
+      "reason": "ASR split a compound term; 'वीतराग' (without-rāga) is the intended Vedantic term.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "विषयेन्द्रिय संयोगात् यत्तदग्रेऽमृतोपमम्",
+      "corrected": "विषयेन्द्रियसंयोगात् यत्तदग्रेऽमृतोपमम्",
+      "category": "sanskrit",
+      "reason": "Corrected sandhi/spacing in a Sanskrit quotation to match expected verse phrasing.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "संस्पर्शज",
+      "corrected": "स्पर्शज",
+      "category": "sanskrit",
+      "reason": "'संस्पर्शज' appears to be an ASR corruption of the technical term 'स्पर्शज' (arising from contact); corrected accordingly.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "अमृतोप",
+      "corrected": "अमृतोपमम्",
+      "category": "sanskrit",
+      "reason": "Truncated Sanskrit word 'अमृतोप' likely intended as 'अमृतोपमम्' in the quoted verse; completed to match the context.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "अल्प संख्यक",
+      "corrected": "अल्पसंख्यक",
+      "category": "spelling",
+      "reason": "Compound word should be written together in Hindi ('अल्पसंख्यक' is the standard orthography).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "मन, तितिक्षा को थोड़ा पहले मन में महत्व दें, बुद्धि में महत्व दें, और उसका अधिक से अधिक अभ्यास किया जाए, आश्रय लिया जाए, तब चित्त में समता बनती है।",
+      "corrected": "तितिक्षा को पहले मन में महत्व दें, बुद्धि में महत्व दें, और उसका अधिक से अधिक अभ्यास किया जाए, आश्रय लिया जाए, तब चित्त में समता बनती है।",
+      "category": "other",
+      "reason": "Removed an obvious duplicate/hesitation ('मन' repeated) to clarify the sentence while preserving meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "अगेन रेजेक्शन",
+      "corrected": "यानि 'rejection'",
+      "category": "asr_term",
+      "reason": "Probable ASR misrecognition of the speaker's English phrase; corrected to a concise Hindi marker plus the English word to preserve code-switching and meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "ऐसे गुरजनों को याद करना पड़ता है।",
+      "corrected": "ऐसे गुरुजनों को याद करना पड़ता है।",
+      "category": "asr_term",
+      "reason": "निज-शब्द 'गुरुजन' का ASR द्वारा 'गुरजनों' रूप में गलत पहचान; स्पष्ट टोकन सुधार।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "इतना आपका परिकर है, परिवार है, इतने मित्र हैं, इतना आपके क्लबों के सदस्य हो, फिर प्रेम ही प्रेम आपको तो होना चाहिए।",
+      "corrected": "इतना आपका परिकर है, परिवार है, इतने मित्र हैं, इतने आपके क्लबों के सदस्य हों, फिर प्रेम ही प्रेम आपको तो होना चाहिए।",
+      "category": "spelling",
+      "reason": "वाक्य-समीकरण: 'इतना ... सदस्य हो' को बहुवचन/सम्मान के अनुरूप 'इतने ... सदस्य हों' में सुधार कर वाक्य प्रवाह सुधारा गया। असल मूल अर्थ बदला नहीं गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "नीच भूमि जिसको बोलते हैं।",
+      "corrected": "नीच भूमि जिसे बोलते हैं।",
+      "category": "spelling",
+      "reason": "Replaced colloquial/ASR form 'जिसको' with standard relative pronoun 'जिसे' for grammatical correctness.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "वरायटीज़",
+      "corrected": "वेराइटीज़",
+      "category": "asr_term",
+      "reason": "Normalized English loanword transliteration to a more common form; preserves the spoken-variety sense (varieties).",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 11,
+      "original": "जोड़ घटाने के कारण",
+      "corrected": "जोड़-घटाने के कारण",
+      "category": "punctuation",
+      "reason": "Inserted hyphen to mark the compound action 'जोड़-घटाने' (adding/removing) as a single concept, improving readability without changing meaning.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "पुराण तो यही है।",
+      "corrected": "परिणाम तो यही है।",
+      "category": "asr_term",
+      "reason": "‘पुराण’ is an unlikely word in context; speaker clearly meant 'परिणाम' (the result/conclusion).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "यस, उस अभिमान वृत्ति के कारण",
+      "corrected": "यह, उस अभिमान वृत्ति के कारण",
+      "category": "asr_term",
+      "reason": "‘यस’ is an ASR artifact; context indicates the demonstrative 'यह' was intended.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "स्नेहरहित हो जाए।",
+      "corrected": "स्नेह-रहित हो जाए।",
+      "category": "spelling",
+      "reason": "Compound consistency and readability: 'स्नेह-रहित' is the standard form.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 12,
+      "original": "ईश्वरः परजन्यवत् गीययः।",
+      "corrected": "ईश्वरः परजन्यवत् द्रष्टव्यः।",
+      "category": "sanskrit",
+      "reason": "The speaker immediately repeats and corrects this Sanskrit phrase; 'द्रष्टव्यः' is the intended word (Brahma Sūtra quotation).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "सो इस शब्द का अर्थ बिल्कुल ये नहीं समझना चाहिए कि ज्ञानी वो है जो नीरस हो।",
+      "corrected": "तो इस शब्द का अर्थ बिल्कुल ये नहीं समझना चाहिए कि ज्ञानी वो है जो नीरस हो।",
+      "category": "asr_term",
+      "reason": "आम ASR गलती: 'सो' यहाँ संदर्भ अनुसार 'तो' होना चाहिए।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "जो आसक्त है, उसी वही सबके लिए उपलब्ध है।",
+      "corrected": "जो अनासक्त है, वही सबके लिए उपलब्ध है।",
+      "category": "asr_term",
+      "reason": "ASR ने 'अनासक्त' को 'आसक्त' और 'उसी वही' दोहरा दिया; संदर्भ से 'अनासक्त' और एकल 'वही' अधिक सुसंगत हैं। यह परिवर्तन वैचारिक अर्थ को प्रभावित कर सकता है, इसलिए समीक्षा के लिये चिह्नित।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "माने he try to use everyone, thinks that everybody is fool.",
+      "corrected": "माने he tries to use everyone, thinks that everybody is a fool.",
+      "category": "asr_term",
+      "reason": "उद्धरणित अंग्रेज़ी वाक्य में स्पष्ट व्याकरणिक सुधार (tries, a fool)।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 13,
+      "original": "दाव पेच",
+      "corrected": "दाव-पेच",
+      "category": "punctuation",
+      "reason": "कम्पाउंड शब्द के रूप में हाइफ़न जोड़कर पाठ स्पष्ट हुआ।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "जो व्यक्ति स्वयं आत्मानंद में है। वो चूँकि दूसरे के दिए हुए आनंद पर निर्भर नहीं करता, इसलिए किसी दूसरे में आसक्त होने की संभावना नहीं है।",
+      "corrected": "जो व्यक्ति स्वयं आत्मानंद में है, वह चूँकि दूसरे के दिए हुए आनंद पर निर्भर नहीं करता, इसलिए किसी दूसरे में आसक्त होने की संभावना नहीं है।",
+      "category": "sentence_boundary",
+      "reason": "वाक्य सीमा और प्रवाह सुधारने हेतु दो वाक्यों को जोड़ा गया और स्पष्टता खातिर 'वो' को 'वह' में बदला गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "सर्वत्र शब्द लिखा, यः सर्वत्र अनस्नेहः नहीं, कैसा? अनभिस्नेहः।",
+      "corrected": "सर्वत्र शब्द लिखा, 'यः सर्वत्र अनस्नेहः' नहीं—कैसा? 'अनभिस्नेहः'।",
+      "category": "punctuation",
+      "reason": "संस्‍कृत वाक्यांशों को स्पष्टता हेतु उद्धरण और विराम चिह्न जोड़कर विभक्त किया गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 13,
+      "original": "आखिरी, गुरुदेव ने एक वाक्य लिखा कि",
+      "corrected": "आखिर में, गुरुदेव ने एक वाक्य लिखा कि",
+      "category": "spelling",
+      "reason": "श्रवण/ASR के कारण आया 'आखिरी' को प्रवाह के अनुरूप 'आखिर में' किया गया।",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 14,
+      "original": "यश हो,",
+      "corrected": "यही हो,",
+      "category": "asr_term",
+      "reason": "Probable ASR error: 'यश' is unlikely in context; 'यही हो' fits the speaker's continuation ('let it be so' / 'यही हो').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 14,
+      "original": "ऐसी कहीं स्थिति होवे,",
+      "corrected": "ऐसी कोई स्थिति होवे,",
+      "category": "asr_term",
+      "reason": "'कहीं' is likely an ASR misrecognition of 'कोई' in this idiomatic phrase ('ऐसी कोई स्थिति'), so corrected for clarity.",
+      "confidence": "high"
+    }
+  ]
+}

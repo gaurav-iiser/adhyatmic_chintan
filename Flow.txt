@@ -1,0 +1,13 @@
+Step 1. Audio/video --> get the raw transcript data from mp4 file or youtube directly --> clean data --> human review --> The corpus is ready.
+Step 2. 
+Clean transcript
+      ↓
+Semantic enrichment (Take the cleaned transcript and attach useful meaning-related metadata to it without changing what was originally said.)
+      ↓
+RAG chunking
+      ↓
+Index
+      ↓
+Question retrieval
+      ↓
+Grounded answer

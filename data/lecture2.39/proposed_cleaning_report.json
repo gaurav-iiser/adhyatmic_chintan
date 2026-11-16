@@ -1,0 +1,292 @@
+{
+  "lecture_id": "lecture2.39",
+  "cleaning_model": "gpt-5-mini",
+  "total_segments": 13,
+  "total_changes": 33,
+  "segments_needing_human_review": 0,
+  "segments_auto_accepted": 13,
+  "review_segment_indexes": [],
+  "review_notes": [
+    "Segment 0: Several Sanskrit terms and shloka lines appear with sandhi and compound forms (e.g., 'मोहकलिलं', 'बुद्धिर्व्यतितरिष्यति', 'समाधावचला') — I preserved original forms where the intended canonical wording was not certain. Please verify these shloka / sandhi forms against the source text if precise canonical spelling is required.",
+    "Segment 0: The long compound 'अनेकशब्दद्विसाधनसंबन्धप्रकाशनश्रुतिभिः' was split before 'श्रुतिभिः' to improve readability; confirm if further splitting or different segmentation is preferred.",
+    "Segment 0: Several fragments (e.g., 'विक्षिप्ता सती', 'तस्मिन्नात्मनि त्येतत् बुद्धिर्यन्तः अचला') are transcribed verbatim from the audio but may benefit from human review for exact Sanskrit/Hindi orthography or intended grammatical forms.",
+    "Segment 2: Sanskrit phrases such as 'स्वाद्वन्नं न तु याच्यताम्' and 'शुद्धं हृदय दौर्बल्यम्' were left unchanged because the intended canonical wording is not certain from the audio; please verify these Sanskrit phrases against the teacher's intended recitation if precise classical forms are required.",
+    "Segment 3: The Sanskrit quotation segment (\"कृपणाः फलहेतवः। बुद्धियुक्तो जहातीह उभे सुकृतदुष्कृते। कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा...\") appears to be a partial or possibly mis-transcribed verse. I preserved the original wording; please verify the exact Sanskrit phrasing against the intended shloka.",
+    "Segment 3: The term \"भजनानंदी\" (\"यह भजनानंदी बनाने के लिए है\") may be an ASR or spelling artifact—confirm whether the speaker intended \"भजनानन्दी\", \"भजनानंदी\", or another term.",
+    "Segment 4: Sanskrit phrase 'लप्स्यामहे अद्राक्ष्म चेत्वा' is left as in raw transcript but is unclear / possibly mis-transcribed; please verify against original source (Katha Upanishad) and correct if necessary.",
+    "Segment 4: Phrase 'शास्त्र से अनुग्रहीत रहो' may reflect ASR uncertainty ('अनुग्रहीत' vs. 'अनुग्रहित' vs. another term). Preserve as spoken, but recommend human review for intended wording.",
+    "Segment 5: Several Sanskrit-looking phrases (e.g., 'वरणीयस्यैव तवैव बाहात्', 'तदागन्ता सिनर्वेदं श्रोतव्यस्य श्रुतस्य च।') were preserved verbatim because their correct restoration is uncertain from context. Please review these for accuracy against the speaker's intended Sanskrit.",
+    "Segment 8: The sequence 'अनेक साध्य साधन संबंध प्रकाशन श्रुतिभिः श्रवणैः ही' may contain ASR errors or missing inflections; please verify against the original audio/text.",
+    "Segment 8: The word 'इतरतिया' is unclear and may be an ASR mistranscription; human review recommended.",
+    "Segment 8: The phrase 'विक्षिप्ता सती' (end) could be a mangled Sanskrit term (e.g., 'विक्षिप्तचित्ता' or similar); verify with source audio to confirm exact wording.",
+    "Segment 11: Several short Sanskrit-looking fragments may be mis-transcribed or unclear (e.g., 'तरति शोकमात्मवित्', 'अनुष्ठाय न शोचति'). Verify against audio/text if precise Sanskrit rendering is required.",
+    "Segment 11: 'सन्निव्योंगे' (\"भगवान जरूर सन्निव्योंगे\") appears to be an ASR artifact; original intended word/phrase is uncertain — review from audio recommended.",
+    "Segment 11: 'समाधिस्थस्य केशव', 'स्थितप्रज्ञस्य का भाषा' and 'सावाशी' are uncertain transcriptions in places where doctrinal meaning could be affected; please verify these phrases from the source audio or a human reviewer."
+  ],
+  "changes": [
+    {
+      "segment_index": 0,
+      "original": "यदा ते मोहकलिलं बुद्धिर्व्यतितरिष्यति। तदा गन्तासि निर्वेदं श्रोतव्यस्य श्रुतस्य च॥ श्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला।",
+      "corrected": "यदा ते मोहकलिलं बुद्धिर्व्यतितरिष्यति। तदा गन्तासि निर्वेदं श्रोतव्यस्य श्रुतस्य च॥\n\nश्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला।",
+      "category": "sentence_boundary",
+      "reason": "Inserted paragraph/line break after the shloka punctuation to preserve verse boundary and improve sentence separation; reflects speaker's pausing between verse and explanation.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "श्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला। समाधावचला बुद्धिस्तदा योगमवाप्स्यसि॥ श्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला।",
+      "corrected": "श्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला। समाधावचला बुद्धिस्तदा योगमवाप्स्यसि॥\n\nश्रुतिविप्रतिपन्ना ते यदा स्थास्यति निश्चला।",
+      "category": "sentence_boundary",
+      "reason": "Inserted a paragraph/line break to reflect the repeated recitation and a pause between verses/phrases, preserving the spoken repetition.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 0,
+      "original": "अनेकशब्दद्विसाधनसंबन्धप्रकाशनश्रुतिभिः।",
+      "corrected": "अनेकशब्दद्विसाधनसंबन्धप्रकाशन श्रुतिभिः।",
+      "category": "punctuation",
+      "reason": "Inserted a space before 'श्रुतिभिः' to separate fused words produced by ASR; improves readability while preserving intended terms.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "समाधीयते चित्तमस्मिन्निति।",
+      "corrected": "समाधीयते चित्तमस्मिन् इति।",
+      "category": "spelling",
+      "reason": "Inserted a space between 'चित्तमस्मिन्' and 'इति' to reflect standard Sanskrit/Hindi phrasing 'चित्तमस्मिन् इति' rather than a fused token.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 0,
+      "original": "तदा योगमवाप्स्यसि। तदा योगमवाप्स्यसि। श्रुतिविप्रतिपन्ना। अनेकशब्दद्विसाधनसंबन्धप्रकाशनश्रुतिभिः।",
+      "corrected": "तदा योगमवाप्स्यसि। तदा योगमवाप्स्यसि। श्रुतिविप्रतिपन्ना। अनेकशब्दद्विसाधनसंबन्धप्रकाशन श्रुतिभिः।",
+      "category": "punctuation",
+      "reason": "Normalized spacing before 'श्रुतिभिः' in the repeated section as well, matching earlier correction for consistency.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "समूचे दृश्य प्रपंच के विषय में, जो भी प्रत्यक्षादि प्रमाणों से ज्ञात है अथवा जो शब्द प्रमाण से जानने योग्य है। उन सभी विषयों में बुद्धि विरक्त हो जाती है।",
+      "corrected": "समूचा दृश्य प्रपंच के विषय में जो भी प्रत्यक्षादि प्रमाणों से ज्ञात है अथवा जो शब्द प्रमाण से जानने योग्य है, उन सभी विषयों में बुद्धि विरक्त हो जाती है।",
+      "category": "sentence_boundary",
+      "reason": "Two short fragments were joined into a single grammatically complete sentence and punctuation adjusted to improve sentence boundary and flow.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "विरक्त हो जाती है का विप्राय निकला, निष्प्रयोजनं प्रपद्यते, निष्फलं, निष्फलं प्रतिपद्यते इति अभिप्रायः।",
+      "corrected": "विरक्त हो जाती है का विप्राय निकला: 'निष्प्रयोजनं प्रपद्यते, निष्फलं, निष्फलं प्रतिपद्यते' इति अभिप्रायः।",
+      "category": "punctuation",
+      "reason": "Punctuation was adjusted (colon and quotation marks) to clearly mark the cited Sanskrit phrase and improve readability while preserving the original words and repetition.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 1,
+      "original": "मने कोई ऐसी स्थिति चित्त की होती है,",
+      "corrected": "माने कोई ऐसी स्थिति चित्त की होती है,",
+      "category": "spelling",
+      "reason": "Corrected common colloquial spelling 'मने' to standard 'माने'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 1,
+      "original": "समुंचा दृश्य प्रपंच निष्फलं प्रतिपद्यते,",
+      "corrected": "समूचा दृश्य प्रपंच निष्फलं प्रतिपद्यते,",
+      "category": "spelling",
+      "reason": "Corrected likely ASR spelling error 'समुंचा' to 'समूचा'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "देह को पंचभूत से बना है",
+      "corrected": "देह पंचभूतों से बना है",
+      "category": "spelling",
+      "reason": "Removed unnecessary postposition 'को' and pluralized 'पंचभूत' to 'पंचभूतों' for grammatically correct phrasing.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 2,
+      "original": "पंचमहाभूत का शरीर है",
+      "corrected": "पंचमहाभूतों का शरीर है",
+      "category": "spelling",
+      "reason": "Pluralized 'पंचमहाभूत' to 'पंचमहाभूतों' for grammatical correctness (body is composed of the five great elements).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "देहाभिमान कोई छोटी चीज तो है नहीं।",
+      "corrected": "देहाभिमान कोई छोटी चीज तो नहीं है।",
+      "category": "punctuation",
+      "reason": "Corrected common spoken word order to standard written ordering for clarity (placement of 'नहीं' before 'है').",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "परमात्मा के निकटता",
+      "corrected": "परमात्मा की निकटता",
+      "category": "spelling",
+      "reason": "Corrected case/particle to standard Hindi collocation ('की निकटता' is the correct genitive construction).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 3,
+      "original": "मुश्किल है",
+      "corrected": "मुश्किल है।",
+      "category": "punctuation",
+      "reason": "Added terminal punctuation (sentence-final danda) to complete the sentence.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 4,
+      "original": "नचिकेता ने थोड़े कहा कि आप दोगे तो मैं नहीं लूँगा।",
+      "corrected": "नचिकेता ने थोड़ा कहा कि आप दोगे तो मैं नहीं लूँगा।",
+      "category": "spelling",
+      "reason": "High-confidence correction of 'थोड़े' (ASR artefact) to 'थोड़ा' to match grammatical usage in context.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 5,
+      "original": "वरस्तु में वरणीयस्यैव तवैव बाहात्।",
+      "corrected": "वस्तु में वरणीयस्यैव तवैव बाहात्।",
+      "category": "spelling",
+      "reason": "Probable ASR error: 'वरस्तु' is likely 'वस्तु'. Preserved surrounding Sanskrit phrase as in source.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 6,
+      "original": "ये चौपाई है, विद्या बिनु विवेक उपजाए।",
+      "corrected": "ये चौपाई है: विद्या बिनु विवेक उपजाए।",
+      "category": "punctuation",
+      "reason": "Punctuation changed to indicate that the following phrase is a quoted chaupai (verse), improving sentence boundary and readability.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 6,
+      "original": "श्रुति विप्रतिपन्ना ते यदा स्थास्यति निश्चला, समाधावचला बुद्धिस्तदा योगमवाप्स्यसि।",
+      "corrected": "श्रुतविप्रतिपन्ना ते यदा स्थास्यति निश्चला, समाधावच्छला बुद्धिस्तदा योगमवाप्स्यसि।",
+      "category": "sanskrit",
+      "reason": "Combined separated Sanskrit compounds and corrected probable sandhi/doubling (समाधावच्छला) to better match the expected Bhagavad-gītā phrasing.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 7,
+      "original": "कभी इधर जाती है, कभी इधर जाती है, चला है वो।",
+      "corrected": "कभी इधर जाती है, कभी उधर जाती है, चला है वो।",
+      "category": "asr_term",
+      "reason": "ASR repeated 'इधर' twice; context clearly contrasts 'इधर' और 'उधर'.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो बुद्धि बार-बार चला हो रही है, वहाँ जा रही है, फिर वहाँ से लौट के यहाँ जा रही है, फिर लौट के उधर आ रही है।",
+      "corrected": "तो बुद्धि बार-बार चंचल हो रही है, वहाँ जा रही है, फिर वहाँ से लौट के यहाँ जा रही है, फिर लौट के उधर आ रही है।",
+      "category": "asr_term",
+      "reason": "'चला' is a misrecognition of 'चंचल' in this context describing restless mind.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "तो चला बुद्धि अथवा चंचला बुद्धि का मतलब क्या हुआ?",
+      "corrected": "तो चंचल बुद्धि अथवा चंचला बुद्धि का मतलब क्या हुआ?",
+      "category": "asr_term",
+      "reason": "'चला बुद्धि' corrected to 'चंचल बुद्धि' to match intended term used earlier.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 7,
+      "original": "ये सारे ही पक्षों में महत्त्व बुद्धि है।",
+      "corrected": "इन सारे ही पक्षों में महत्त्व है।",
+      "category": "other",
+      "reason": "Grammatical correction to reflect intended meaning that all these sides have importance.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "आत्मा में अधिकरण वाची नहीं है, आत्मा के विषय में।",
+      "corrected": "आत्मनि अधिकरणवाची नहीं है, आत्मा के विषय में।",
+      "category": "sanskrit",
+      "reason": "Corrected Sanskrit grammatical compound and locative form: 'आत्मनि' (locative) and combined 'अधिकरणवाची' (adhikaranavācī) to reflect intended technical term.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 8,
+      "original": "बुद्धिर् यदा स्थास्यति",
+      "corrected": "बुद्धि यदा स्थास्यति",
+      "category": "spelling",
+      "reason": "Removed stray character/typo 'र्' after 'बुद्धि' (ASR artifact).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 8,
+      "original": "श्रवण ही, उन श्रुतियों को तो वैदिक साधक है, उसने सुना।",
+      "corrected": "श्रवण ही — उन श्रुतियों को तो वैदिक साधक ने सुना।",
+      "category": "other",
+      "reason": "Fixed agent-marking and sentence boundary: replaced awkward 'है, उसने' with correct 'ने' and clarified pause with an em-dash for spoken emphasis.",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 9,
+      "original": "How confident they are.",
+      "corrected": "How confident are they.",
+      "category": "asr_term",
+      "reason": "Corrected English word order to match intended question form (high-confidence ASR/generation error).",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "अना वाक्यों से वह महापुरुष मोहित नहीं होता।",
+      "corrected": "ऐसे वाक्यों से वह महापुरुष मोहित नहीं होता।",
+      "category": "asr_term",
+      "reason": "'अना' ASR त्रुटि; संदर्भानुसार वक्ता यहाँ 'ऐसे वाक्यों' कहना चाहते हैं।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "उस सारे वाक्यों की संगति लगाने में समर्थ है।",
+      "corrected": "उन सारे वाक्यों की संगति लगाने में समर्थ है।",
+      "category": "spelling",
+      "reason": "उचित सर्वनाम 'उन' प्रयोग के अनुसार वाक्य-संगत सुधार।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "एक ही श्लोक के भीतर दो वाक्य विरोधी हो गया।",
+      "corrected": "एक ही श्लोक के भीतर दो वाक्य विरोधी हो गए।",
+      "category": "spelling",
+      "reason": "वाक्यों के बहुवचन से क्रिया का समायोजन (विरोधी हो गया -> विरोधी हो गए)।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 10,
+      "original": "प्रणाम है उसको।",
+      "corrected": "प्रश्न है उसको।",
+      "category": "asr_term",
+      "reason": "संदर्भानुसार 'प्रश्न' सही शब्द है; 'प्रणाम' ASR द्वारा गलत पहचाना गया।",
+      "confidence": "high"
+    },
+    {
+      "segment_index": 11,
+      "original": "तरेशाम्",
+      "corrected": "तेषाम्",
+      "category": "sanskrit",
+      "reason": "Obvious ASR transcription error in a Sanskrit pronoun; corrected to expected form 'तेषाम्'.",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "इस श्लोक के बाद में, इसको कलम देखेंगे, आप अंडरलाइन कर लें।",
+      "corrected": "इस श्लोक के बाद में, इसे कल हम देखेंगे, आप अंडरलाइन कर लें।",
+      "category": "asr_term",
+      "reason": "ASR likely merged 'कल हम' into 'कलम'. 'कल हम देखेंगे' fits the context ('we will see it tomorrow').",
+      "confidence": "medium"
+    },
+    {
+      "segment_index": 12,
+      "original": "सर्वत्र एव हि अध्यात्मशास्त्रे—देखो ये सिद्धांत बोल दिया है—सर्वत्र एव हि अध्यात्मशास्त्रे कृतार्थ लक्षणानि यानि तानि एव साधनानि उपदिश्यन्ते।",
+      "corrected": "सर्वत्र एव हि अध्यात्मशास्त्रे—देखो ये सिद्धांत बोल दिया है—सर्वत्र एव हि अध्यात्मशास्त्रे कृतार्थलक्षणानि यानि तानि एव साधनानि उपदिश्यन्ते।",
+      "category": "sanskrit",
+      "reason": "Normalized the Sanskrit compound 'कृतार्थलक्षणानि' (merged separated words) to match the compound form used later in the passage.",
+      "confidence": "medium"
+    }
+  ]
+}

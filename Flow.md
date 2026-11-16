@@ -1,22 +1,46 @@
-Step 1. Audio/video --> get the raw transcript data from mp4 file or youtube directly --> clean data --> human review --> The corpus is ready.
+Step 1.
+
+Audio/video (mp4 file or youtube)
+
+&#x20;     ↓
+
+raw transcript data (command: adhyatmik file /c/path/to/lecture1.mp4 --lecture-id <lecture\_name> or adhyatmik youtube "youtube\_link" --lecture-id <lecture\_name>) (costs me about $0.35)
+
+&#x20;     ↓
+
+clean data (cmd: adhyatmik clean --lecture-id <lecture\_name>) (costs me about $0.20)
 
 
 
-Step 2. 
+&#x20;     ↓
+
+&#x20;human review (cmd: adhyatmik review --lecture-id <lecture\_name>)
+
+&#x20;     ↓
+
+clean transcript (corpus) is ready
+
+
+
+
+
+Step 2.
 
 Clean transcript
 
 &#x20;     ↓
 
-Semantic enrichment 
+Semantic enrichment (cmd: adhyatmik enrich --lecture-id <lecture\_name>)
 
 &#x20;     ↓
 
-RAG chunking
+RAG chunking (cmd: adhyatmik chunk --lecture-id <lecture\_name>)
+
+
 
 &#x20;     ↓
 
-Index
+Index (cmd: adhyatmik index --force)
 
 &#x20;     ↓
 
@@ -25,6 +49,18 @@ Question retrieval
 &#x20;     ↓
 
 Grounded answer
+
+
+
+Added commands for automation:
+
+
+
+process (cmd:adhyatmik process --lecture-id <lecture\_name>)
+
+process-all (1. cmd: adhyatmik process-all, 2. adhyatmik process-all --index): cmd 1 will not automatically index the data, cmd2 will force indexing.
+
+status: (cmd: adhyatmik status): Gives the status of all the process for each lecture, and if human review is required.
 
 
 

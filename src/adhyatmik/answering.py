@@ -337,35 +337,35 @@ def answer_question(
     )
 
     prompt = f"""
-USER CONTEXT
+    USER CONTEXT
 
-{context_block}
+    {context_block}
 
-USER QUESTION
+    USER QUESTION
 
-{query}
+    {query}
 
 
-RETRIEVED LECTURE SOURCES
+    RETRIEVED LECTURE SOURCES
 
-{source_packet}
+    {source_packet}
 
-Answer the USER QUESTION.
+    Answer the USER QUESTION.
 
-Use USER CONTEXT to understand and tailor the answer when it is
-provided.
+    Use USER CONTEXT to understand and tailor the answer when it is
+    provided.
 
-Use ONLY the retrieved lecture sources for spiritual, philosophical,
-scriptural, or doctrinal claims.
+    Use ONLY the retrieved lecture sources for spiritual, philosophical,
+    scriptural, or doctrinal claims.
 
-Give one clear, natural answer.
+    Give one clear, natural answer.
 
-Do not mention chunk IDs, timestamps, or retrieval mechanics in the
-answer itself.
+    Do not mention chunk IDs, timestamps, or retrieval mechanics in the
+    answer itself.
 
-If those sources are insufficient, say so rather than using outside
-knowledge.
-"""
+    If those sources are insufficient, say so rather than using outside
+    knowledge.
+    """
 
     client = OpenAI(
         api_key=settings.openai_api_key

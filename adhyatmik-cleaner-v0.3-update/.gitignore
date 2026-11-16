@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.DS_Store
+
+# Keep source media, temporary audio, and any other generated data out of Git.
+# Transcript artifacts are intentionally versioned as durable project data.
+data/*
+!data/.gitkeep
+!data/*/
+data/*/*
+!data/*/raw_transcript.txt
+!data/*/raw_transcript.json
+!data/*/clean_transcript.txt
+!data/*/clean_transcript.json
+!data/*/cleaning_report.json
