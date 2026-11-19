@@ -6,7 +6,7 @@ from rich.table import Table
 
 from .cleaner import clean_all_lectures, clean_lecture
 from .config import Settings
-from .pipeline import process_file, process_youtube
+from .pipeline import format_timestamp, process_file, process_youtube
 from .reviewer import review_lecture
 from .enrichment import enrich_lecture
 from .rag_chunker import chunk_lecture
@@ -547,11 +547,30 @@ def ask_question(
             "for the question"
         ),
     ),
-    top_k: int = typer.Option(
-        7,
+    top_k: int | None = typer.Option(
+        None,
         "--top-k",
         "-k",
-        help="Number of retrieved chunks supplied to the answer model",
+        help=(
+            "Optional override for automatic "
+            "retrieval size"
+        ),
+    ),
+    mode: str = typer.Option(
+        "auto",
+        "--mode",
+        help=(
+            "Answer mode: auto, focused, "
+            "broad, or chapter-summary"
+        ),
+    ),
+    chapter: int | None = typer.Option(
+        None,
+        "--chapter",
+        help=(
+            "Optional explicit Bhagavad Gita "
+            "chapter number"
+        ),
     ),
 ):
     """Answer a question using only retrieved lecture material."""
@@ -561,6 +580,8 @@ def ask_question(
         Settings(),
         context=context,
         top_k=top_k,
+        mode=mode,
+        chapter=chapter,
     )
 
     console.print()
@@ -598,9 +619,9 @@ def ask_question(
             console.print(
                 "• "
                 f"{reference.lecture_id} — "
-                f"{_format_seconds(reference.start_seconds)}"
+                f"{format_timestamp(reference.start_seconds)}"
                 "–"
-                f"{_format_seconds(reference.end_seconds)}"
+                f"{format_timestamp(reference.end_seconds)}"
             )
 
     # console.print(

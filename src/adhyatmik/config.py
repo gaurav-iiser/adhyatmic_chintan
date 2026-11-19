@@ -25,7 +25,13 @@ class Settings(BaseSettings):
     embedding_batch_size: int = 64
 
     answer_model: str = "gpt-5-mini"
-    answer_top_k: int = 5
+    answer_top_k: int = 7
+
+    answer_broad_top_k: int = 20
+    answer_broad_max_per_lecture: int = 3
+
+    chapter_digest_model: str = "gpt-6-luna"
+    chapter_summary_batch_chars: int = 45000
 
     chunk_seconds: int = 300
     data_dir: Path = Path("./data")
